@@ -1,7 +1,7 @@
 <?php require('conn.php'); ?>
 <?php
 session_start();
-if ($_SESSION['role'] != 'ss')
+if ($_SESSION['role'] != 'distiSPBT')
 {
       header('Location:../index.php');
 }
