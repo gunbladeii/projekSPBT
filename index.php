@@ -94,7 +94,7 @@ session_start();
 <body class="hold-transition login-page">
 <div class="login-box shadow p-3 mb-5 bg-white rounded">
   <div class="login-logo">
-  <a href="index.php"><img src="adminSPBT/dist/img/logo_kpm.png" style="width:55%"></a>
+  <a href="index.php"><img src="adminSPBT/dist/img/logo_login.png" style="width:55%"></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
