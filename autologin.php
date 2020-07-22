@@ -1,11 +1,11 @@
-<?php require('adminAFM/conn.php'); ?>
+<?php require('adminSPBT/conn.php'); ?>
 <?php
       session_start();
       function locationHeader()
       {
           if($_SESSION['role'] == "administrator")
             {
-                header('Location:adminAFM/index.php');
+                header('Location:adminSPBT/index.php');
             }
             else if($_SESSION['role'] == "rider")
             {

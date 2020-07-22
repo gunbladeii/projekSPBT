@@ -466,9 +466,9 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
 <!-- InputMask -->
-<script src="../adminAFM/plugins/inputmask/jquery.inputmask.bundle.js"></script>
+<script src="../adminSPBT/plugins/inputmask/jquery.inputmask.bundle.js"></script>
 <!-- Select2 -->
-<script src="../adminAFM/plugins/select2/js/select2.full.min.js"></script>
+<script src="../adminSPBT/plugins/select2/js/select2.full.min.js"></script>
 <script src="multipleuse.js"></script>
 <script>  
 $(document).ready(function(){ 

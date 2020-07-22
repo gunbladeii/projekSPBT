@@ -7,7 +7,7 @@
     $date = date('Y-m-d');
     
     
-    require('../adminAFM/salaryAlgorithm.php');
+    require('../adminSPBT/salaryAlgorithm.php');
 ?>
 
 <!--start if employeeStatus=='temp'-->
