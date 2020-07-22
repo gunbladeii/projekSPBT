@@ -3,8 +3,8 @@
 # Type="MYSQL"
 # HTTP="true"
 $hostname = "localhost";
-$database = "iberkat";
-$username = "iberkat";
+$database = "iconvess_projekSPBT";
+$username = "iconvess_iconvess";
 $password = "Sh@ti5620";
 $iBerkat = mysql_pconnect($hostname, $username, $password) or trigger_error(mysql_error(),E_USER_ERROR); 
 ?>
