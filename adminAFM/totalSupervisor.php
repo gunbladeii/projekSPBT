@@ -1,4 +1,4 @@
-<?php require_once('Connection/iBerkat.php'); ?>
+<?php require_once('Connection/spbtConn.php'); ?>
 <?php session_start();?>
 <?php
 if (!function_exists("GetSQLValueString")) {
