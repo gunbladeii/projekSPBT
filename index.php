@@ -61,7 +61,7 @@ session_start();
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
-            header('Location:supervisorAFM/index.php');
+            header('Location:distiSPBT/index.php');
             }
             else if($res["role"] != "administrator" || $res["role"] != "ss" ||$res["role"] != "rider")
             {

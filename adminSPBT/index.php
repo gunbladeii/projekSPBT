@@ -902,11 +902,11 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 				$('#percentSuccessParcel').load('percentSuccessParcel.php')
 				$('#totalSupervisor').load('totalSupervisor.php')
 				$('#totalRider').load('totalRider.php')
-			    $('#odometer').load('../supervisorAFM/liveOdometer.php')
-			    $('#show').load('../supervisorAFM/liveAttendance.php')
-				$('#parcel').load('../supervisorAFM/liveParcel.php')
-				$('#attStat').load('../supervisorAFM/attStat.php')
-				$('#parcelStat').load('../supervisorAFM/parcelStat.php')
+			    $('#odometer').load('../distiSPBT/liveOdometer.php')
+			    $('#show').load('../distiSPBT/liveAttendance.php')
+				$('#parcel').load('../distiSPBT/liveParcel.php')
+				$('#attStat').load('../distiSPBT/attStat.php')
+				$('#parcelStat').load('../distiSPBT/parcelStat.php')
 			}, 5000);
 		});
 </script>

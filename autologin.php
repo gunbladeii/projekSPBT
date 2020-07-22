@@ -13,7 +13,7 @@
             }
             else if($_SESSION['role'] == "ss")
             {
-            header('Location:supervisorAFM/index.php');
+            header('Location:distiSPBT/index.php');
             }
             else
             {

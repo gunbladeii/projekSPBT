@@ -42,7 +42,7 @@ session_start();
                   $_SESSION['user'] = $row['username'];
                   $_SESSION['role'] = $row["role"];
                   $_SESSION['password'] = $row["password"];
-                  header('Location:supervisorAFM/index.php');
+                  header('Location:distiSPBT/index.php');
               }
               else if($row["role"] != "administrator" || $row["role"] != "ss" ||$row["role"] != "rider")
               {
