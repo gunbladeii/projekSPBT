@@ -40,7 +40,7 @@ $a=1;
     
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>iBerkat | publisherSPBT PAGE</title>
+  <title>eSPBT2.0 | publisherSPBT PAGE</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -208,7 +208,7 @@ $a=1;
     <a href="#" class="brand-link">
       <img src="../adminSPBT/dist/img/iberkat.jpeg" alt="altus Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-dark">iBerkat</span>
+      <span class="brand-text font-weight-dark">eSPBT2.0</span>
     </a>
 
     <!-- Sidebar -->
@@ -509,7 +509,7 @@ $a=1;
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="https://iberkat.my/iBerkat">iBerkat Sdn. Bhd</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="https://iberkat.my/eSPBT2.0">eSPBT2.0 Sdn. Bhd</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0-beta.1
