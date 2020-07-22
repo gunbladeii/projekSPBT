@@ -680,7 +680,7 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
               <div class="row">
                 <div class="col-12">
                   <h4>
-                    <i class="fas fa-globe"></i> Altus Freight Management Sdn. Bhd.
+                    <i class="fas fa-globe"></i> Altus Freight Management eSPBT2.0
                     <small class="float-right">Date: <?php echo date ("d/m/Y")?></small>
                   </h4>
                 </div>
@@ -691,7 +691,7 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
                 <div class="col-sm-4 invoice-col">
                   From
                   <address>
-                    <strong>AFM, Sdn. Bhd.</strong><br>
+                    <strong>AFM, eSPBT2.0</strong><br>
                     Ovul Damansara<br>
                     53200, Kuala Lumpur<br>
                     Phone: (60) 123-5432<br>
