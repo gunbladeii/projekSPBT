@@ -9,7 +9,7 @@
             }
             else if($_SESSION['role'] == "rider")
             {
-            header('Location:publisherSPBT/profileRider.php');
+            header('Location:publisherSPBT/indexPublisher.php');
             }
             else if($_SESSION['role'] == "ss")
             {

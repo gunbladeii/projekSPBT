@@ -20,7 +20,7 @@
     	$status = $_POST['status'];
     	$itemCode = $_POST['itemCode'];
     	$mysqli->query("UPDATE `infoParcel` SET `stationCode`='$stationCode', `nama`='$nama', `fail` ='$fail', `date`='$date' , `odoStart`='$odoStart', `odoFinish`='$odoFinish', `oil`='$oil', `success`='$success', `status` = '$status', `itemCode` = '$itemCode' WHERE `noIC` ='$noIC' AND `date`='$date'");
-    	header("location:profileRider.php");
+    	header("location:indexPublisher.php");
     }
 
     $members = $mysqli->query("SELECT * FROM `infoParcel` WHERE `noIC`='$noIC' AND `date` = '$date'");

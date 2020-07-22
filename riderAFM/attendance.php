@@ -73,7 +73,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="profileRider.php" class="nav-link">Home</a>
+        <a href="indexPublisher.php" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -178,7 +178,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
       </li>
       <!-- Exit -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="../profileRider.php">
+        <a class="nav-link" data-toggle="dropdown" href="../indexPublisher.php">
           <i class="far fa-times-circle"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -194,7 +194,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="profileRider.php" class="brand-link">
+    <a href="indexPublisher.php" class="brand-link">
       <img src="../adminSPBT/dist/img/iberkat.jpeg" alt="altus Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-dark">iBerkat</span>
@@ -218,7 +218,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="profileRider.php" class="nav-link active">
+            <a href="indexPublisher.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                  -iBERKAT RIDER SECTION-
@@ -229,7 +229,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
             </ul>
           </li>
           <li class="nav-item">
-            <a href="profileRider.php" class="nav-link">
+            <a href="indexPublisher.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Back to Dashboard Panel
@@ -261,7 +261,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="profileRider.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="indexPublisher.php">Home</a></li>
               <li class="breadcrumb-item active">Attendace Section</li>
             </ol>
           </div><!-- /.col -->

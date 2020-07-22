@@ -1011,7 +1011,7 @@
 [10-Jan-2020 13:03:35 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveStatusPunch.php on line 6
 [10-Jan-2020 13:03:35 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveReceive.php on line 6
 [10-Jan-2020 13:03:35 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveAttendStatus.php on line 6
-[10-Jan-2020 13:03:35 UTC] PHP Notice:  Undefined index: role in /home/iberkatm/public_html/iBerkat/publisherSPBT/profileRider.php on line 4
+[10-Jan-2020 13:03:35 UTC] PHP Notice:  Undefined index: role in /home/iberkatm/public_html/iBerkat/publisherSPBT/indexPublisher.php on line 4
 [10-Jan-2020 13:03:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveReceive.php on line 6
 [10-Jan-2020 13:03:57 UTC] PHP Notice:  Undefined index: stationCode in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveReceive.php on line 17
 [10-Jan-2020 13:03:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveStatusPunch.php on line 6
@@ -4395,7 +4395,7 @@
 [24-Jan-2020 15:31:49 asia/kuala_lumpur] PHP Notice:  Undefined index: timeOut in /home/iberkatm/public_html/iBerkat/publisherSPBT/insert_update_delete.php on line 18
 [24-Jan-2020 15:31:49 asia/kuala_lumpur] PHP Notice:  Undefined index: longitude in /home/iberkatm/public_html/iBerkat/publisherSPBT/insert_update_delete.php on line 19
 [24-Jan-2020 15:31:49 asia/kuala_lumpur] PHP Notice:  Undefined index: latitude in /home/iberkatm/public_html/iBerkat/publisherSPBT/insert_update_delete.php on line 20
-[24-Jan-2020 07:31:54 UTC] PHP Notice:  Undefined index: role in /home/iberkatm/public_html/iBerkat/publisherSPBT/profileRider.php on line 4
+[24-Jan-2020 07:31:54 UTC] PHP Notice:  Undefined index: role in /home/iberkatm/public_html/iBerkat/publisherSPBT/indexPublisher.php on line 4
 [24-Jan-2020 07:32:07 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveStatusPunch.php on line 6
 [24-Jan-2020 07:32:07 UTC] PHP Notice:  Undefined index: stationCode in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveStatusPunch.php on line 17
 [24-Jan-2020 07:32:07 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/iberkatm/public_html/iBerkat/publisherSPBT/liveAttendStatus.php on line 6
