@@ -45,12 +45,12 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
 date_default_timezone_set("asia/kuala_lumpur");
 $date = date('Y-m-d');
 
-$query_Recordset2 = sprintf("SELECT count(role) AS rider, role FROM login WHERE role = 'rider'");
+$query_Recordset2 = sprintf("SELECT count(role) AS publisherSPBT, role FROM login WHERE role = 'publisherSPBT'");
 $Recordset2 = mysql_query($query_Recordset2, $iBerkat) or die(mysql_error());
 $row_Recordset2 = mysql_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysql_num_rows($Recordset2);
 
 ?>
 <?php 
-if ($row_Recordset2['role'] != NULL){echo $row_Recordset2['rider'];}else{echo '0';}?>
+if ($row_Recordset2['role'] != NULL){echo $row_Recordset2['publisherSPBT'];}else{echo '0';}?>
 

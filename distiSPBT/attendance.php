@@ -3,7 +3,7 @@
 if (!isset($_SESSION)) {
   session_start();
 }
-$MM_authorizedUsers = "rider";
+$MM_authorizedUsers = "publisherSPBT";
 $MM_donotCheckaccess = "false";
 
 // *** Restrict Access To Page: Grant or deny access to this page
@@ -93,7 +93,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AFMS | RIDER PAGE</title>
+  <title>AFMS | publisherSPBT PAGE</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -278,7 +278,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
             <a href="index.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                 -AFMS RIDER SECTION-
+                 -AFMS publisherSPBT SECTION-
                 <!--<i class="right fas fa-angle-left"></i>-->
               </p>
             </a>

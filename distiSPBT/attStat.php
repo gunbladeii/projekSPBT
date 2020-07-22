@@ -22,7 +22,7 @@ $station=$row_joiner['stationCode'];
 date_default_timezone_set("asia/kuala_lumpur"); 
 $date = date('Y-m-d'); 
 $time = date('H:i:s');
-$Recordset2 = $mysqli->query("SELECT * FROM attendance WHERE stationCode = '$station' AND date = '$date' AND role = 'rider'");
+$Recordset2 = $mysqli->query("SELECT * FROM attendance WHERE stationCode = '$station' AND date = '$date' AND role = 'publisherSPBT'");
 $mem = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
@@ -37,7 +37,7 @@ $a=1;
                     <thead>
                     <tr style="text-align:center">
                       <th>No.</th></th>
-                      <th>Rider Name</th>
+                      <th>publisherSPBT Name</th>
                       <th>Clock-In</th>
                       <th>Clock-Out</th>
                      </tr>
@@ -60,5 +60,5 @@ $a=1;
                     </tbody>
                   </table>
 <?php }?>
-<?php }else {echo '<button type="button" class="btn btn-danger btn-block btn-flat" data-toggle="modal" data-target="#modal-success"><i class="fas fa-exclamation-triangle"></i> No rider available right now!</button>';}?>
+<?php }else {echo '<button type="button" class="btn btn-danger btn-block btn-flat" data-toggle="modal" data-target="#modal-success"><i class="fas fa-exclamation-triangle"></i> No publisherSPBT available right now!</button>';}?>
             

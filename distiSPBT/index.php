@@ -14,7 +14,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.riderFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
+$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
@@ -213,7 +213,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['riderFacePic']);?>" style="max-width:100%"/>
+          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
           <a href="index.php" class="d-block"><?php echo ucwords($row_Recordset['nama']);?></a>
@@ -240,7 +240,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
             <a href="register.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Rider Registration
+                publisherSPBT Registration
                 <!--<i class="fas fa-angle-left right"></i>
                 <!--<span class="badge badge-info right">6</span>-->
               </p>
@@ -308,7 +308,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
         <div class="modal-dialog">
           <div class="modal-content bg-success">
             <div class="modal-header">
-              <h4 class="modal-title">Add item parcel to rider</h4>
+              <h4 class="modal-title">Add item parcel to publisherSPBT</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
             </div>
@@ -330,10 +330,10 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
               
             <div class="row">
         <div class="col-md-6">
-           <!-- TABLE: list of rider -->
+           <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Rider Attendance Status</h3>
+                <h3 class="card-title">publisherSPBT Attendance Status</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
@@ -356,7 +356,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
               </div>
               
             <div class="col-md-6"> 
-              <!-- TABLE: parcel delivery rider -->
+              <!-- TABLE: parcel delivery publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
                 <h3 class="card-title">Parcel Delivery Status</h3>

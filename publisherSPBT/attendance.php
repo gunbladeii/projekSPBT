@@ -4,7 +4,7 @@ include_once 'insert_update_delete.php';?>
 session_start();
 if (isset($_SESSION['role']))
 {
-   if($_SESSION['role'] != 'rider')
+   if($_SESSION['role'] != 'publisherSPBT')
     {
       header('Location:../loginFailed.php');  
     }
@@ -36,7 +36,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>iBerkat | RIDER PAGE</title>
+  <title>iBerkat | publisherSPBT PAGE</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -221,7 +221,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
             <a href="indexPublisher.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                 -iBERKAT RIDER SECTION-
+                 -iBERKAT publisherSPBT SECTION-
                 <!--<i class="right fas fa-angle-left"></i>-->
               </p>
             </a>
@@ -394,7 +394,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
         <div class="modal-dialog">
           <div class="modal-content bg-success">
             <div class="modal-header">
-              <h4 class="modal-title">Rider Location</h4>
+              <h4 class="modal-title">publisherSPBT Location</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
             </div>
@@ -498,7 +498,7 @@ function showPosition(position) {
 
             $.ajax({
                 type: "GET",
-                url: "locationRider.php",
+                url: "locationpublisherSPBT.php",
                 data: dataString,
                 cache: false,
                 success: function (data) {

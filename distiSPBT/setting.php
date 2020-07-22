@@ -30,7 +30,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.riderFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
+$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
@@ -231,7 +231,7 @@ $totalRows_revenue = mysqli_num_rows($revenue);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['riderFacePic']);?>" style="max-width:100%"/>
+          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $row_Recordset['nama'];?></a>
@@ -272,7 +272,7 @@ $totalRows_revenue = mysqli_num_rows($revenue);
             <a href="register.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Rider Registration
+                publisherSPBT Registration
                 <!--<i class="fas fa-angle-left right"></i>
                 <!--<span class="badge badge-info right">6</span>-->
               </p>

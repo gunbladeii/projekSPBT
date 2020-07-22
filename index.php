@@ -49,21 +49,21 @@ session_start();
                 $_SESSION['password'] = $res["password"];
                 header('Location:adminSPBT/index.php');
             }
-            else if($res["role"] == "rider")
+            else if($res["role"] == "publisherSPBT")
             {
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
             header('Location:publisherSPBT/indexPublisher.php');
             }
-            else if($res["role"] == "ss")
+            else if($res["role"] == "distiSPBT")
             {
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
             header('Location:distiSPBT/index.php');
             }
-            else if($res["role"] != "admin" || $res["role"] != "ss" ||$res["role"] != "rider")
+            else if($res["role"] != "admin" || $res["role"] != "distiSPBT" ||$res["role"] != "publisherSPBT")
             {
             header('Location:index.php?message=fail');
             }

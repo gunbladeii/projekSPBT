@@ -30,7 +30,7 @@ session_start();
                   $_SESSION['password'] = $row["password"];
                   header('Location:adminSPBT/index.php');
               }
-              else if($row["role"] == "rider")
+              else if($row["role"] == "publisherSPBT")
               {
                   $_SESSION['user'] = $row['username'];
                   $_SESSION['role'] = $row["role"];
@@ -44,7 +44,7 @@ session_start();
                   $_SESSION['password'] = $row["password"];
                   header('Location:distiSPBT/index.php');
               }
-              else if($row["role"] != "admin" || $row["role"] != "ss" ||$row["role"] != "rider")
+              else if($row["role"] != "admin" || $row["role"] != "ss" ||$row["role"] != "publisherSPBT")
               {
                   header('Location:index.php?message=fail');
               }

@@ -3,7 +3,7 @@
 session_start();
 if (isset($_SESSION['role']))
 {
-   if($_SESSION['role'] != 'rider')
+   if($_SESSION['role'] != 'publisherSPBT')
     {
       header('Location:../loginFailed.php');  
     }
@@ -21,7 +21,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.riderFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username =  '$colname_Recordset'");
+$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username =  '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($query_Recordset);
 $totalRows_Recordset = mysqli_num_rows($query_Recordset);
 
@@ -213,7 +213,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['riderFacePic']);?>" style="max-width:100%"/>
+          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
           <a href="indexPublisher.php" class="d-block"><?php echo ucwords($row_Recordset['nama']);?></a>
@@ -229,7 +229,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
             <a href="indexPublisher.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                 -iBERKAT RIDER SECTION-
+                 -iBERKAT publisherSPBT SECTION-
                 <!--<i class="right fas fa-angle-left"></i>-->
               </p>
             </a>
@@ -266,7 +266,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="indexPublisher.php">Home</a></li>
-              <li class="breadcrumb-item active">Rider Section</li>
+              <li class="breadcrumb-item active">publisherSPBT Section</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -274,7 +274,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
     </div>
     <!-- /.content-header -->
     
-     <div class="modal fade" id="viewRiderModal">
+     <div class="modal fade" id="viewpublisherSPBTModal">
         <div class="modal-dialog">
           <div class="modal-content bg-light">
             <div class="modal-header">
@@ -401,7 +401,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
 	<script type="text/javascript">
 		$(document).ready(function() {
 			setInterval(function () {
-				$('#show').load('payrollRider.php')
+				$('#show').load('payrollpublisherSPBT.php')
 				$('#parcel').load('liveParcel.php')
 				$('#attStat').load('attStat.php')
 				$('#parcelStat').load('parcelStat.php')
@@ -413,7 +413,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
-    $('#viewRiderModal').on('show.bs.modal', function (event) {
+    $('#viewpublisherSPBTModal').on('show.bs.modal', function (event) {
           var button = $(event.relatedTarget) // Button that triggered the modal
           var recipient = button.data('whatever') // Extract info from data-* attributes
           var recipient2 = button.data('whatever2') // Extract info from data-* attributes
@@ -422,7 +422,7 @@ $totalRows_parcel = mysqli_num_rows($query_parcel);
 
             $.ajax({
                 type: "GET",
-                url: "payrollRider2.php",
+                url: "payrollpublisherSPBT2.php",
                 data: dataString,
                 cache: false,
                 success: function (data) {

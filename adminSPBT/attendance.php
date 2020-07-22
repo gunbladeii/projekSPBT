@@ -233,7 +233,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
             <a href="payroll.php" class="nav-link">
               <i class="nav-icon fas fa-money-check"></i>
               <p>
-                Rider Payroll
+                publisherSPBT Payroll
                 <!--<span class="right badge badge-danger">New</span>-->
               </p>
             </a>
@@ -317,7 +317,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
           </li>
           
           <li class="nav-item has-treeview">
-          <a href="registerRider.php" class="nav-link">
+          <a href="registerpublisherSPBT.php" class="nav-link">
               <i class="nav-icon fas fa-cash-register"></i>
               <p>
                 Registration Form

@@ -248,7 +248,7 @@ $mysqli->query("UPDATE `revenue` SET `grandTotal` = '$grandTotal2', `date` = '$d
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-money-check"></i>
               <p>
-                Rider Payroll
+                publisherSPBT Payroll
                 <!--<span class="right badge badge-danger">New</span>-->
               </p>
             </a>
@@ -332,7 +332,7 @@ $mysqli->query("UPDATE `revenue` SET `grandTotal` = '$grandTotal2', `date` = '$d
           </li>
           
           <li class="nav-item has-treeview">
-          <a href="registerRider.php" class="nav-link">
+          <a href="registerpublisherSPBT.php" class="nav-link">
               <i class="nav-icon fas fa-cash-register"></i>
               <p>
                 Registration Form
@@ -650,7 +650,7 @@ $mysqli->query("UPDATE `revenue` SET `grandTotal` = '$grandTotal2', `date` = '$d
     <!-- /.content -->
   </div>
    <!--parcelModal-->
-<div class="modal fade" id="viewRiderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+<div class="modal fade" id="viewpublisherSPBTModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -737,7 +737,7 @@ $mysqli->query("UPDATE `revenue` SET `grandTotal` = '$grandTotal2', `date` = '$d
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
-    $('#viewRiderModal').on('show.bs.modal', function (event) {
+    $('#viewpublisherSPBTModal').on('show.bs.modal', function (event) {
           var button = $(event.relatedTarget) // Button that triggered the modal
           var recipient = button.data('whatever') // Extract info from data-* attributes
           var recipient2 = button.data('whatever2') // Extract info from data-* attributes

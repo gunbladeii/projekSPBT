@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.riderFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
+$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
@@ -208,7 +208,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['riderFacePic']);?>" style="max-width:100%"/>
+          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
           <a href="index.php" class="d-block"><?php echo ucwords($row_Recordset['nama']);?></a>
@@ -235,7 +235,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
             <a href="register.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Rider Registration
+                publisherSPBT Registration
                 <!--<i class="fas fa-angle-left right"></i>
                 <!--<span class="badge badge-info right">6</span>-->
               </p>
@@ -307,7 +307,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
       
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new rider/supervisor (<?php date_default_timezone_set("asia/kuala_lumpur");
+      <p class="login-box-msg">Register a new publisherSPBT/supervisor (<?php date_default_timezone_set("asia/kuala_lumpur");
           echo date("Y/m/d, h:i:sa");?>)</p>
       <div class="col-mb-12" style="text-align:center">
       <a data-toggle="modal" data-target="#parcelModal" data-whatever="<?php echo $row_Recordset['id'];?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register New User</a>
@@ -323,7 +323,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Register New Rider</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Register New publisherSPBT</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

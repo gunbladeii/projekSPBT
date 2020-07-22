@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset2 = $_SESSION['user'];
 }
 
-$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.riderFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE login.username = '$colname_Recordset2'");
+$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE login.username = '$colname_Recordset2'");
 $row_Recordset = mysqli_fetch_assoc($query_Recordset);
 $totalRows_Recordset = mysqli_num_rows($query_Recordset);
 
@@ -39,7 +39,7 @@ $a=1;
                 <?php do {?>    
                 <tr>
                 <td><?php echo $a++;?></td>	
-	            <td> <span data-toggle="modal" data-target="#viewRiderModal" data-whatever="<?php echo $row_Recordset2['noIC'];?>" data-whatever2="<?php echo $row_Recordset2['month'];?>" class="badge badge-primary" role="button" aria-pressed="true"><?php $date=date_create($row_Recordset2['date']);echo date_format($date,"F");?></span></td>	
+	            <td> <span data-toggle="modal" data-target="#viewpublisherSPBTModal" data-whatever="<?php echo $row_Recordset2['noIC'];?>" data-whatever2="<?php echo $row_Recordset2['month'];?>" class="badge badge-primary" role="button" aria-pressed="true"><?php $date=date_create($row_Recordset2['date']);echo date_format($date,"F");?></span></td>	
                 <td class="d-sm-inline-flex"><span class="badge badge-warning"><?php echo $row_Recordset2['totalDay'];?></span></td>	
 	            </tr>
                 <?php } while ($row_Recordset2 = mysqli_fetch_assoc($Recordset2));?>

@@ -234,7 +234,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <a href="payroll.php" class="nav-link">
               <i class="nav-icon fas fa-money-check"></i>
               <p>
-                Rider/Driver Payroll
+                publisherSPBT/Driver Payroll
                 <!--<span class="right badge badge-danger">New</span>-->
               </p>
             </a>
@@ -318,7 +318,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           </li>
           
           <li class="nav-item has-treeview">
-          <a href="registerRider.php" class="nav-link">
+          <a href="registerpublisherSPBT.php" class="nav-link">
               <i class="nav-icon fas fa-cash-register"></i>
               <p>
                 Registration Form
@@ -621,7 +621,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new rider/driver (<?php date_default_timezone_set("asia/kuala_lumpur");
+      <p class="login-box-msg">Register a new publisherSPBT/driver (<?php date_default_timezone_set("asia/kuala_lumpur");
           echo date("Y/m/d, h:i:sa");?>)</p>
       <div class="col-mb-12" style="text-align:center">
       <a data-toggle="modal" data-target="#parcelModal" data-whatever="<?php echo $row_Recordset['id'];?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register New User</a>
@@ -635,7 +635,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Register New Rider/Driver</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Register New publisherSPBT/Driver</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

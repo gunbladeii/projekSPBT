@@ -3,13 +3,13 @@
     /*if (isset($_POST['submit'])) {
     	$mysqli->query("INSERT INTO `login` (`noIC`, `nama`, `username`, `employeeID`, `password`, `role`, `terms`) VALUES ('$noIC', '$nama', '$username', '$employeeID', '$password', '$role', '$terms')");
     	
-    	header("location:registerRider.php");
+    	header("location:registerpublisherSPBT.php");
     }*/
 
     $formulaSalary = $mysqli->query("SELECT * FROM `formulaSalary`");
     $FS = mysqli_fetch_assoc($formulaSalary);
     
-    $bankCall = $mysqli->query("SELECT employeeData.riderFacePic, employeeData.employeeStatus, employeeData.noIC, employeeData.nama, employeeData.accNum, employeeData.codeBank, bankName.bankName FROM `employeeData` INNER JOIN `bankName` ON bankName.codeBank = employeeData.codeBank WHERE `noIC` = '$noIC'");
+    $bankCall = $mysqli->query("SELECT employeeData.publisherSPBTFacePic, employeeData.employeeStatus, employeeData.noIC, employeeData.nama, employeeData.accNum, employeeData.codeBank, bankName.bankName FROM `employeeData` INNER JOIN `bankName` ON bankName.codeBank = employeeData.codeBank WHERE `noIC` = '$noIC'");
     $BC = mysqli_fetch_assoc($bankCall);
     
     $attendanceCall = $mysqli->query("SELECT date, COUNT(date) AS attendNo, month, noIC, time, timeOut FROM `attendance` WHERE `noIC` = '$noIC' AND `month` = '$month' GROUP BY `month`");

@@ -293,7 +293,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
             <a href="payroll.php" class="nav-link">
               <i class="nav-icon fas fa-money-check"></i>
               <p>
-                Rider Payroll
+                publisherSPBT Payroll
                 <!--<span class="right badge badge-danger">New</span>-->
               </p>
             </a>
@@ -377,7 +377,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
           </li>
           
           <li class="nav-item has-treeview">
-          <a href="registerRider.php" class="nav-link">
+          <a href="registerpublisherSPBT.php" class="nav-link">
               <i class="nav-icon fas fa-cash-register"></i>
               <p>
                 Registration Form
@@ -675,7 +675,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
                 <div id="external-events">
                   <div class="external-event bg-success">Meeting</div>
                   <div class="external-event bg-warning">Parcel Delayed</div>
-                  <div class="external-event bg-danger">Remind Rider</div>
+                  <div class="external-event bg-danger">Remind publisherSPBT</div>
                   <div class="checkbox">
                     <label for="drop-remove">
                       <input type="checkbox" id="drop-remove" checked='checked'>

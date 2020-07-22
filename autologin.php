@@ -7,11 +7,11 @@
             {
                 header('Location:adminSPBT/index.php');
             }
-            else if($_SESSION['role'] == "rider")
+            else if($_SESSION['role'] == "publisherSPBT")
             {
             header('Location:publisherSPBT/indexPublisher.php');
             }
-            else if($_SESSION['role'] == "ss")
+            else if($_SESSION['role'] == "distiSPBT")
             {
             header('Location:distiSPBT/index.php');
             }

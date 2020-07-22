@@ -1,7 +1,7 @@
 <?php require('conn.php'); ?>
 <?php
 session_start();
-if ($_SESSION['role'] != 'rider')
+if ($_SESSION['role'] != 'publisherSPBT')
 {
       header('Location:../index.php');
 }
@@ -19,7 +19,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.riderFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username =  '$colname_Recordset'");
+$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username =  '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($query_Recordset);
 $totalRows_Recordset = mysqli_num_rows($query_Recordset);
 
@@ -40,7 +40,7 @@ $a=1;
     
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>iBerkat | RIDER PAGE</title>
+  <title>iBerkat | publisherSPBT PAGE</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -216,7 +216,7 @@ $a=1;
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['riderFacePic']);?>" style="max-width:100%"/> 
+          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/> 
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo ucwords(strtolower($row_Recordset['nama']));?></a>
@@ -232,7 +232,7 @@ $a=1;
             <a href="index.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                 -iBERKAT RIDER SECTION-
+                 -iBERKAT publisherSPBT SECTION-
                 <!--<i class="right fas fa-angle-left"></i>-->
               </p>
             </a>
@@ -291,7 +291,7 @@ $a=1;
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Rider Section</li>
+              <li class="breadcrumb-item active">publisherSPBT Section</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->

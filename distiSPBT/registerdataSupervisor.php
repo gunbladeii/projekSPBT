@@ -41,12 +41,12 @@
     	
     if (isset($_POST['submit'])) {
         $DLPic = addslashes(file_get_contents($_FILES["DLPic"]["tmp_name"]));
-    	$riderFaceMotorPic = addslashes(file_get_contents($_FILES["riderFaceMotorPic"]["tmp_name"]));
-    	$riderFacePic = addslashes(file_get_contents($_FILES["riderFacePic"]["tmp_name"]));
+    	$publisherSPBTFaceMotorPic = addslashes(file_get_contents($_FILES["publisherSPBTFaceMotorPic"]["tmp_name"]));
+    	$publisherSPBTFacePic = addslashes(file_get_contents($_FILES["publisherSPBTFacePic"]["tmp_name"]));
     	
     	/*add pictue*/
     	
-    	$mysqli->query("INSERT INTO `employeeData` (`noIC`, `nama`, `emel`, `sex`, `dob`, `pob`, `nationality`, `race`, `religion`, `marriage`, `childrenNo`, `address`, `noTel`, `lesenNo`, `lesenExp`, `noPlate`, `roadtaxNo`, `vehicleModel`, `vehicleYear`, `pdrmRecordNo`, `caseNo`, `employeeStatus`, `stationCode`, `accNum`, `codeBank`, `DLPic`, `riderFacePic`, `riderFaceMotorPic`) VALUES ('$noIC', '$nama', '$username', '$sex', '$dob', '$pob', '$nationality', '$race', '$religion', '$marriage','$childrenNo', '$address', '$noTel', '$lesenNo', '$lesenExp', '$noPlate', '$roadtaxNo', '$vehicleModel', '$vehicleYear', '$pdrmRecordNo', '$caseNo', '$employeeStatus', '$stationCode', '$accNum', '$codeBank', '$DLPic', '$riderFacePic', '$riderFaceMotorPic')");
+    	$mysqli->query("INSERT INTO `employeeData` (`noIC`, `nama`, `emel`, `sex`, `dob`, `pob`, `nationality`, `race`, `religion`, `marriage`, `childrenNo`, `address`, `noTel`, `lesenNo`, `lesenExp`, `noPlate`, `roadtaxNo`, `vehicleModel`, `vehicleYear`, `pdrmRecordNo`, `caseNo`, `employeeStatus`, `stationCode`, `accNum`, `codeBank`, `DLPic`, `publisherSPBTFacePic`, `publisherSPBTFaceMotorPic`) VALUES ('$noIC', '$nama', '$username', '$sex', '$dob', '$pob', '$nationality', '$race', '$religion', '$marriage','$childrenNo', '$address', '$noTel', '$lesenNo', '$lesenExp', '$noPlate', '$roadtaxNo', '$vehicleModel', '$vehicleYear', '$pdrmRecordNo', '$caseNo', '$employeeStatus', '$stationCode', '$accNum', '$codeBank', '$DLPic', '$publisherSPBTFacePic', '$publisherSPBTFaceMotorPic')");
     	
     	header("location:register.php");
     }
@@ -134,7 +134,7 @@
                     <select name="role" class="custom-select browser-default" required>
                       <option value="">Choose role</option>
                       <option value="ss">Station Supervisor</option>
-                      <option value="rider">Rider</option>
+                      <option value="publisherSPBT">publisherSPBT</option>
                       <option value="admin">admin</option>
                     </select>
                     <div class="input-group-append input-group-text">
@@ -145,7 +145,7 @@
        </div><h3></h3>
        <!--end class tab-pane -->
        
-       <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#menu1">Rider Information</button>
+       <button type="button" class="btn btn-default btn-block" data-toggle="collapse" data-target="#menu1">publisherSPBT Information</button>
        <!--BEGIN CLASS tab-pane-->
         <div id="menu1" class="collapse">
         <h3></h3>
@@ -347,7 +347,7 @@
         <div class="form-group">
            <label>User Picture:</label>
            <div class="input-group mb-3">
-              <input type="file" name="riderFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17" required>
+              <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17" required>
               <div class="input-group-append input-group-text">
                 <span class="fas fa-portrait"></span>
               </div>
@@ -357,7 +357,7 @@
         <div class="form-group">
            <label>Motorcycle Picture:</label>
            <div class="input-group mb-3">
-              <input type="file" name="riderFaceMotorPic" id="image3" class="form-control" accept="image/*" id="validationDefault18" required>
+              <input type="file" name="publisherSPBTFaceMotorPic" id="image3" class="form-control" accept="image/*" id="validationDefault18" required>
               <div class="input-group-append input-group-text">
                 <span class="fas fa-image"></span>
               </div>
