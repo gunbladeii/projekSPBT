@@ -46,7 +46,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <!-- Select2 -->
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
-  <script src="../riderAFM/check.js"></script>
+  <script src="../publisherSPBT/check.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

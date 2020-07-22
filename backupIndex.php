@@ -35,7 +35,7 @@ session_start();
                   $_SESSION['user'] = $row['username'];
                   $_SESSION['role'] = $row["role"];
                   $_SESSION['password'] = $row["password"];
-                  header('Location:riderAFM/profileRider.php');
+                  header('Location:publisherSPBT/profileRider.php');
               }
               else if($row["role"] == "ss")
               {
