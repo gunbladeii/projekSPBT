@@ -17,7 +17,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 
 $stationName = $row_Recordset['stationCode'];
 
-$station = $mysqli->query("SELECT login.nama, login.role, login.username AS emel, login.noIC, employeeData.stationCode FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE login.role NOT LIKE 'administrator' ORDER BY login.nama ASC");
+$station = $mysqli->query("SELECT login.nama, login.role, login.username AS emel, login.noIC, employeeData.stationCode FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE login.role NOT LIKE 'admin' ORDER BY login.nama ASC");
 $row_station = mysqli_fetch_assoc($station);
 $totalRows_station = mysqli_num_rows($station);
 

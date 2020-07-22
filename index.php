@@ -42,7 +42,7 @@ session_start();
                 $msg = "Invalid Username or Password";
             }
         
-            if($res["role"] == "administrator")
+            if($res["role"] == "admin")
             {
                 $_SESSION['user'] = $res['username'];
                 $_SESSION['role'] = $res["role"];
@@ -63,7 +63,7 @@ session_start();
             $_SESSION['password'] = $res["password"];
             header('Location:distiSPBT/index.php');
             }
-            else if($res["role"] != "administrator" || $res["role"] != "ss" ||$res["role"] != "rider")
+            else if($res["role"] != "admin" || $res["role"] != "ss" ||$res["role"] != "rider")
             {
             header('Location:index.php?message=fail');
             }

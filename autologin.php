@@ -3,7 +3,7 @@
       session_start();
       function locationHeader()
       {
-          if($_SESSION['role'] == "administrator")
+          if($_SESSION['role'] == "admin")
             {
                 header('Location:adminSPBT/index.php');
             }

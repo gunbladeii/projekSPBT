@@ -135,7 +135,7 @@
                       <option value="">Choose role</option>
                       <option value="ss">Station Supervisor</option>
                       <option value="rider">Rider</option>
-                      <option value="administrator">Administrator</option>
+                      <option value="admin">admin</option>
                     </select>
                     <div class="input-group-append input-group-text">
                       <span class="fas fa-user"></span>

@@ -23,7 +23,7 @@ session_start();
       {
           while($row = mysqli_fetch_assoc($result))
           {
-              if($row["role"] == "administrator")
+              if($row["role"] == "admin")
               {
                   $_SESSION['user'] = $row['username'];
                   $_SESSION['role'] = $row["role"];
@@ -44,7 +44,7 @@ session_start();
                   $_SESSION['password'] = $row["password"];
                   header('Location:distiSPBT/index.php');
               }
-              else if($row["role"] != "administrator" || $row["role"] != "ss" ||$row["role"] != "rider")
+              else if($row["role"] != "admin" || $row["role"] != "ss" ||$row["role"] != "rider")
               {
                   header('Location:index.php?message=fail');
               }
