@@ -48,15 +48,6 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $loginCall = $mysqli->query("SELECT * FROM `login` WHERE username =  '$colname_Recordset'");
     $LC = mysqli_fetch_assoc($loginCall);
 
-    $judulCall = $mysqli->query("SELECT * FROM `judul`");
-    $JC = mysqli_fetch_assoc($judulCall);
-
-    $stateCall = $mysqli->query("SELECT * FROM `state`");
-    $SC = mysqli_fetch_assoc($stateCall);
-
-    $stateCall2 = $mysqli->query("SELECT * FROM `state` GROUP BY `zon`");
-    $SC2 = mysqli_fetch_assoc($stateCall2);
-
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 

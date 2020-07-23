@@ -19,6 +19,15 @@
 
     $id = $mysqli->query("SELECT * FROM `login` WHERE id =  '$id'");
     $ReID = mysqli_fetch_assoc($id);
+
+    $judulCall = $mysqli->query("SELECT * FROM `judul`");
+    $JC = mysqli_fetch_assoc($judulCall);
+
+    $stateCall = $mysqli->query("SELECT * FROM `state`");
+    $SC = mysqli_fetch_assoc($stateCall);
+
+    $stateCall2 = $mysqli->query("SELECT * FROM `state` GROUP BY `zon`");
+    $SC2 = mysqli_fetch_assoc($stateCall2);
 ?>
 
 <!--start if employeeStatus=='temp'-->
@@ -75,13 +84,6 @@
                   </div>
 <?php }?>
 </form> 
-
-<!--end if employeeStatus=='temp'-->
-
-        <input type="hidden" name="terms" value="agree"/>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		</div>
  
 <!-- Select2 -->
 <script src="plugins/select2/js/select2.full.min.js"></script>
