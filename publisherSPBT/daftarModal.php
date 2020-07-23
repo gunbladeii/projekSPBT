@@ -24,7 +24,7 @@
         header("location:indexPublisher.php");
     }
     
-    $loginCall = $mysqli->query("SELECT * FROM `login` WHERE id = '$id'");
+    $loginCall = $mysqli->query("SELECT * FROM `login` WHERE id = $id");
     $LC = mysqli_fetch_assoc($loginCall);
     
     
