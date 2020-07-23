@@ -211,7 +211,7 @@ $mysqli->query("UPDATE `revenue` SET `grandTotal` = '$grandTotal2', `date` = '$d
           <i class="nav-icon fas fa-users-cog"></i>
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo $row_Recordset['nama'];?></a>
+          <a href="#" class="d-block"><?php echo $row_Recordset['name'];?></a>
         </div>
       </div>
 

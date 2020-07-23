@@ -256,7 +256,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
           <i class="nav-icon fas fa-users-cog"></i>
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo $row_Recordset['nama'];?></a>
+          <a href="#" class="d-block"><?php echo $row_Recordset['name'];?></a>
         </div>
       </div>
 

@@ -234,7 +234,7 @@ $totalRows_revenue = mysqli_num_rows($revenue);
           <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo $row_Recordset['nama'];?></a>
+          <a href="#" class="d-block"><?php echo $row_Recordset['name'];?></a>
         </div>
       </div>
 

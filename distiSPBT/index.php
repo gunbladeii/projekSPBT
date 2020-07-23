@@ -216,7 +216,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
           <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
-          <a href="index.php" class="d-block"><?php echo ucwords($row_Recordset['nama']);?></a>
+          <a href="index.php" class="d-block"><?php echo ucwords($row_Recordset['name']);?></a>
         </div>
       </div>
 
@@ -290,7 +290,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Welcome <?php echo ucwords(strtolower($row_Recordset['nama']));?></h1>
+            <h1 class="m-0 text-dark">Welcome <?php echo ucwords(strtolower($row_Recordset['name']));?></h1>
            
           </div><!-- /.col -->
           <div class="col-sm-6">

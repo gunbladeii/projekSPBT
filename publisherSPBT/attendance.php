@@ -208,7 +208,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
           <i class="nav-icon fas fa-user"></i>
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo $row_Recordset['nama'];?></a>
+          <a href="#" class="d-block"><?php echo $row_Recordset['name'];?></a>
         </div>
       </div>
 
@@ -253,7 +253,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Welcome <?php echo ucwords(strtolower($row_Recordset['nama']));?></h1>
+            <h1 class="m-0 text-dark">Welcome <?php echo ucwords(strtolower($row_Recordset['name']));?></h1>
             <p>Attendance Section <br>
             (As of <?php echo $date;?>)
             </p>
@@ -299,7 +299,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
         <input type="hidden" value="<?php echo $date?>" name="date">
         <input type="hidden" value="<?php echo $month?>" name="month">
         <input type="hidden" value="<?php echo $year?>" name="year">
-        <input type="hidden" name="nama" value="<?php echo $row_Recordset['nama']?>">
+        <input type="hidden" name="nama" value="<?php echo $row_Recordset['name']?>">
         <input type="hidden" name="noIC" value="<?php echo $row_Recordset['noIC']?>">
         <input type="hidden" name="stationCode" value="<?php echo $row_joiner['stationCode']?>">
         <input type="hidden" name="role" value="<?php echo $row_Recordset['role']?>">
@@ -316,7 +316,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
                 </div>
                 <!-- /.table-responsive -->
         <input type="hidden" value="<?php echo $time?>" name="timeOut">   
-        <input type="hidden" name="nama" value="<?php echo $row_Recordset['nama']?>">
+        <input type="hidden" name="nama" value="<?php echo $row_Recordset['name']?>">
         <input type="hidden" name="noIC" value="<?php echo $row_Recordset['noIC']?>">
         <input type="hidden" name="stationCode" value="<?php echo $row_joiner['stationCode']?>">
         <input type="hidden" name="role" value="<?php echo $row_Recordset['role']?>">
