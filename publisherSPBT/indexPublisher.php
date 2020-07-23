@@ -975,8 +975,8 @@ $(document).ready(function(){
 
 </script>
 <!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="plugins/datatables/dataTables.bootstrap4.js"></script>
+<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
+<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable();
