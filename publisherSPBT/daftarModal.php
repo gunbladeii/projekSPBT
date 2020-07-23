@@ -41,7 +41,7 @@
 </head>
 <body>   
 <?php if ($attend['time'] != NULL){?>
-<form method="post" action="editdata.php" role="form">
+<form method="post" action="daftarModal.php" role="form">
 	<div class="modal-body">
 		<div class="form-group">
 		    <label for="id">ID</label>

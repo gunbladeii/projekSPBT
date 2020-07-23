@@ -252,10 +252,10 @@ $a=1;
           </li>
           
           <li class="nav-item">
-            <a data-toggle="modal" data-target="#parcelModal" data-whatever="<?php echo $mem['noIC'];?>" data-whatever2="<?php echo $mem['date'];?>" class="nav-link">
-              <i class="nav-icon fas fa-address-card"></i>
+            <a data-toggle="modal" data-target="#daftarModal" class="nav-link">
+              <i class="nav-icon fas fa-truck"></i>
               <p>
-                Delivery Record
+                Daftar Pengedar
                 <!--<i class="fas fa-angle-left right"></i>
                 <!--<span class="badge badge-info right">6</span>-->
               </p>
@@ -309,7 +309,7 @@ $a=1;
           </div>
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
-            <a data-toggle="modal" data-target="#parcelModal" data-whatever="<?php echo $mem['noIC'];?>" data-whatever2="<?php echo $mem['date'];?>"><div class="info-box mb-3">
+            <a data-toggle="modal" data-target="#daftarModal" data-whatever="<?php echo $mem['noIC'];?>" data-whatever2="<?php echo $mem['date'];?>"><div class="info-box mb-3">
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-map-pin"></i></span>
 
               <div class="info-box-content">
@@ -510,11 +510,11 @@ $a=1;
 <!-- ./wrapper -->     
 
 <!-- Begin parcel modal -->
-    <div class="modal fade" id="parcelModal">
+    <div class="modal fade" id="daftarModal">
         <div class="modal-dialog">
           <div class="modal-content bg-success">
             <div class="modal-header">
-              <h4 class="modal-title">Update info parcel</h4>
+              <h4 class="modal-title">Daftar Pengedar</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
             </div>
@@ -539,7 +539,7 @@ $a=1;
                 <span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-              <div class="dash"></div>
+              <div class="dash2"></div>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -614,8 +614,8 @@ $a=1;
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
-    /*parcelModal*/
-    $('#parcelModal').on('show.bs.modal', function (event) {
+    /*daftarModal*/
+    $('#daftarModal').on('show.bs.modal', function (event) {
           var button = $(event.relatedTarget) // Button that triggered the modal
           var recipient = button.data('whatever') // Extract info from data-* attributes
           var recipient2 = button.data('whatever2') // Extract info from data-* attributes
@@ -624,7 +624,7 @@ $a=1;
 
             $.ajax({
                 type: "GET",
-                url: "editdata.php",
+                url: "daftarModal.php",
                 data: dataString,
                 cache: false,
                 success: function (data) {
@@ -651,7 +651,7 @@ $a=1;
                 cache: false,
                 success: function (data) {
                     console.log(data);
-                    modal.find('.dash').html(data);
+                    modal.find('.dash2').html(data);
                 },
                 error: function(err) {
                     console.log(err);
