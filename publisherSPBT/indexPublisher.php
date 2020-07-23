@@ -559,7 +559,7 @@ $b=1;
                           <tr>
                             <td><a href="#"><?php echo $b++;?></a></td>
                             <td><?php echo strtoupper($RID2['judul']);?></td>
-                            <td><span class="badge badge-info"><?php echo $RID2['name']?></span></td>
+                            <td><span class="badge badge-info"><?php echo strtoupper($RID2['name'])?></span></td>
                             <td><span class="badge badge-success"><?php echo strtoupper($RID2['state']);?></span></td>
                             <td><span class="badge badge-warning"><?php echo strtoupper($RID2['zon']);?></span></td>
                           </tr>
