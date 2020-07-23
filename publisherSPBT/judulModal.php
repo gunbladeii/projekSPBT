@@ -19,8 +19,8 @@
       header("location:indexPublisher.php");
     } 
 
-    $id = $mysqli->query("SELECT * FROM `login` WHERE id =  '$id'");
-    $ReID = mysqli_fetch_assoc($id);
+    $id2 = $mysqli->query("SELECT * FROM `login` WHERE id =  '$id'");
+    $ReID = mysqli_fetch_assoc($id2);
 
     $judulCall = $mysqli->query("SELECT * FROM `judul`");
     $JC = mysqli_fetch_assoc($judulCall);
