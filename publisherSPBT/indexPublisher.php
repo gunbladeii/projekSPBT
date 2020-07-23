@@ -472,7 +472,7 @@ $a=1;
                 <div class="table-responsive">
                   <table class="table m-0">
                     <thead>
-                    <tr style="text-align:center">
+                    <tr>
                       <th>No</th>
                       <th>Nama Pengedar</th>
                       <th>Username</th>
@@ -482,7 +482,7 @@ $a=1;
                     </thead>
                     <tbody>
                     <?php do {?>
-                    <tr style="text-align:center">
+                    <tr>
                       <td><a href="#"><?php echo $a++;?></a></td>
                       <td><?php echo strtoupper($RID['name']);?></td>
                       <td><span class="badge badge-info"><?php echo $RID['username']?></span></td>
