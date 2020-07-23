@@ -279,7 +279,7 @@ $b=1;
             </ul>
           </li>
           <li class="nav-item">
-            <a href="attendance.php" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-folder"></i>
               <p>
                 i-Record
@@ -289,7 +289,7 @@ $b=1;
             </a>
           </li>
           <li class="nav-item">
-              <a href="payroll.php" class="nav-link">
+              <a href="#" class="nav-link">
               <i class="nav-icon fas fa-search-location"></i>
               <p>
                 i-Track
