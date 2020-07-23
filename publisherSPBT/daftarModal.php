@@ -85,7 +85,7 @@
         <input type="hidden" name="role" value="distiSPBT"/>
         <input type="hidden" name="status" value="active"/>
         <div class="modal-footer">
-            <input type="submit" class="btn btn-primary" name="submit" value="Register New User"/>&nbsp;
+            <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </form>
