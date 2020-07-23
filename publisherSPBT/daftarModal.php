@@ -24,7 +24,7 @@
         header("location:indexPublisher.php");
     }
     
-    $loginCall = $mysqli->query("SELECT * FROM `login`");
+    $loginCall = $mysqli->query("SELECT * FROM `login` WHERE id = '$id'");
     $LC = mysqli_fetch_assoc($loginCall);
     
     
@@ -84,6 +84,7 @@
         
         <input type="hidden" name="role" value="distiSPBT"/>
         <input type="hidden" name="status" value="active"/>
+        <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
         <div class="modal-footer">
             <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
