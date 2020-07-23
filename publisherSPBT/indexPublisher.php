@@ -297,7 +297,7 @@ $a=1;
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
             <a href="attendance.php" style="color:black;"><div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-box"></i></span>
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-book-open"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Judul</span>
