@@ -71,6 +71,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $RID2 = mysqli_fetch_assoc($refID3);
 
 $a=1;
+$b=1;
 ?>
 <!DOCTYPE html>
 <html>
@@ -556,7 +557,7 @@ $a=1;
                           <tbody>
                           <?php do {?>
                           <tr>
-                            <td><a href="#"><?php echo $a++;?></a></td>
+                            <td><a href="#"><?php echo $b++;?></a></td>
                             <td><?php echo strtoupper($RID2['name']);?></td>
                             <td><span class="badge badge-info"><?php echo $RID2['username']?></span></td>
                             <td><span class="badge badge-success"><?php echo $RID2['password']?></span></td>
