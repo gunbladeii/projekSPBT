@@ -34,7 +34,7 @@
 <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
 <?php if ($ReID['role'] == 'distiSPBT'){?>
                <div>
-                <h5><?php echo strtoupper($LC['name']);?></h5>
+                <h5><?php echo strtoupper($ReID['name']);?></h5>
                     <div class="form-group">
                         <div class="input-group mb-3">
                             <select name="judul" class="custom-select browser-default" required>
