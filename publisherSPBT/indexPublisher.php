@@ -33,6 +33,9 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
         $password = $_POST['password'];
         $role = $_POST['role'];
         $status = $_POST['status'];
+        $judul = $_POST['judul'];
+        $zon = $_POST['zon'];
+        $state = $_POST['state'];
         
     if (isset($_POST['submit'])) {
         $publisherSPBTFacePic = addslashes(file_get_contents($_FILES["publisherSPBTFacePic"]["tmp_name"]));
@@ -42,8 +45,21 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
       header("location:indexPublisher.php");
     }
 
+    if (isset($_POST['submit'])) {
+
+      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `judul`, `zon`, `state`) VALUES ('$roleID', '$judul', '$zon', '$state')");
+      
+      header("location:indexPublisher.php");
+    }
+
     $loginCall = $mysqli->query("SELECT * FROM `login` WHERE username =  '$colname_Recordset'");
     $LC = mysqli_fetch_assoc($loginCall);
+
+    $judulCall = $mysqli->query("SELECT * FROM `judul`");
+    $JC = mysqli_fetch_assoc($judulCall);
+
+    $stateCall = $mysqli->query("SELECT * FROM `state`");
+    $SC = mysqli_fetch_assoc($stateCall);
 
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
@@ -589,6 +605,49 @@ $a=1;
 
                 <div>
                     <h5 style="padding-left: 15px;text-decoration: underline overline" class="display-5">Daftar Tugasan Pengedar</h5>
+
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <select name="judul" class="custom-select browser-default" required>
+                                  <option value="">Pilih judul yang dihantar</option>
+                                  <?php do{?>
+                                  <option value="<?php echo $JC['name'];?>"><?php echo ucwords($JC['name']);?></option>
+                                  <?php }while ($JC = mysqli_fetch_assoc($judulCall))?>
+                                </select>
+                                <div class="input-group-append input-group-text">
+                                  <span class="fas fa-book"></span>
+                               </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <select name="state" class="custom-select browser-default" required>
+                                  <option value="">Pilih negeri yang dihantar</option>
+                                  <?php do{?>
+                                  <option value="<?php echo $SC['state'];?>"><?php echo strtoupper($SC['state']);?></option>
+                                  <?php }while ($SC = mysqli_fetch_assoc($stateCall))?>
+                                </select>
+                                <div class="input-group-append input-group-text">
+                                  <span class="fas fa-book"></span>
+                               </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <select name="zon" class="custom-select browser-default" required>
+                                  <option value="">Pilih zon yang dihantar</option>
+                                  <?php do{?>
+                                  <option value="<?php echo $SC['zon'];?>"><?php echo strtoupper($SC['zon']);?></option>
+                                  <?php }while ($SC = mysqli_fetch_assoc($stateCall))?>
+                                </select>
+                                <div class="input-group-append input-group-text">
+                                  <span class="fas fa-book"></span>
+                               </div>
+                        </div>
+                    </div>
+
                 </div>
                   <input type="hidden" name="role" value="distiSPBT"/>
                   <input type="hidden" name="status" value="active"/>
