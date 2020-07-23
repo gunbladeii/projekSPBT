@@ -20,11 +20,11 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $refIDPublisher = $row_Recordset['roleID'];
 
-    $refID3 = $mysqli->query("SELECT *, COUNT(login.refID) AS `jumJudul` FROM `login`WHERE login.refID = '$refIDPublisher' GROUP BY login.refID");
+    $refID3 = $mysqli->query("SELECT *, COUNT(login.refID) AS `jumPenerbit` FROM `login`WHERE login.refID = '$refIDPublisher' GROUP BY login.refID");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 
-<?php if ($RID2['roleID'] != NULL || !empty($RID2['roleID'])) {echo '<span class="badge badge-success"><?php echo $RID2['jumJudul']?></span>';}else{echo '<span class="badge badge-danger">0</span>';}?>
+<?php if ($RID2['roleID'] != NULL || !empty($RID2['roleID'])) {echo '<span class="badge badge-success"><?php echo $RID2['jumPenerbit']?></span>';}else{echo '<span class="badge badge-danger">0</span>';}?>
 
 
 
