@@ -64,7 +64,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $stateCall2 = $mysqli->query("SELECT * FROM `state` GROUP BY `zon`");
     $SC2 = mysqli_fetch_assoc($stateCall2);
 
-    $refID2 = $mysqli->query("SELECT login.name,login.username,login.password,login.status,statusBekalan.judul, statusBekalan.zon, statusBekalan.state, statusBekalan.date, statusBekalan.time FROM `login` INNER JOIN statusBekalan ON login.roleID = statusBekalan.roleID WHERE login.refID =  '$refIDPublisher' ORDER BY login.name ASC");
+    $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 
 $a=1;
