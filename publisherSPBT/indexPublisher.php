@@ -537,7 +537,9 @@ $a=1;
             </div>
 
             <div>
+              <h4>Daftar akaun pengguna</h4> 
               <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+                <div>
                   <div class="form-group">
                      <label style="padding-left: 15px">User Picture:</label>
                      <div class="input-group mb-3">
@@ -583,7 +585,11 @@ $a=1;
                          </div>
                     </div>
                   </div>
-                  
+                </div>
+
+                <div>
+                    <h4>Daftar Tugasan Pengedar</h4>
+                </div>
                   <input type="hidden" name="role" value="distiSPBT"/>
                   <input type="hidden" name="status" value="active"/>
                   <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
