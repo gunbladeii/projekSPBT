@@ -37,7 +37,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     if (isset($_POST['submit'])) {
         $publisherSPBTFacePic = addslashes(file_get_contents($_FILES["publisherSPBTFacePic"]["tmp_name"]));
      
-      $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic`) VALUES ('$roleID', '$refID', $name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
+      $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic`) VALUES ('$roleID', '$refID', '$name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
       
       header("location:indexPublisher.php");
     }
