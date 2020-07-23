@@ -487,7 +487,7 @@ $a=1;
                     <?php do {?>
                     <tr style="text-align:center">
                       <td><a href="#"><?php echo $a++;?></a></td>
-                      <td><?php echo $RID['name'];?></td>
+                      <td><?php echo strtoupper($RID['name']);?></td>
                       <td><span class="badge badge-info"><?php echo $RID['username']?></span></td>
                       <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
                       <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
