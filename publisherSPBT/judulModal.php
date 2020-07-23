@@ -8,12 +8,14 @@
    $judul = $_POST['judul'];
    $zon = $_POST['zon'];
    $state = $_POST['state'];
-   $roleID = $_POST['roleID'];
+   $roleID2 = $_POST['roleID'];
     
    if (isset($_POST['submit2'])) {
 
-      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `judul`, `state`, `zon`) VALUES ('$roleID', '$judul', '$state', '$zon')");
+      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `judul`, `state`, `zon`) VALUES ('$roleID2', '$judul', '$state', '$zon')");
       
+       $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic`) VALUES ('$roleID', '$refID', '$name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
+
       header("location:indexPublisher.php");
     } 
 
