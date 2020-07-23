@@ -33,7 +33,7 @@
 <!--start if employeeStatus=='temp'-->
 
 <?php if ($ReID['role'] == 'distiSPBT'){?>
-  <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+  <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
                <div>
                 <h6 class="badge badge-success"><?php echo strtoupper($ReID['name']);?></h6>
                     <div class="form-group">
