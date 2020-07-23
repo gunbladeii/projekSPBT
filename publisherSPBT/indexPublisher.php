@@ -528,7 +528,7 @@ $b=1;
             <div class="col-md-6">
                   <div class="card">
                     <div class="card-header border-transparent">
-                      <h3 class="card-title">Senarai edaran buku</h3>
+                      <h3 class="card-title">Status edaran buku</h3>
                       <h2 class="card-title" style="font-size:14px;">(<?php date_default_timezone_set("asia/kuala_lumpur"); echo date('d-M-Y');?>; <?php echo date('g:h:i a');?>)</h2>
 
                       <div class="card-tools">
@@ -552,6 +552,10 @@ $b=1;
                             <th>Nama Pengedar</th>
                             <th>Negeri</th>
                             <th>Zon</th>
+                            <th>Pesanan</th>
+                            <th>Bekal</th>
+                            <th>Status</th>
+
                           </tr>
                           </thead>
                           <tbody>
@@ -562,6 +566,9 @@ $b=1;
                             <td><span class="badge badge-info"><?php echo strtoupper($RID2['name'])?></span></td>
                             <td><span class="badge badge-success"><?php echo strtoupper($RID2['state']);?></span></td>
                             <td><span class="badge badge-warning"><?php echo strtoupper($RID2['zon']);?></span></td>
+                            <td><?php if (!empty($RID2['totPesanan'])){echo '<span class="badge badge-success">'.strtoupper($RID2['totPesanan']).'</span>'}else {echo '<span class="badge badge-danger">0</span>'}?></td>
+                            <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">'.strtoupper($RID2['totBekalan']).'</span>'}else {echo '<span class="badge badge-danger">0</span>'}?></td>
+                            <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">Selesai</span>'}else {echo '<span class="badge badge-danger">Belum selesai</span>'}?></td>
                           </tr>
                           <?php } while ($RID2 = mysqli_fetch_assoc($refID3)); ?>
                           </tbody>
