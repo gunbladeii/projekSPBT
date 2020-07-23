@@ -537,7 +537,7 @@ $a=1;
             </div>
 
             <div>
-              <h4>Daftar akaun pengguna</h4> 
+              <h5 style="padding-left: 15px" class="badge badge-info">Daftar akaun pengguna</h5> 
               <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
                 <div>
                   <div class="form-group">
@@ -588,7 +588,7 @@ $a=1;
                 </div>
 
                 <div>
-                    <h4>Daftar Tugasan Pengedar</h4>
+                    <h5 style="padding-left: 15px" class="badge badge-info">Daftar Tugasan Pengedar</h5>
                 </div>
                   <input type="hidden" name="role" value="distiSPBT"/>
                   <input type="hidden" name="status" value="active"/>
