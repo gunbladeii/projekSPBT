@@ -500,7 +500,7 @@ $b=1;
                     <?php do {?>
                     <tr>
                       <td><?php echo $a++;?></td>
-                      <td><a><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
+                      <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $RID['id'];?>" class="nav-link"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
                       <td><span class="badge badge-secondary"><?php echo $RID['username']?></span></td>
                       <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
                       <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
@@ -963,7 +963,7 @@ $(document).ready(function(){
     $('#judulModal').on('show.bs.modal', function (event) {
           var button = $(event.relatedTarget) // Button that triggered the modal
           var recipient = button.data('whatever') // Extract info from data-* attributes
-          var recipient2 = button.data('whatever2') // Extract info from data-* attributes
+          //var recipient2 = button.data('whatever2') // Extract info from data-* attributes
           var modal = $(this);
           var dataString = 'id=' + recipient;
 

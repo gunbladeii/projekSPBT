@@ -1,94 +1,80 @@
 <?php session_start();?>
 <?php
     require('conn.php');
-    $noIC = $_GET['noIC'];
-    $month = $_GET['month'];
+    $id = $_GET['id'];
     date_default_timezone_set("asia/kuala_lumpur"); 
     $date = date('Y-m-d');
+
+   $judul = $_POST['judul'];
+   $zon = $_POST['zon'];
+   $state = $_POST['state'];
+   $roleID = $_POST['roleID'];
     
-    
-    require('../adminSPBT/salaryAlgorithm.php');
+   if (isset($_POST['submit2'])) {
+
+      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `judul`, `state`, `zon` ) VALUES ('$roleID', '$judul', '$state', '$zon')");
+      
+      header("location:indexPublisher.php");
+    } 
+
+    $id = $mysqli->query("SELECT * FROM `login` WHERE id =  '$id'");
+    $ReID = mysqli_fetch_assoc($id);
 ?>
 
 <!--start if employeeStatus=='temp'-->
+<form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+<?php if ($ReID['role'] == 'distiSPBT'){?>
+               <div>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <select name="judul" class="custom-select browser-default" required>
+                                  <option value="">Pilih judul yang dihantar</option>
+                                  <?php do{?>
+                                  <option value="<?php echo $JC['name'];?>"><?php echo ucwords($JC['name']);?></option>
+                                  <?php }while ($JC = mysqli_fetch_assoc($judulCall))?>
+                                </select>
+                                <div class="input-group-append input-group-text">
+                                  <span class="fas fa-book"></span>
+                               </div>
+                        </div>
+                    </div>
 
-<?php if ($BC['employeeStatus'] == 'temp' && $AC > 0){?>
-            <div class="image"><img src="data:image/jpeg;base64,<?php echo base64_encode($BC['publisherSPBTFacePic']);?>" class="img-fluid img-thumbnail mx-auto d-block" style="width: 50px;height: 50px;border-radius: 50%; vertical-align:middle"/></div>
-           <div style="text-align:center; padding:3px"><button class="btn btn-outline-dark btn-sm btn-block"><?php $monthM=date_create($AC['date']);echo 'Month of '.date_format($monthM,"F,Y");?></button></div>
-            <div style="text-align:center; padding:3px"><button class="btn btn-outline-dark btn-sm btn-block"><?php echo 'Nama: '.ucwords($BC['nama']).' (I/C Number: '.$BC['noIC'].')';?></button></div>
-            <div style="text-align:center; padding:3px"><button class="btn btn-outline-dark btn-sm btn-block"><?php echo 'Account Info: ('.$BC['bankName'].': '.$BC['accNum'].')';?></button></div>
-            <div class="table-responsive">
-            <table id="example2" class="table table-hover table-responsive-xl">
-                <thead>
-                <tr style="text-align:center">
-                  <th colspan="3" class="table-info">Earnings</th>
-                  <th colspan="3" class="table-warning">Deductions</th>
-                </tr>
-                </thead>
-                <thead>
-                <tr style="text-align:center">
-                  <th class="table-info">#</th>
-                  <th class="table-info">Description</th>
-                  <th class="table-info">Amount (RM)</th>
-                  <th class="table-warning">#</th>
-                  <th class="table-warning">Description</th>
-                  <th class="table-warning">Amount (RM)</th>
-                </tr>
-                </thead>
-                <tbody>
-        
-                <tr>
-                <td>1</td>
-                <td>Fees</td>
-                <td style="text-align:right"><span id="fees" class="btn btn-light btn-sm btn-block"><?php echo $formBasicSalary;?></span></td>
-                <!--earnings-->
-                <td>1</td>
-                <td>EPF</td>
-                <td style="text-align:right"><span id="epf" class="btn btn-light btn-sm btn-block"><?php echo $epf;?></span></td>
-                <!--deductions-->
-	            </tr>
-	            
-	            <tr>
-                <td>2</td>
-                <td>Comission</td>
-                <td style="text-align:right"><span id="comission" class="btn btn-light btn-sm btn-block"><?php echo $totalComission;?></span></td>
-                <!--earnings-->
-                <td>2</td>
-                <td>Socso</td>
-                <td style="text-align:right"><span id="socso" class="btn btn-light btn-sm btn-block"><?php echo $socso;?></span></td>
-                <!--deductions-->
-	            </tr>
-	            
-	            <tr>
-                <td>3</td>
-                <td>Handphone</td>
-                <td style="text-align:right"><span id="handphone" class="btn btn-light btn-sm btn-block"><?php echo $formHandphone;?></span></td>
-                <!--earnings-->
-                <td>3</td>
-                <td>EIS</td>
-                <td style="text-align:right"><span id="eis" class="btn btn-light btn-sm btn-block"><?php echo $eis;?></span></td>
-                <!--deductions-->
-	            </tr>
-                </tbody>
-                
-                <tfoot>
-                    
-                <tr style="text-align:center">
-                  <th class="table-info" colspan="2">Total Earnings</th>
-                  <th class="table-info" style="text-align:right"><span id="totalEarning" class="btn btn-light btn-sm btn-block"><?php echo $totalEarning;?></span></th>
-                  <th class="table-warning" colspan="2">Total Deductions</th>
-                  <th class="table-warning"><span id="totalDeduction" class="btn btn-light btn-sm btn-block"><?php echo $totalDeduction;?></span></th>
-                </tr>
-                
-                <tr style="text-align:center">
-                  <th class="table-success" colspan="3">Grand Total</th>
-                  <th class="table-success" colspan="3"><span id="grandTotal" class="btn btn-light btn-sm btn-block"><?php echo $grandTotal;?></span></th>
-                </tr>
-                
-                </tfoot>
-              </table>
-             </div>
-<?php }?> 
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <select name="state" class="custom-select browser-default" required>
+                                  <option value="">Pilih negeri yang dihantar</option>
+                                  <?php do{?>
+                                  <option value="<?php echo $SC['state'];?>"><?php echo strtoupper($SC['state']);?></option>
+                                  <?php }while ($SC = mysqli_fetch_assoc($stateCall))?>
+                                </select>
+                                <div class="input-group-append input-group-text">
+                                  <span class="fas fa-book"></span>
+                               </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <select name="zon" class="custom-select browser-default" required>
+                                  <option value="">Pilih zon yang dihantar</option>
+                                  <?php do{?>
+                                  <option value="<?php echo $SC2['zon'];?>"><?php echo strtoupper($SC2['zon']);?></option>
+                                  <?php }while ($SC2 = mysqli_fetch_assoc($stateCall2))?>
+                                </select>
+                                <div class="input-group-append input-group-text">
+                                  <span class="fas fa-book"></span>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <input type="hidden" name="roleID" value="<?php echo $ReID['roleID'];?>"/>
+                  <div class="modal-footer">
+                      <input type="submit" class="btn btn-primary" name="submit2" value="Daftar tugas"/>&nbsp;
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+<?php }?>
+</form> 
 
 <!--end if employeeStatus=='temp'-->
 
