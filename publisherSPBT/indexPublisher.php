@@ -388,71 +388,7 @@ $b=1;
         </div>
         <!-- /.row -->
         
-        <!-- modal for tracking number -->
-        <div class="modal fade" id="modal-info">
-        <div class="modal-dialog">
-          <div class="modal-content bg-info">
-            <div class="modal-header">
-              <h4 class="modal-title">Scan Parcel</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-            <div style="width: 100%;margin:0 auto;text-align:center;">
-            <!--<form role="form" action="//track.trackingmore.com" method="get" onsubmit="return false">-->
-            <form role="form" action="#" method="post">  
-                        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-                        <div class="col">
-                          <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-                         <div style="col-sm-12;">
-                            <video id="preview" class="mw-100 hw-100"></video>
-                          </div>
-
-                           <script type="text/javascript">
-                        let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
-                        scanner.addListener('scan', function (content) {
-                          document.getElementById("scanInput").value = content;
-                        });
-                        Instascan.Camera.getCameras().then(function (cameras) {
-                          if (cameras.length > 0) {
-                            scanner.start(cameras[1]);
-                          } else {
-                            console.error('No cameras found.');
-                          }
-                        }).catch(function (e) {
-                          console.error(e);
-                        });
-                      </script>
-
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1">Result</span>
-                        </div>
-                        <input type="text" class="form-control" name="scanInput" id="scanInput" aria-label="Username" aria-describedby="basic-addon1">
-                      </div>
-
-                      </div>
-                    </div>
-             </form>
-             
-             <!-- qr code scanner script 
-             <div style="width: 100%;margin:0 auto;text-align:center;">
-             <video id="preview" style="width: 100%;margin:0 auto;text-align:center;"></video>
-             <span class="scan"></span>
-             <script type="text/javascript" src="appcam.js"></script>
-            </div>
-           end ! qr code scanner script -->
-            
-             
-           </div>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
+        
         <div class="row">
           <div class="col-md-12">
               
