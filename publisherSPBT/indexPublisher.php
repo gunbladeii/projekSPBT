@@ -23,7 +23,8 @@ $query_Recordset = $mysqli->query("SELECT * FROM login WHERE username =  '$colna
 $row_Recordset = mysqli_fetch_assoc($query_Recordset);
 $totalRows_Recordset = mysqli_num_rows($query_Recordset);
 
-/*insert into table login and employeeData*/
+        $refIDPublisher = $row_Recordset['roleID'];
+        /*insert into table login and employeeData*/
          $roleID = $_POST['roleID'];
          $refID = $_POST['refID'];
          $name = $_POST['name'];
@@ -46,6 +47,9 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
 
     $loginCall = $mysqli->query("SELECT * FROM `login` WHERE username =  '$colname_Recordset'");
     $LC = mysqli_fetch_assoc($loginCall);
+
+    $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
+    $RID = mysqli_fetch_assoc($refID2);
 
 $a=1;
 ?>
@@ -453,7 +457,7 @@ $a=1;
            <!-- TABLE: LATEST ORDERS -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Data Pesanan</h3>
+                <h3 class="card-title">Senarai nama pengedar</h3>
                 <h2 class="card-title" style="font-size:14px;">(<?php date_default_timezone_set("asia/kuala_lumpur"); echo date('d-M-Y');?>; <?php echo date('g:h:i a');?>)</h2>
 
                 <div class="card-tools">
@@ -467,31 +471,28 @@ $a=1;
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                <?php if (!empty($mem2['date'])){?>
+                <?php if ($RID['role'] == 'distiSPBT'){?>
                 <div class="table-responsive">
                   <table class="table m-0">
                     <thead>
                     <tr style="text-align:center">
                       <th>No</th>
-                      <th>Date</th>
-                      <th>Total Parcel</th>
-                      <th>Success</th>
-                      <th>Undel</th>
-                      <th>(%)</th>
+                      <th>Nama Pengedar</th>
+                      <th>Username</th>
+                      <th>Password</th>
+                      <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php do {?>
                     <tr style="text-align:center">
                       <td><a href="#"><?php echo $a++;?></a></td>
-                      <td><?php $dateM = new DateTime($mem2['date']);
-                                echo $dateM->format('d-m-Y');?></td>
-                      <td><span class="badge badge-info"><?php echo $mem2['itemCode']?></span></td>
-                      <td><span class="badge badge-success"><?php echo $mem2['success']?></span></td>
-                      <td><span class="badge badge-danger"><?php echo $mem2['fail']?></span></td>
-                      <td><span class="badge badge-warning"><?php echo round($mem2['percent'],2).'%';?></span></td>
+                      <td><?php echo $RID['name'];?></td>
+                      <td><span class="badge badge-info"><?php echo $RID['username']?></span></td>
+                      <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
+                      <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
                     </tr>
-                    <?php } while ($mem2 = mysqli_fetch_assoc($query_parcel2)); ?>
+                    <?php } while ($RID = mysqli_fetch_assoc($refID2)); ?>
                     </tbody>
                   </table>
                 </div>
