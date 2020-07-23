@@ -64,7 +64,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $stateCall2 = $mysqli->query("SELECT * FROM `state` GROUP BY `zon`");
     $SC2 = mysqli_fetch_assoc($stateCall2);
 
-    $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
+    $refID2 = $mysqli->query("SELECT login.name,login.username,login.password,login.status,statusBekalan.judul, statusBekalan.zon, statusBekalan.state, statusBekalan.date, statusBekalan.time FROM `login` INNER JOIN statusBekalan ON login.roleID = statusBekalan.roleID WHERE login.refID =  '$refIDPublisher' ORDER BY login.name ASC");
     $RID = mysqli_fetch_assoc($refID2);
 
 $a=1;
@@ -466,10 +466,10 @@ $a=1;
       <!-- /.modal -->
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
               
             <div class="row">
-         <div class="col-md-12">
+         <div class="col-md-6">
            <!-- TABLE: LATEST ORDERS -->
             <div class="card">
               <div class="card-header border-transparent">
@@ -522,7 +522,53 @@ $a=1;
           <!-- /.col -->
 
             <div class="col-md-6">
-            
+                  <div class="card">
+                    <div class="card-header border-transparent">
+                      <h3 class="card-title">Senarai edaran buku</h3>
+                      <h2 class="card-title" style="font-size:14px;">(<?php date_default_timezone_set("asia/kuala_lumpur"); echo date('d-M-Y');?>; <?php echo date('g:h:i a');?>)</h2>
+
+                      <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-widget="collapse">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-widget="remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                      <?php if ($RID['role'] == 'distiSPBT'){?>
+                      <div class="table-responsive">
+                        <table class="table m-0">
+                          <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Nama Pengedar</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Status</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php do {?>
+                          <tr>
+                            <td><a href="#"><?php echo $a++;?></a></td>
+                            <td><?php echo strtoupper($RID['name']);?></td>
+                            <td><span class="badge badge-info"><?php echo $RID['username']?></span></td>
+                            <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
+                            <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
+                          </tr>
+                          <?php } while ($RID = mysqli_fetch_assoc($refID2)); ?>
+                          </tbody>
+                        </table>
+                      </div>
+                      <?php } else {echo '<span class="badge badge-danger">No data yet</span>';}?>
+                      
+                      <!-- /.table-responsive -->
+                    </div>
+                  </div>
+                  <!-- /.card -->
             
             </div>
             <!-- /.card -->
