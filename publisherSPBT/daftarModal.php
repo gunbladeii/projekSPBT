@@ -31,7 +31,7 @@
 ?>
   
 
-<form method="post" action="registerData.php" role="form" enctype="multipart/form-data">
+<form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
       
        <!--BEGIN CLASS tab-pane-->
         <h3></h3>
