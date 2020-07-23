@@ -290,7 +290,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Welcome <?php echo ucwords(strtolower($row_Recordset['name']));?></h1>
+            <h1 class="m-0 text-dark">Selamat Datang <?php echo ucwords(strtolower($row_Recordset['name']));?></h1>
            
           </div><!-- /.col -->
           <div class="col-sm-6">
