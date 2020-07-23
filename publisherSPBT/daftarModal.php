@@ -39,7 +39,7 @@
         <div class="form-group">
            <label style="padding-left: 15px">User Picture:</label>
            <div class="input-group mb-3">
-              <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17" required>
+              <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17">
               <div class="input-group-append input-group-text">
                 <span class="fas fa-portrait"></span>
               </div>
