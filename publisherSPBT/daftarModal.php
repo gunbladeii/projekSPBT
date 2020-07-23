@@ -57,7 +57,7 @@
         
         <div class="form-group">
           <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Taip nama pengedar" name="name" id="validationDefault02" required>
+          <input type="text" style="text-transform: uppercase;" class="form-control" placeholder="Taip nama pengedar" name="name" id="validationDefault02" required>
           <div class="input-group-append input-group-text">
               <span class="fas fa-user"></span>
           </div>
