@@ -66,7 +66,7 @@
         
         <div class="form-group">
           <div class="input-group mb-3"> 
-          <input type="email" name="username" class="form-control" placeholder="Masukkan cadangan username" id="validationDefault03" required>
+          <input type="email" name="username" class="form-control" placeholder="Masukkan cadangan username (e-mel)" id="validationDefault03" required>
           <div class="input-group-append input-group-text">
               <span class="fas fa-envelope"></span>
           </div>
