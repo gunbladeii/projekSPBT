@@ -67,7 +67,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 
-    $refID3 = $mysqli->query("SELECT login.name, statusBekalan.state, statusBekalan.zon, statusBekalan.judul FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE statusBekalan.refID =  '$refIDPublisher' ORDER BY statusBekalan.judul ASC");
+    $refID3 = $mysqli->query("SELECT login.name, login.role, statusBekalan.state, statusBekalan.zon, statusBekalan.judul FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE statusBekalan.refID =  '$refIDPublisher' ORDER BY statusBekalan.judul ASC");
     $RID2 = mysqli_fetch_assoc($refID3);
 
 $a=1;
