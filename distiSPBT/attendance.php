@@ -352,7 +352,7 @@ $totalRows_Recordset = mysql_num_rows($Recordset);
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="https://iberkat.my/AFM">AFM Sdn. Bhd</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="https://iberkat.my/AFM">AFM </a></strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0-beta.1

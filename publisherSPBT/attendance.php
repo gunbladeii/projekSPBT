@@ -379,7 +379,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="https://iberkat.my/eSPBT2.0">eSPBT2.0 Sdn. Bhd</a>.</strong>
+    <strong>Copyright &copy; 2019 <a href="https://iberkat.my/eSPBT2.0">eSPBT2.0 </a></strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0-beta.1
