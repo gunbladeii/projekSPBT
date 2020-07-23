@@ -61,6 +61,9 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $stateCall = $mysqli->query("SELECT * FROM `state`");
     $SC = mysqli_fetch_assoc($stateCall);
 
+    $stateCall2 = $mysqli->query("SELECT * FROM `state`");
+    $SC2 = mysqli_fetch_assoc($stateCall2);
+
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 
@@ -639,8 +642,8 @@ $a=1;
                             <select name="zon" class="custom-select browser-default" required>
                                   <option value="">Pilih zon yang dihantar</option>
                                   <?php do{?>
-                                  <option value="<?php echo $SC['zon'];?>"><?php echo strtoupper($SC['zon']);?></option>
-                                  <?php }while ($SC = mysqli_fetch_assoc($stateCall))?>
+                                  <option value="<?php echo $SC2['zon'];?>"><?php echo strtoupper($SC2['zon']);?></option>
+                                  <?php }while ($SC2 = mysqli_fetch_assoc($stateCall2))?>
                                 </select>
                                 <div class="input-group-append input-group-text">
                                   <span class="fas fa-book"></span>
