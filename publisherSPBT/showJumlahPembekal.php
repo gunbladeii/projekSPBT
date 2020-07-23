@@ -20,7 +20,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $refIDPublisher = $row_Recordset['roleID'];
 
-    $refID3 = $mysqli->query("SELECT login.name, login.role, statusBekalan.state, statusBekalan.zon, statusBekalan.judul, statusBekalan.totBekalan, statusBekalan.totPesanan, statusBekalan.date, statusBekalan.time, COUNT(statusBekalan.judul) AS `jumJudul` FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE login.roleID =  '$refIDPublisher' GROUP BY statusBekalan.judul");
+    $refID3 = $mysqli->query("SELECT *, COUNT(login.refID) AS `jumJudul` FROM `login`WHERE login.refID = '$refIDPublisher' GROUP BY login.refID");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 
