@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $refIDPublisher = $row_Recordset['roleID'];
 
-    $refID3 = $mysqli->query("SELECT login.name, login.role, statusBekalan.state, statusBekalan.zon, statusBekalan.judul, statusBekalan.totBekalan, statusBekalan.totPesanan, statusBekalan.date, statusBekalan.time, SUM(statusBekalan.totBekalan) AS jumHantar FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE login.refID =  '$refIDPublisher' GROUP BY statusBekalan.refID");
+    $refID3 = $mysqli->query("SELECT login.name, login.role, statusBekalan.state, statusBekalan.zon, statusBekalan.judul, statusBekalan.totBekalan, statusBekalan.totPesanan, statusBekalan.date, statusBekalan.time, SUM(statusBekalan.totBekalan) AS jumHantar FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE statusBekalan.refID =  '$refIDPublisher' GROUP BY statusBekalan.refID");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 
