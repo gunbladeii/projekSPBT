@@ -450,7 +450,7 @@ $a=1;
       <!-- /.modal -->
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
               
             <div class="row">
          <div class="col-md-12">
@@ -500,17 +500,12 @@ $a=1;
                 
                 <!-- /.table-responsive -->
               </div>
-              <!-- /.card-body 
-              <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-right"><i class="fas fa-phone-square-alt"></i> Call SS</a>
-              </div>
-              /.card-footer -->
             </div>
             <!-- /.card -->
           </div>
           <!-- /.col -->
 
-          <div class="col-md-4">
+            <div class="col-md-6">
             
             
             </div>
