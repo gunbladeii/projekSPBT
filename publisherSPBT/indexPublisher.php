@@ -846,9 +846,9 @@ $(document).ready(function(){
  });  
  </script>  
 <!-- Select2 -->
-<script src="plugins/select2/js/select2.full.min.js"></script>
+<script src="../adminSPBT/plugins/select2/js/select2.full.min.js"></script>
 <!-- InputMask -->
-<script src="plugins/inputmask/jquery.inputmask.bundle.js"></script>
+<script src="../adminSPBT/plugins/inputmask/jquery.inputmask.bundle.js"></script>
 <script type="text/javascript">
   $(function() {
      'use strict';
