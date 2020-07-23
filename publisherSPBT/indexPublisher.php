@@ -568,7 +568,7 @@ $b=1;
                             <td><span class="badge badge-warning"><?php echo strtoupper($RID2['zon']);?></span></td>
                             <td><?php if (!empty($RID2['totPesanan'])){echo '<span class="badge badge-success">'.strtoupper($RID2["totPesanan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
                             <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">'.strtoupper($RID2["totBekalan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
-                            <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">Selesai</span>';}else {echo '<span class="badge badge-danger">Belum selesai</span>';}?></td>
+                            <td><?php if (!empty($RID2['totBekalan']) && $RID2['totBekalan'] == $RID2['totPesanan']){echo '<span class="badge badge-success">Selesai</span>';}elseif ($RID2['totBekalan'] < $RID2['totPesanan']){echo '<span class="badge badge-danger">Belum selesai</span>';}elseif ($RID2['totBekalan'] > $RID2['totPesanan']){echo '<span class="badge badge-danger">Semak semula</span>';}?></td>
                           </tr>
                           <?php } while ($RID2 = mysqli_fetch_assoc($refID3)); ?>
                           </tbody>
