@@ -919,20 +919,12 @@ $(document).ready(function(){
 
 </script>
 <!-- DataTables -->
-<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
-<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
+<script src="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></script>
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
+  $(document).ready( function () {
+    $('#example1').DataTable();
+} );
 </script>
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
