@@ -232,7 +232,7 @@ $a=1;
           </li>
           <li class="nav-item">
             <a href="attendance.php" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon far fa-folder"></i>
               <p>
                 i-Record
                 <!--<i class="fas fa-angle-left right"></i>
@@ -242,7 +242,7 @@ $a=1;
           </li>
           <li class="nav-item">
               <a href="payroll.php" class="nav-link">
-              <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <i class="nav-icon fas fa-search-location"></i>
               <p>
                 i-Track
                 <!--<i class="fas fa-angle-left right"></i>
