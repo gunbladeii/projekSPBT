@@ -275,7 +275,7 @@ $a=1;
           </li>
           
           <li class="nav-item">
-            <a data-toggle="modal" data-target="#daftarModal" data-whatever="<?php echo $row_Recordset['id'];?>" class="nav-link">
+            <a data-toggle="modal" data-target="#daftarModal" class="nav-link">
               <i class="nav-icon fas fa-truck"></i>
               <p>
                 Daftar Pengedar
