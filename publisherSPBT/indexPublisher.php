@@ -300,7 +300,7 @@ $a=1;
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-box"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">e-Attendance</span>
+                <span class="info-box-text">Jumlah Judul</span>
                 <div id="show2"></div>
               </div>
               <!-- /.info-box-content -->
@@ -313,7 +313,7 @@ $a=1;
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-motorcycle"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Delivery Records</span>
+                <span class="info-box-text">Jumlah Bekalan</span>
                 <div id="show"></div>
               </div>
               <!-- /.info-box-content -->
@@ -330,7 +330,7 @@ $a=1;
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar-alt"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Payment Voucher</span>
+                <span class="info-box-text">Jumlah Pesanan</span>
                 <div id="show3"></div>
               </div>
               <!-- /.info-box-content -->
@@ -344,7 +344,7 @@ $a=1;
               <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-archive"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Scan Parcel</span>
+                <span class="info-box-text">Jejak pesanan</span>
                 <span class="badge badge-success" data-toggle="modal" data-target="#modal-info">Scan Now</span>
               </div>
               <!-- /.info-box-content -->
