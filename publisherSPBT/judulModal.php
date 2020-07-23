@@ -31,8 +31,9 @@
 ?>
 
 <!--start if employeeStatus=='temp'-->
-<form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+
 <?php if ($ReID['role'] == 'distiSPBT'){?>
+  <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
                <div>
                 <h6 class="badge badge-success"><?php echo strtoupper($ReID['name']);?></h6>
                     <div class="form-group">
@@ -83,9 +84,10 @@
                       <input type="submit" class="btn btn-primary" name="submit2" value="Daftar tugas"/>&nbsp;
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   </div>
+    </form> 
 <?php }?>
-</form> 
- 
+
+
 <!-- Select2 -->
 <script src="plugins/select2/js/select2.full.min.js"></script>
 <!-- InputMask -->
