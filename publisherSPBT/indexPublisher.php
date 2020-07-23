@@ -543,8 +543,8 @@ $b=1;
                     <!-- /.card-header -->
                     <div class="card-body p-0">
                       <?php if ($RID2['role'] == 'distiSPBT'){?>
-                      <div class="table-responsive" id="example1">
-                        <table class="table m-0">
+                      <div class="table-responsive">
+                        <table class="table m-0" id="example1">
                           <thead>
                           <tr>
                             <th>No</th>
