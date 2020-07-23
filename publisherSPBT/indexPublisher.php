@@ -38,11 +38,12 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
         
         /*add pictue*/
         
-        $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic` VALUES ('$roleID', '$refID', $name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
+        $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic`) VALUES ('$roleID', '$refID', $name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
         
         header("location:indexPublisher.php");
     }
-    
+
+
     $loginCall = $mysqli->query("SELECT * FROM `login` WHERE username =  '$colname_Recordset'");
     $LC = mysqli_fetch_assoc($loginCall);
 
