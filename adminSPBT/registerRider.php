@@ -616,7 +616,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     <!-- Main content -->
 <section class="content">
   <div class="register-logo">
-    <a href="index.php"><img src="iberkat.jpeg" style="width:45%"></a>
+    <a href="index.php"><img src="logo_kpm.png" style="width:45%"></a>
   </div>
       
   <div class="card">

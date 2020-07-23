@@ -198,7 +198,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
-      <img src="../adminSPBT/dist/img/iberkat.jpeg" alt="altus Logo" class="brand-image img-circle elevation-3"
+      <img src="../adminSPBT/dist/img/logo_kpm.png" alt="altus Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-dark">eSPBT2.0</span>
     </a>
@@ -302,7 +302,7 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
     <!-- Main content -->
     <section class="content">
   <div class="register-logo">
-    <a href="index.php"><img src="../adminSPBT/iberkat.jpeg" style="width:15%"></a>
+    <a href="index.php"><img src="../adminSPBT/logo_kpm.png" style="width:15%"></a>
   </div>
       
   <div class="card">
