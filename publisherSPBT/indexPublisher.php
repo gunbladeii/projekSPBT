@@ -613,7 +613,6 @@ $b=1;
             </div>
 
             <div>
-              <h5 style="padding-left: 15px;text-decoration: underline overline" class="display-5">Daftar akaun pengguna</h5> 
               <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
                 <div>
                   <div class="form-group">
