@@ -19,18 +19,9 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$query_Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username =  '$colname_Recordset'");
+$query_Recordset = $mysqli->query("SELECT * FROM login WHERE username =  '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($query_Recordset);
 $totalRows_Recordset = mysqli_num_rows($query_Recordset);
-
-$noIC = $row_Recordset['noIC'];
-$query_parcel = $mysqli->query("SELECT * FROM infoParcel WHERE date = '$date' AND noIC = '$noIC'");
-$mem = mysqli_fetch_assoc($query_parcel);
-$totalRows_parcel = mysqli_num_rows($query_parcel);
-
-$query_parcel2 = $mysqli->query("SELECT *,(success/itemCode)*100 AS percent FROM infoParcel WHERE noIC = '$noIC' ORDER BY date DESC LIMIT 10");
-$mem2 = mysqli_fetch_assoc($query_parcel2);
-$totalRows_parcel2 = mysqli_num_rows($query_parcel2);
 
 $a=1;
 ?>
@@ -219,7 +210,7 @@ $a=1;
           <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/> 
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo ucwords(strtolower($row_Recordset['nama']));?></a>
+          <a href="#" class="d-block"><?php echo ucwords(strtolower($row_Recordset['name']));?></a>
         </div>
       </div>
 
@@ -229,10 +220,10 @@ $a=1;
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="index.php" class="nav-link active">
+            <a href="indexPublisher.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                 -iBERKAT publisherSPBT SECTION-
+                 -PUBLISHER SECTION-
                 <!--<i class="right fas fa-angle-left"></i>-->
               </p>
             </a>
@@ -243,7 +234,7 @@ $a=1;
             <a href="attendance.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                e-Attendance
+                i-Record
                 <!--<i class="fas fa-angle-left right"></i>
                 <!--<span class="badge badge-info right">6</span>-->
               </p>
@@ -253,7 +244,7 @@ $a=1;
               <a href="payroll.php" class="nav-link">
               <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
-                e-Payroll
+                i-Track
                 <!--<i class="fas fa-angle-left right"></i>
                 <!--<span class="badge badge-info right">6</span>-->
               </p>
