@@ -499,9 +499,9 @@ $b=1;
                     <tbody>
                     <?php do {?>
                     <tr>
-                      <td><a href="#"><?php echo $a++;?></a></td>
-                      <td><?php echo strtoupper($RID['name']);?></td>
-                      <td><span class="badge badge-info"><?php echo $RID['username']?></span></td>
+                      <td><?php echo $a++;?></td>
+                      <td><a><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
+                      <td><span class="badge badge-secondary"><?php echo $RID['username']?></span></td>
                       <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
                       <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
                     </tr>
@@ -674,11 +674,11 @@ $b=1;
       <!-- End parcel modal -->
       
       <!-- Begin salary modal -->
-      <div class="modal fade" id="salaryModal">
+      <div class="modal fade" id="judulModal">
         <div class="modal-dialog">
           <div class="modal-content bg-light">
             <div class="modal-header">
-              <h4 class="modal-title">Payment voucher (Current view)</h4>
+              <h4 class="modal-title">Daftar Tugasan (Pengedar)</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
             </div>
@@ -959,17 +959,17 @@ $(document).ready(function(){
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
-    /*SalaryModal*/
-    $('#salaryModal').on('show.bs.modal', function (event) {
+    /*judulModal*/
+    $('#judulModal').on('show.bs.modal', function (event) {
           var button = $(event.relatedTarget) // Button that triggered the modal
           var recipient = button.data('whatever') // Extract info from data-* attributes
           var recipient2 = button.data('whatever2') // Extract info from data-* attributes
           var modal = $(this);
-          var dataString = 'noIC=' + recipient + '&' + 'month=' + recipient2;
+          var dataString = 'id=' + recipient;
 
             $.ajax({
                 type: "GET",
-                url: "showSalary.php",
+                url: "judulModal.php",
                 data: dataString,
                 cache: false,
                 success: function (data) {
