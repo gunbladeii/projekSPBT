@@ -3,7 +3,6 @@
 if (!isset($_SESSION)) {
   session_start();
 }
-session_start();
 
 $colname_Recordset = "-1";
 if (isset($_SESSION['user'])) {
@@ -20,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $refIDPublisher = $row_Recordset['roleID'];
 
-    $refID3 = $mysqli->query("SELECT *, COUNT(login.refID) AS `jumPenerbit` FROM `login`WHERE login.refID = '$refIDPublisher' GROUP BY login.refID");
+    $refID3 = $mysqli->query("SELECT *, COUNT(refID) AS `jumPenerbit` FROM `login` WHERE refID = '$refIDPublisher' GROUP BY refID");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 
