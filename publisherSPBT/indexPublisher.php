@@ -512,7 +512,7 @@ $a=1;
 <!-- Begin parcel modal -->
     <div class="modal fade" id="daftarModal">
         <div class="modal-dialog">
-          <div class="modal-content bg-success">
+          <div class="modal-content bg-light">
             <div class="modal-header">
               <h4 class="modal-title">Daftar Pengedar</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
