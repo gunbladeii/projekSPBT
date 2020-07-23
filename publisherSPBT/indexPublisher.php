@@ -429,7 +429,7 @@ $a=1;
            <!-- TABLE: LATEST ORDERS -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Parcel Delivery Status</h3>
+                <h3 class="card-title">Data Pesanan</h3>
                 <h2 class="card-title" style="font-size:14px;">(<?php date_default_timezone_set("asia/kuala_lumpur"); echo date('d-M-Y');?>; <?php echo date('g:h:i a');?>)</h2>
 
                 <div class="card-tools">
