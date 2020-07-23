@@ -51,11 +51,9 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 
-    $refID3 = $mysqli->query("SELECT login.name, login.role, statusBekalan.state, statusBekalan.zon, statusBekalan.judul, statusBekalan.totBekalan, statusBekalan.totPesanan, statusBekalan.date, statusBekalan.time FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE login.refID =  '$refIDPublisher' ORDER BY statusBekalan.judul ASC");
-    $RID2 = mysqli_fetch_assoc($refID3);
 
 $a=1;
-$b=1;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -462,40 +460,7 @@ $b=1;
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                      <?php if ($RID2['role'] == 'distiSPBT'){?>
-                      <div class="table-responsive">
-                        <table class="table m-0" id="example1">
-                          <thead>
-                          <tr>
-                            <th>No</th>
-                            <th>Judul</th>
-                            <th>Nama Pengedar</th>
-                            <th>Negeri</th>
-                            <th>Zon</th>
-                            <th>Pesanan</th>
-                            <th>Bekal</th>
-                            <th>Status</th>
-
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <?php do {?>
-                          <tr>
-                            <td><?php echo $b++;?></td>
-                            <td><?php echo strtoupper($RID2['judul']);?></td>
-                            <td><span class="badge badge-info"><?php echo strtoupper($RID2['name'])?></span></td>
-                            <td><span class="badge badge-success"><?php echo strtoupper($RID2['state']);?></span></td>
-                            <td><span class="badge badge-warning"><?php echo strtoupper($RID2['zon']);?></span></td>
-                            <td><?php if (!empty($RID2['totPesanan'])){echo '<span class="badge badge-success">'.strtoupper($RID2["totPesanan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
-                            <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">'.strtoupper($RID2["totBekalan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
-                            <td><?php if (!empty($RID2['totBekalan']) && $RID2['totBekalan'] == $RID2['totPesanan']){echo '<span class="badge badge-success">Selesai</span>';}elseif ($RID2['totBekalan'] < $RID2['totPesanan']){echo '<span class="badge badge-danger">Belum selesai</span>';}elseif ($RID2['totBekalan'] > $RID2['totPesanan']){echo '<span class="badge badge-danger">Semak semula</span>';}elseif ($RID2['totBekalan'] == 0){echo '<span class="badge badge-danger">Belum selesai</span>';}?></td>
-                          </tr>
-                          <?php } while ($RID2 = mysqli_fetch_assoc($refID3)); ?>
-                          </tbody>
-                        </table>
-                      </div>
-                      <?php } else {echo '<span class="badge badge-danger">No data yet</span>';}?>
-                      
+                      <div id="showStatusBekal"></div>                      
                       <!-- /.table-responsive -->
                     </div>
                   </div>
@@ -871,7 +836,7 @@ $(document).ready(function(){
 			setInterval(function () {
 				$('#show').load('liveReceive.php')
 				$('#show2').load('liveStatusPunch.php')
-				$('#show3').load('liveAttendStatus.php')
+				$('#showStatusBekal').load('showStatusBekal.php')
 			}, 3000);
 		});
 </script>
