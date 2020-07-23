@@ -663,52 +663,6 @@ $b=1;
                   </div>
                 </div>
 
-                <div>
-                    <h5 style="padding-left: 15px;text-decoration: underline overline" class="display-5">Daftar Tugasan Pengedar</h5>
-
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <select name="judul" class="custom-select browser-default" required>
-                                  <option value="">Pilih judul yang dihantar</option>
-                                  <?php do{?>
-                                  <option value="<?php echo $JC['name'];?>"><?php echo ucwords($JC['name']);?></option>
-                                  <?php }while ($JC = mysqli_fetch_assoc($judulCall))?>
-                                </select>
-                                <div class="input-group-append input-group-text">
-                                  <span class="fas fa-book"></span>
-                               </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <select name="state" class="custom-select browser-default" required>
-                                  <option value="">Pilih negeri yang dihantar</option>
-                                  <?php do{?>
-                                  <option value="<?php echo $SC['state'];?>"><?php echo strtoupper($SC['state']);?></option>
-                                  <?php }while ($SC = mysqli_fetch_assoc($stateCall))?>
-                                </select>
-                                <div class="input-group-append input-group-text">
-                                  <span class="fas fa-book"></span>
-                               </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <select name="zon" class="custom-select browser-default" required>
-                                  <option value="">Pilih zon yang dihantar</option>
-                                  <?php do{?>
-                                  <option value="<?php echo $SC2['zon'];?>"><?php echo strtoupper($SC2['zon']);?></option>
-                                  <?php }while ($SC2 = mysqli_fetch_assoc($stateCall2))?>
-                                </select>
-                                <div class="input-group-append input-group-text">
-                                  <span class="fas fa-book"></span>
-                               </div>
-                        </div>
-                    </div>
-
-                </div>
                   <input type="hidden" name="role" value="distiSPBT"/>
                   <input type="hidden" name="status" value="active"/>
                   <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
