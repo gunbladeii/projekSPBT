@@ -61,7 +61,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $stateCall = $mysqli->query("SELECT * FROM `state`");
     $SC = mysqli_fetch_assoc($stateCall);
 
-    $stateCall2 = $mysqli->query("SELECT * FROM `state`");
+    $stateCall2 = $mysqli->query("SELECT * FROM `state` GROUP BY `zon`");
     $SC2 = mysqli_fetch_assoc($stateCall2);
 
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
