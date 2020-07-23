@@ -32,8 +32,7 @@
   
 
 <form method="post" action="registerData.php" role="form" enctype="multipart/form-data">
-    
-       <button type="button" class="btn btn-light btn-block">Login Section</button>
+      
        <!--BEGIN CLASS tab-pane-->
         <div id="home" class="collapse">
         <h3></h3>
