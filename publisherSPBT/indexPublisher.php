@@ -321,7 +321,7 @@ $a=1;
         <!-- Info boxes -->
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
-            <a href="attendance.php" style="color:black;"><div class="info-box">
+            <a href="#" style="color:black;"><div class="info-box">
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-book-open"></i></span>
 
               <div class="info-box-content">
@@ -351,7 +351,7 @@ $a=1;
           <div class="clearfix hidden-md-up"></div>
 
           <div class="col-12 col-sm-6 col-md-3">
-            <a data-toggle="modal" data-target="#salaryModal" data-whatever="<?php echo $row_Recordset['noIC'];?>" data-whatever2="<?php echo $month;?>" style="color:black;"><div class="info-box mb-3">
+            <a data-toggle="modal" data-target="#" data-whatever="<?php echo $row_Recordset['noIC'];?>" data-whatever2="<?php echo $month;?>" style="color:black;"><div class="info-box mb-3">
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-info-circle"></i></span>
 
               <div class="info-box-content">
