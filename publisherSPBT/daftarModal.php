@@ -6,6 +6,7 @@
     $date = date('Y-m-d');
        /*insert into table login and employeeData*/
          $roleID = $_POST['roleID'];
+         $refID = $_POST['refID'];
          $name = $_POST['name'];
          $username = $_POST['username'];/*emel instead*/
        /*insert into table login*/
@@ -13,13 +14,12 @@
         $role = $_POST['role'];
         $status = $_POST['status'];
         
-        
     if (isset($_POST['submit'])) {
         $publisherSPBTFacePic = addslashes(file_get_contents($_FILES["publisherSPBTFacePic"]["tmp_name"]));
         
         /*add pictue*/
         
-        $mysqli->query("INSERT INTO `login` (`roleID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic` VALUES ('$roleID', '$name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
+        $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic` VALUES ('$roleID', '$refID', $name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
         
         header("location:indexPublisher.php");
     }
