@@ -67,7 +67,7 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 
-    $refID3 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
+    $refID3 = $mysqli->query("SELECT login.name, statusBekalan.state, statusBekalan.zon, statusBekalan.judul FROM `login` INNER JOIN `statusBekalan` ON login.roleID = statusBekalan.roleID WHERE statusBekalan.refID =  '$refIDPublisher' ORDER BY statusBekalan.judul ASC");
     $RID2 = mysqli_fetch_assoc($refID3);
 
 $a=1;
@@ -548,20 +548,20 @@ $b=1;
                           <thead>
                           <tr>
                             <th>No</th>
+                            <th>Judul</th>
                             <th>Nama Pengedar</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Status</th>
+                            <th>Negeri</th>
+                            <th>Zon</th>
                           </tr>
                           </thead>
                           <tbody>
                           <?php do {?>
                           <tr>
                             <td><a href="#"><?php echo $b++;?></a></td>
-                            <td><?php echo strtoupper($RID2['name']);?></td>
-                            <td><span class="badge badge-info"><?php echo $RID2['username']?></span></td>
-                            <td><span class="badge badge-success"><?php echo $RID2['password']?></span></td>
-                            <td><span class="badge badge-warning"><?php echo strtoupper($RID2['status']);?></span></td>
+                            <td><?php echo strtoupper($RID2['judul']);?></td>
+                            <td><span class="badge badge-info"><?php echo $RID2['name']?></span></td>
+                            <td><span class="badge badge-success"><?php echo strtoupper($RID2['state']);?></span></td>
+                            <td><span class="badge badge-warning"><?php echo strtoupper($RID2['zon']);?></span></td>
                           </tr>
                           <?php } while ($RID2 = mysqli_fetch_assoc($refID3)); ?>
                           </tbody>
