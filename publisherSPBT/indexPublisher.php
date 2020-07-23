@@ -621,8 +621,8 @@ $b=1;
     <!-- End salary modal -->
 
 
-<!-- jQuery 
-<script src="../adminSPBT/plugins/jquery/jquery.min.js"></script>-->
+<!-- jQuery -->
+<script src="../adminSPBT/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../adminSPBT/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
