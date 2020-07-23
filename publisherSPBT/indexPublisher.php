@@ -835,7 +835,7 @@ $(document).ready(function(){
 		$(document).ready(function() {
 			setInterval(function () {
 				$('#show').load('liveReceive.php')
-				$('#showJumlahPembekal').load('liveStatusPunch.php')
+				$('#showJumlahPembekal').load('showJumlahPembekal.php')
 				$('#showStatusBekal').load('showStatusBekal.php')
 			}, 3000);
 		});
