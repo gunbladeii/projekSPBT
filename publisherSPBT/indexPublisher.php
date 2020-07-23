@@ -67,6 +67,9 @@ $totalRows_Recordset = mysqli_num_rows($query_Recordset);
     $refID2 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
     $RID = mysqli_fetch_assoc($refID2);
 
+    $refID3 = $mysqli->query("SELECT * FROM `login` WHERE refID =  '$refIDPublisher'");
+    $RID2 = mysqli_fetch_assoc($refID3);
+
 $a=1;
 ?>
 <!DOCTYPE html>
@@ -538,7 +541,7 @@ $a=1;
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                      <?php if ($RID['role'] == 'distiSPBT'){?>
+                      <?php if ($RID2['role'] == 'distiSPBT'){?>
                       <div class="table-responsive">
                         <table class="table m-0">
                           <thead>
@@ -554,12 +557,12 @@ $a=1;
                           <?php do {?>
                           <tr>
                             <td><a href="#"><?php echo $a++;?></a></td>
-                            <td><?php echo strtoupper($RID['name']);?></td>
-                            <td><span class="badge badge-info"><?php echo $RID['username']?></span></td>
-                            <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
-                            <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
+                            <td><?php echo strtoupper($RID2['name']);?></td>
+                            <td><span class="badge badge-info"><?php echo $RID2['username']?></span></td>
+                            <td><span class="badge badge-success"><?php echo $RID2['password']?></span></td>
+                            <td><span class="badge badge-warning"><?php echo strtoupper($RID2['status']);?></span></td>
                           </tr>
-                          <?php } while ($RID = mysqli_fetch_assoc($refID2)); ?>
+                          <?php } while ($RID2 = mysqli_fetch_assoc($refID3)); ?>
                           </tbody>
                         </table>
                       </div>
