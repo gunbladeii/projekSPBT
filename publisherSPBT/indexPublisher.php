@@ -343,8 +343,8 @@ $a=1;
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-map-pin"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Jumlah Bekalan</span>
-                <div id="show"></div>
+                <span class="info-box-text">Jumlah Penghantaran</span>
+                <div id="showJumlahHantar"></div>
               </div>
               <!-- /.info-box-content -->
             </div></a>
@@ -834,7 +834,7 @@ $(document).ready(function(){
 	<script type="text/javascript">
 		$(document).ready(function() {
 			setInterval(function () {
-				$('#show').load('liveReceive.php')
+				$('#showJumlahHantar').load('showJumlahHantar.php')
 				$('#showJumlahPembekal').load('showJumlahPembekal.php')
 				$('#showStatusBekal').load('showStatusBekal.php')
 			}, 3000);
