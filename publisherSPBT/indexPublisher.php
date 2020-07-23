@@ -327,7 +327,7 @@ $a=1;
 
           <div class="col-12 col-sm-6 col-md-3">
             <a data-toggle="modal" data-target="#salaryModal" data-whatever="<?php echo $row_Recordset['noIC'];?>" data-whatever2="<?php echo $month;?>" style="color:black;"><div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar-alt"></i></span>
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-info-circle"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Pesanan</span>
@@ -341,7 +341,7 @@ $a=1;
          
          <div class="col-12 col-sm-6 col-md-3">
             <a href="#" style="color:black;"><div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-archive"></i></span>
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-map-pin"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Jejak pesanan</span>
