@@ -481,7 +481,7 @@ $b=1;
                           <tbody>
                           <?php do {?>
                           <tr>
-                            <td><a href="#"><?php echo $b++;?></a></td>
+                            <td><?php echo $b++;?></td>
                             <td><?php echo strtoupper($RID2['judul']);?></td>
                             <td><span class="badge badge-info"><?php echo strtoupper($RID2['name'])?></span></td>
                             <td><span class="badge badge-success"><?php echo strtoupper($RID2['state']);?></span></td>
