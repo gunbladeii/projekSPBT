@@ -48,41 +48,7 @@
 			<input type="text" class="form-control" id="noIC" name="noIC" value="<?php echo $mem['noIC'];?>" readonly="true"/>
 
 		</div>
-		<div class="form-group">
-		    <label for="id">Name</label>
-			<input type="text" class="form-control" id="nama" name="nama" value="<?php echo ucwords(strtolower($mem['nama']));?>"/>
-		</div>
-	
-	
-	       <input type="hidden" class="form-control" id="stationCode" name="stationCode" value="<?php echo $mem['stationCode'];?>" readonly="true"/>
-			<input type="hidden" class="form-control" id="date" name="date" value="<?php echo $mem['date'];?>" readonly="true"/>
-			
-		<div class="form-group">
-        <label for="email">Total Received:</label>
-		<input type="text" class="form-control" id="itemCode" name="itemCode" value="<?php echo $mem['itemCode'];?>"/>
-		</div>
-			
-		<div class="form-group">
-        <label for="email">Total Success</label>
-			<input type="hidden" class="form-control" id="fail" name="fail" value="<?php echo $mem['fail'];?>"/>
-			<input type="hidden" class="form-control" id="status" name="status" value="<?php echo $mem['status'];?>"/>
-			<input type="number" class="form-control" id="success" name="success" value="<?php echo $mem['success'];?>"/>
-		</div>
 		
-		<div class="form-group">
-        <label for="email">Odometer Start:</label>
-			<input type="number" class="form-control" id="odoStart" name="odoStart" value="<?php echo $mem['odoStart'];?>"/>
-		</div>
-		
-		<div class="form-group">
-        <label for="email">Odometer Finish:</label>
-			<input type="number" class="form-control" id="odoFinish" name="odoFinish" value="<?php echo $mem['odoFinish'];?>"/>
-		</div>
-		
-		<div class="form-group">
-        <label for="email">Oil (RM):</label>
-			<input type="number" class="form-control" id="oil" name="oil" value="<?php echo $mem['oil'];?>"/>
-		</div>
 		
 		<div class="modal-footer">
 			<input type="submit" class="btn btn-primary" name="submit" value="Update Data Parcel" />&nbsp;
