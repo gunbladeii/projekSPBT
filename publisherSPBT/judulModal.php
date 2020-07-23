@@ -9,10 +9,11 @@
    $zon = $_POST['zon'];
    $state = $_POST['state'];
    $roleID2 = $_POST['roleID'];
+   $refID = $_POST['refID'];
     
    if (isset($_POST['submit2'])) {
 
-      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `judul`, `state`, `zon`) VALUES ('$roleID2', '$judul', '$state', '$zon')");
+      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `refID`, `judul`, `state`, `zon`) VALUES ('$roleID2', '$refID', $judul', '$state', '$zon')");
 
       header("location:indexPublisher.php");
     } 
@@ -80,6 +81,7 @@
                 </div>
 
                   <input type="hidden" name="roleID" value="<?php echo $ReID['roleID'];?>"/>
+                  <input type="hidden" name="refID" value="<?php echo $ReID['refID'];?>"/>
                   <div class="modal-footer">
                       <input type="submit" class="btn btn-primary" name="submit2" value="Daftar tugas"/>&nbsp;
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -331,7 +331,7 @@ $a=1;
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Judul</span>
-                <div id="show2"></div>
+                <div id="showJumlahJudul"></div>
               </div>
               <!-- /.info-box-content -->
             </div></a>
@@ -835,7 +835,7 @@ $(document).ready(function(){
 		$(document).ready(function() {
 			setInterval(function () {
 				$('#show').load('liveReceive.php')
-				$('#show2').load('liveStatusPunch.php')
+				$('#showJumlahJudul').load('liveStatusPunch.php')
 				$('#showStatusBekal').load('showStatusBekal.php')
 			}, 3000);
 		});
