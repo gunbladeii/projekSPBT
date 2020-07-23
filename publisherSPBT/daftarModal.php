@@ -34,7 +34,6 @@
 <form method="post" action="registerData.php" role="form" enctype="multipart/form-data">
       
        <!--BEGIN CLASS tab-pane-->
-        <div id="home" class="collapse">
         <h3></h3>
         
         <div class="form-group">
@@ -45,7 +44,7 @@
                 <span class="fas fa-portrait"></span>
               </div>
           </div>
-        </div>
+         </div>
 
         <div class="form-group">
           <div class="input-group mb-3">
@@ -76,16 +75,12 @@
         
         <div class="form-group">
           <div class="input-group mb-3"> 
-          <input type="password" name="password" class="form-control" placeholder="Masukkan cadangan password" id="validationDefault04" required>
-          <div class="input-group-append input-group-text">
-              <span class="fas fa-lock"></span>
+               <input type="password" name="password" class="form-control" placeholder="Masukkan cadangan password" id="validationDefault04" required>
+               <div class="input-group-append input-group-text">
+                  <span class="fas fa-lock"></span>
+               </div>
           </div>
-          </div
         </div>
-        
-        </div>
-       </div><h3></h3>
-       <!--end class tab-pane -->
         
         <input type="hidden" name="role" value="distiSPBT"/>
         <input type="hidden" name="status" value="active"/>
