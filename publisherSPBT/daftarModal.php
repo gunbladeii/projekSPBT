@@ -32,10 +32,6 @@
   
 
 <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
-      
-       <!--BEGIN CLASS tab-pane-->
-        <h3></h3>
-        
         <div class="form-group">
            <label style="padding-left: 15px">User Picture:</label>
            <div class="input-group mb-3">
