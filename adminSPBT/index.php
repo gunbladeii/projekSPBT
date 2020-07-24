@@ -420,7 +420,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               </div>
             </div>
           </div>
-        </div>
+         </div>
         
         <!-- /.row -->
         <!-- Main row -->
