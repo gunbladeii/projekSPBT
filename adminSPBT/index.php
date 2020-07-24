@@ -257,13 +257,13 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">eSPBT2.0 System Dashboard</h1>
+            <h1 class="m-0 text-dark">eSPBT 2.0 System Dashboard</h1>
             <p>(*All data shown below as of <?php echo $date;?>)</p>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">eSPBT2.0 | Dashboard</li>
+              <li class="breadcrumb-item active">eSPBT 2.0 | Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -281,7 +281,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="inner">
                 <h3><div id="totalSuccessParcel"></div></h3>
 
-                <p>Succesful Parcel Today</p>
+                <p>Jumlah Penerbit</p>
               </div>
               <div class="icon">
                 <i class="ion ion-clipboard"></i>
@@ -296,7 +296,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="inner">
                 <h3><div id="percentSuccessParcel"></div></h3>
 
-                <p>Parcel Delivered Rate</p>
+                <p>Jumlah Judul</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -311,7 +311,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="inner">
                 <h3><div id="totalSupervisor"></div></h3>
 
-                <p>Supervisor</p>
+                <p>Jumlah Pesanan</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -326,7 +326,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="inner">
                 <h3><div id="totalpublisherSPBT"></div></h3>
 
-                <p>publisherSPBTs</p>
+                <p>Jumlah Pembekalan</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -337,11 +337,12 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           <!-- ./col -->
         </div>
         
-        <div class="col-md-12">
+        <div id="row">
+        <div class="col-md-6">
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">publisherSPBT Attendance Status</h3>
+                <h3 class="card-title">Senarai penerbit berdaftar</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
@@ -363,11 +364,11 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               </div>
               </div>
               
-            <div class="col-md-12"> 
+            <div class="col-md-6"> 
               <!-- TABLE: parcel delivery publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Parcel Delivery Status</h3>
+                <h3 class="card-title">Senarai judul</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
               <!-- /.card-body -->
                 <div class="card-tools">
@@ -389,13 +390,16 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             </div>
             <!-- /.card -->
           </div>
-          <!-- /.col -->
-        
-        <div class="col-lg-12">
+          <!-- /.col -->        
+        </div>
+        <!-- /.row -->
+
+        <div id="row">
+        <div class="col-lg-6">
            <!-- TABLE: list of odometer -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Vehicle Odometer</h3>
+                <h3 class="card-title">Senarai </h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
@@ -414,86 +418,13 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
                   </div>
                 <!-- /.table-responsive -->
               </div>
-              </div>
-              </div>
+            </div>
+          </div>
+        </div>
         
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">
-          <!-- Left col -->
-          <section class="col-lg-12 connectedSortable">
-            <!-- Custom tabs (Charts with tabs)-->
-            <div class="card">
-              <div class="card-header d-flex p-0">
-                <h3 class="card-title p-3">
-                  <i class="fas fa-chart-pie mr-1"></i>
-                  Cost VS Revenue Indicator (by month)
-                </h3>
-              </div><!-- /.card-body -->
-              <div id="showAttChart"></div>
-            </div>
-            </div>
-            <!-- /.card -->
-            
-            <!-- DIRECT CHAT -->
-            <!-- carousel
-            <div class="card direct-chat direct-chat-primary">
-              <div class="card-header">
-                <h3 class="card-title">Annoucement</h3>
-
-                <div class="card-tools">
-                  <span data-toggle="tooltip" title="3 New Messages" class="badge badge-primary">3</span>
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Contacts"
-                          data-widget="chat-pane-toggle">
-                    <i class="fas fa-comments"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              
-             
-              <div class="card-body">
-  
- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://blog.bannersnack.com/wp-content/uploads/2018/12/emotional-advertising-examples-.png" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://quinnlenamatttim.files.wordpress.com/2013/01/magazine-ads-dhl-1.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.pinimg.com/originals/e6/da/f1/e6daf1a7e3cd09d07e108ccce68fb468.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  end carousel -->
- 
-             </div>
-            
-            <!--/.direct-chat -->
-
-            
-          </section>
-          <!-- /.Left col -->
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
          
   </div>
   <!-- /.content-wrapper -->
