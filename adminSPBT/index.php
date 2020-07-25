@@ -339,7 +339,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       </section>
       <section class="content">
         <div id="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
@@ -365,7 +365,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               </div>
               </div>
               
-            <div class="col-md-6"> 
+            <div class="col-md-12"> 
               <!-- TABLE: parcel delivery publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
@@ -398,7 +398,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 
       <section class="content">
         <div id="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
            <!-- TABLE: list of odometer -->
             <div class="card">
               <div class="card-header border-transparent">
