@@ -227,15 +227,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Senarai pengguna sistem
-                <!--<span class="right badge badge-danger">New</span>-->
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Control panel
