@@ -40,8 +40,8 @@ $year = date('Y');
                     <tr>
                       <td><?php echo $a++;?></td>
                       <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>" class="nav-link"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
-                      <td><span class="badge badge-secondary"><?php echo $RID['username']?></span></td>
-                      <td><span class="badge badge-success"><?php echo $RID['password']?></span></td>
+                      <td><?php echo $RID['username']?></td>
+                      <td><?php echo $RID['password']?></td>
                       <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
                     </tr>
                     <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>
