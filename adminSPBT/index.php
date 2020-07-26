@@ -286,7 +286,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><div id="showTotalJudul"></div></h3>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalJudul"></div></h3>
 
                 <p>Jumlah Judul</p>
               </div>
@@ -301,7 +301,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><div id="showTotalPesanan"></div></h3>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPesanan"></div></h3>
 
                 <p>Jumlah Pesanan</p>
               </div>
@@ -316,7 +316,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><div id="showTotalPembekalan"></div></h3>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPembekalan"></div></h3>
 
                 <p>Jumlah Pembekalan</p>
               </div>
