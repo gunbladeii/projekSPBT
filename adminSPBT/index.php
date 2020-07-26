@@ -446,7 +446,8 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-		   
+		    
+        $('#showJudulList').load('showJudulList.php'); 
 			setInterval(function () {
 				$('#showAttChart').load('showAttChart.php')
 				$('#showTotalPenerbit').load('showTotalPenerbit.php')
@@ -455,7 +456,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 				$('#showTotalPembekalan').load('showTotalPembekalan.php')
         $('#showUserList').load('showUserList.php')
 			  $('#odometer').load('../distiSPBT/liveOdometer.php')
-				$('#showJudulList').load('showJudulList.php')
 				$('#attStat').load('../distiSPBT/attStat.php')
 				$('#parcelStat').load('../distiSPBT/parcelStat.php')
 			}, 5000);
