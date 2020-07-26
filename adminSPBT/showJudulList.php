@@ -25,7 +25,7 @@ $year = date('Y');
 ?>
 <?php if (!empty($RID['state'])){?>
                 <div class="table-responsive">
-                  <table id="example2" class="table m-0">
+                  <table id="example1" class="table m-0">
                     <thead>
                     <tr>
                       <th>No</th>

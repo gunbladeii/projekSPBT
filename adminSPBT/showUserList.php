@@ -25,7 +25,7 @@ $year = date('Y');
 ?>
 <?php if (!empty($RID['role'])){?>
                 <div class="table-responsive">
-                  <table class="table m-0 table-sm">
+                  <table id="example3" class="table m-0 table-sm">
                     <thead>
                     <tr>
                       <th>No</th>
@@ -52,3 +52,18 @@ $year = date('Y');
                 </div>
 <?php } else {echo '<div style="padding-left: 15px"><span class="badge badge-danger">Tiada data setakat ini</span></div>';}?>
 
+<script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap4.js"></script>
+<script>
+  $(function () {
+    $("#example3").DataTable();
+    $('#example4').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+  });
+</script>

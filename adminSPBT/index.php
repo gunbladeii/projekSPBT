@@ -447,14 +447,14 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 	<script type="text/javascript">
 		$(document).ready(function() {
 		    
-        $('#showJudulList').load('showJudulList.php'); 
+        $('#showJudulList').load('showJudulList.php');
+        $('#showUserList').load('showUserList.php'); 
 			setInterval(function () {
 				$('#showAttChart').load('showAttChart.php')
 				$('#showTotalPenerbit').load('showTotalPenerbit.php')
 				$('#showTotalJudul').load('showTotalJudul.php')
 				$('#showTotalPesanan').load('showTotalPesanan.php')
 				$('#showTotalPembekalan').load('showTotalPembekalan.php')
-        $('#showUserList').load('showUserList.php')
 			  $('#odometer').load('../distiSPBT/liveOdometer.php')
 				$('#attStat').load('../distiSPBT/attStat.php')
 				$('#parcelStat').load('../distiSPBT/parcelStat.php')
