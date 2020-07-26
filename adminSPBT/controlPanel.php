@@ -1,9 +1,7 @@
 <?php require('conn.php'); ?>
 <?php
-session_start();
-if ($_SESSION['role'] != 'admin')
-{
-      header('Location:../index.php');
+if (!isset($_SESSION)) {
+  session_start();
 }
 
 ?>
@@ -28,7 +26,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>eSPBT 2.0 | Dashboard</title>
+  <title>eSPBT 2.0 | Control Panek</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -250,13 +248,13 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark" style="font-family: 'Fugaz One', cursive;">eSPBT 2.0 System Dashboard</h1>
+            <h1 class="m-0 text-dark" style="font-family: 'Fugaz One', cursive;">Control Panel</h1>
             <p>(*All data shown below as of <?php echo $date;?>)</p>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">eSPBT 2.0 | Dashboard</li>
+              <li class="breadcrumb-item active">eSPBT 2.0 | Control Panel</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -267,67 +265,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3><div id="showTotalPenerbit"></div></h3>
-
-                <p>Jumlah Penerbit</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-clipboard"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3><div id="showTotalJudul"></div></h3>
-
-                <p>Jumlah Judul</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3><div id="showTotalPesanan"></div></h3>
-
-                <p>Jumlah Pesanan</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3><div id="showTotalPembekalan"></div></h3>
-
-                <p>Jumlah Pembekalan</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
+        
         </div>
       </section>
       <section class="content">
@@ -336,7 +274,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Senarai pengguna sistem</h3>
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Daftar Pengguna Sistem</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
@@ -351,7 +289,63 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
-                    <div id="showUserList"></div>
+                        <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+                            <div>
+                              <div class="form-group">
+                                 <label style="padding-left: 15px">User Picture:</label>
+                                 <div class="input-group mb-3">
+                                    <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17">
+                                    <div class="input-group-append input-group-text">
+                                      <span class="fas fa-portrait"></span>
+                                    </div>
+                                </div>
+                               </div>
+
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                <input type="text" name="roleID" class="form-control" placeholder="Cadangan Role ID" id="validationDefault01" required>
+                                <div class="input-group-append input-group-text">
+                                    <span class="fas fa-id-card-alt"></span>
+                                </div>
+                               </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                <input type="text" style="text-transform: uppercase;" class="form-control" placeholder="Taip nama pengedar" name="name" id="validationDefault02" required>
+                                <div class="input-group-append input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <div class="input-group mb-3"> 
+                                <input type="email" name="username" class="form-control" placeholder="Masukkan cadangan username (e-mel)" id="validationDefault03" required>
+                                <div class="input-group-append input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <div class="input-group mb-3"> 
+                                     <input type="password" name="password" class="form-control" placeholder="Masukkan cadangan password" id="validationDefault04" required>
+                                     <div class="input-group-append input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                     </div>
+                                </div>
+                              </div>
+                            </div>
+
+                              <input type="hidden" name="role" value="distiSPBT"/>
+                              <input type="hidden" name="status" value="active"/>
+                              <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
+                              <div class="modal-footer">
+                                  <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                         </form>
                   </div>
                 <!-- /.table-responsive -->
               </div>
