@@ -369,63 +369,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
-                       <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
-                            <div>
-                              <div class="form-group">
-                                 <label style="padding-left: 15px">User Picture:</label>
-                                 <div class="input-group mb-3">
-                                    <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17">
-                                    <div class="input-group-append input-group-text">
-                                      <span class="fas fa-portrait"></span>
-                                    </div>
-                                </div>
-                               </div>
-
-                              <div class="form-group">
-                                <div class="input-group mb-3">
-                                <input type="text" name="roleID" class="form-control" placeholder="Cadangan Role ID" id="validationDefault01" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-id-card-alt"></span>
-                                </div>
-                               </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3">
-                                <input type="text" style="text-transform: uppercase;" class="form-control" placeholder="Taip nama pengedar" name="name" id="validationDefault02" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-user"></span>
-                                </div>
-                                </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3"> 
-                                <input type="email" name="username" class="form-control" placeholder="Masukkan cadangan username (e-mel)" id="validationDefault03" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                                </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3"> 
-                                     <input type="password" name="password" class="form-control" placeholder="Masukkan cadangan password" id="validationDefault04" required>
-                                     <div class="input-group-append input-group-text">
-                                        <span class="fas fa-lock"></span>
-                                     </div>
-                                </div>
-                              </div>
-                            </div>
-
-                              <input type="hidden" name="role" value="distiSPBT"/>
-                              <input type="hidden" name="status" value="active"/>
-                              <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
-                              <div class="modal-footer">
-                                  <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              </div>
-                         </form>
+                      <div id="updatePesananJudul"></div>
                 </div>
                 <!-- /.table-responsive -->
               </div>
@@ -439,7 +383,25 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
  </section>
 </div>
 <!-- ./wrapper -->
-
+<!-- Begin salary modal -->
+      <div class="modal fade" id="updatePesananJudul">
+        <div class="modal-dialog">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h4 class="modal-title">Kemaskini Pesanan Judul</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="dash2"></div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    <!-- End salary modal -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -488,7 +450,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 		$(document).ready(function() {
 		    
         $('#showJudulList').load('showJudulList.php');
-        $('#showUserList').load('showUserList.php'); 
+        $('#updatePesananJudul').load('updatePesananJudul.php'); 
 			setInterval(function () {
 				$('#showAttChart').load('showAttChart.php')
 				$('#showTotalPenerbit').load('showTotalPenerbit.php')
@@ -513,6 +475,31 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       "autoWidth": false,
     });
   });
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    /*updatePesananJudul*/
+    $('#updatePesananJudul').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient = button.data('whatever') // Extract info from data-* attributes
+          //var recipient2 = button.data('whatever2') // Extract info from data-* attributes
+          var modal = $(this);
+          var dataString = 'id=' + recipient;
+
+            $.ajax({
+                type: "GET",
+                url: "updatePesananJudul2.php",
+                data: dataString,
+                cache: false,
+                success: function (data) {
+                    console.log(data);
+                    modal.find('.dash2').html(data);
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+    })
 </script>
 </body>
 </html>
