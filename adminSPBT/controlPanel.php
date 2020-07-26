@@ -374,8 +374,9 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- /.card -->
           </div>
           <!-- /.col -->       
- </section>
-</div>
+       </section>
+      </div>
+    </div>
 </div>
 <!-- ./wrapper -->
 
