@@ -26,7 +26,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>eSPBT 2.0 | Control Panek</title>
+  <title>eSPBT 2.0 | Control Panel</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
