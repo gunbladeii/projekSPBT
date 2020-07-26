@@ -309,7 +309,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><div id="totalSupervisor"></div></h3>
+                <h3><div id="showTotalPesanan"></div></h3>
 
                 <p>Jumlah Pesanan</p>
               </div>
@@ -484,7 +484,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 				$('#showAttChart').load('showAttChart.php')
 				$('#showTotalPenerbit').load('showTotalPenerbit.php')
 				$('#showTotalJudul').load('showTotalJudul.php')
-				$('#totalSupervisor').load('totalSupervisor.php')
+				$('#showTotalPesanan').load('showTotalPesanan.php')
 				$('#totalpublisherSPBT').load('totalpublisherSPBT.php')
 			    $('#odometer').load('../distiSPBT/liveOdometer.php')
 			    $('#show').load('../distiSPBT/live#')
