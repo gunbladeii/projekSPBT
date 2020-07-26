@@ -47,5 +47,5 @@ $year = date('Y');
                     </tbody>
                   </table>
                 </div>
-<?php } else {echo '<span class="badge badge-danger">Tiada data setakat ini</span>';}?>
+<?php } else {echo '<div style="padding-left: 15px"><span class="badge badge-danger">Tiada data setakat ini</span></div>';}?>
 
