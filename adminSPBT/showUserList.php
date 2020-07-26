@@ -19,11 +19,11 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT * FROM `login` WHERE role = 'publisherSPBT' AND year = '$year'");
+    $refID3 = $mysqli->query("SELECT * FROM `login` WHERE year = '$year'");
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
-<?php if ($RID['role'] == 'publisherSPBT'){?>
+<?php if (!empty($RID['role'])){?>
                 <div class="table-responsive">
                   <table class="table m-0">
                     <thead>
@@ -32,6 +32,7 @@ $year = date('Y');
                       <th>Nama Penerbit</th>
                       <th>Username</th>
                       <th>Password</th>
+                      <th>Peranan</th>
                       <th>Status</th>
                     </tr>
                     </thead>
@@ -42,6 +43,7 @@ $year = date('Y');
                       <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>" class="nav-link"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
                       <td><?php echo $RID['username']?></td>
                       <td><?php echo $RID['password']?></td>
+                      <td><?php if($RID['role'] == 'admin'){echo 'Administrator';}else if($RID['role'] == 'publisherSPBT'){echo 'Penerbit';}else if($RID['role'] == 'distiSPBT'){echo 'Pengedar';}?></td>
                       <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
                     </tr>
                     <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>

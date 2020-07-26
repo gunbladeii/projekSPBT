@@ -343,7 +343,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Senarai penerbit berdaftar</h3>
+                <h3 class="card-title">Senarai pengguna sistem</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
@@ -358,7 +358,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
-                    <div id="showPenerbitList"></div>
+                    <div id="showUserList"></div>
                   </div>
                 <!-- /.table-responsive -->
               </div>
@@ -479,7 +479,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 				$('#showTotalJudul').load('showTotalJudul.php')
 				$('#showTotalPesanan').load('showTotalPesanan.php')
 				$('#showTotalPembekalan').load('showTotalPembekalan.php')
-        $('#showPenerbitList').load('showPenerbitList.php')
+        $('#showUserList').load('showUserList.php')
 			  $('#odometer').load('../distiSPBT/liveOdometer.php')
 				$('#showJudulList').load('showJudulList.php')
 				$('#attStat').load('../distiSPBT/attStat.php')
