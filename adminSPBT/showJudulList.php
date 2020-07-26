@@ -37,7 +37,7 @@ $year = date('Y');
                     <?php do {?>
                     <tr>
                       <td><?php echo $a++;?></td>
-                      <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>" class="nav-link"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
+                      <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
                       <td><?php echo $RID['year']?></td>
                     </tr>
                     <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>
