@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT * FROM `statusBekalan` WHERE year = '$year'");
+    $refID3 = $mysqli->query("SELECT * FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE year = '$year'");
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
@@ -32,6 +32,7 @@ $year = date('Y');
                       <th>Nama Judul</th>
                       <th>Negeri</th>
                       <th>Zon</th>
+                      <th>Penerbit/Pengedar</th>
                       <th>Jumlah Pesanan</th>
                       <th>Jumlah Pembekalan</th>
                       <th>Tahun</th>
@@ -45,6 +46,7 @@ $year = date('Y');
                       <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>"><span class="badge badge-info"><?php echo strtoupper($RID['judul']);?></span></a></td>
                       <td><?php echo $RID['state'];?></td>
                       <td><?php echo $RID['zon'];?></td>
+                      <td><?php echo strtoupper($RID['name']);?></td>
                       <td><?php echo $RID['totPesanan'];?></td>
                       <td><?php echo $RID['totBekalan'];?></td>
                       <td><?php echo $RID['year'];?></td>
