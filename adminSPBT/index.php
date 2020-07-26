@@ -286,7 +286,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="icon">
                 <i class="ion ion-clipboard"></i>
               </div>
-              <a href="pod.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -294,14 +294,14 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><div id="percentSuccessParcel"></div></h3>
+                <h3><div id="showTotalJudul"></div></h3>
 
                 <p>Jumlah Judul</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="pod.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -483,7 +483,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 			setInterval(function () {
 				$('#showAttChart').load('showAttChart.php')
 				$('#showTotalPenerbit').load('showTotalPenerbit.php')
-				$('#percentSuccessParcel').load('percentSuccessParcel.php')
+				$('#showTotalJudul').load('showTotalJudul.php')
 				$('#totalSupervisor').load('totalSupervisor.php')
 				$('#totalpublisherSPBT').load('totalpublisherSPBT.php')
 			    $('#odometer').load('../distiSPBT/liveOdometer.php')
