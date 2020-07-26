@@ -52,6 +52,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
   <!-- chart.js plugin -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
@@ -249,7 +250,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">eSPBT 2.0 System Dashboard</h1>
+            <h1 class="m-0 text-dark" style="font-family: 'Fugaz One', cursive;">eSPBT 2.0 System Dashboard</h1>
             <p>(*All data shown below as of <?php echo $date;?>)</p>
           </div><!-- /.col -->
           <div class="col-sm-6">
