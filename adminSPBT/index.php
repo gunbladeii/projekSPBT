@@ -362,7 +362,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- TABLE: parcel delivery publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Status pembekalan mengikut judul dan negeri</h3>
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Status pembekalan mengikut judul dan negeri</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
               <!-- /.card-body -->
                 <div class="card-tools">
