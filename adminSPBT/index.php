@@ -51,6 +51,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
   <!-- chart.js plugin -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
@@ -334,7 +335,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title">Senarai pengguna sistem</h3>
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Senarai pengguna sistem</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
