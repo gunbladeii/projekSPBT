@@ -47,7 +47,7 @@ $year = date('Y');
                       <td><?php echo $RID['zon'];?></td>
                       <td><?php echo $RID['totPesanan'];?></td>
                       <td><?php echo $RID['totBekalan'];?></td>
-                      <td><?php echo $RID['year']?></td>
+                      <td><?php echo $RID['year'];?></td>
                       <td><?php if($RID['totPesanan'] == $RID['totBekalan']){echo '<span class="badge badge-success">Selesai</span>';}else if($RID['totPesanan'] > $RID['totBekalan']){echo '<span class="badge badge-warning">Belum selesai</span>';}else if($RID['totPesanan'] < $RID['totBekalan']){echo '<span class="badge badge-danger">Semak semula</span>';}?></td>
                     </tr>
                     <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>
