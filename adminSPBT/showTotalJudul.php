@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT *, COUNT(name) AS `jumJudul` FROM `judul` WHERE tahun = '$year'");
+    $refID3 = $mysqli->query("SELECT *, COUNT(name) AS `jumJudul` FROM `judul` WHERE year = '$year'");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 <?php
