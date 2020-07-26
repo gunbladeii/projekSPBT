@@ -40,7 +40,7 @@ $year = date('Y');
      
       $mysqli->query("INSERT INTO `login` (`roleID`, `refID`, `name`, `username`, `password`, `role`, `status`, `publisherSPBTFacePic`) VALUES ('$roleID', '$refID', '$name', '$username', '$password', '$role', '$status', '$publisherSPBTFacePic')");
       
-      header("location:indexPublisher.php");
+      header("location:controlPanel.php");
     }
 
     $refID3 = $mysqli->query("SELECT statusBekalan.id, login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year' AND statusBekalan.id = '$id'");
@@ -48,7 +48,7 @@ $year = date('Y');
     $a=1;
 ?>
 
-<form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+<form method="post" action="daftarPengguna.php" role="form" enctype="multipart/form-data">
                             <div>
                               <div class="form-group">
                                  <label style="padding-left: 15px">User Picture:</label>
