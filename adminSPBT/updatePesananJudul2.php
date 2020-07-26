@@ -9,6 +9,8 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
+$id = $_GET['id'];
+
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
@@ -19,7 +21,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year'");
+    $refID3 = $mysqli->query("SELECT login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year' AND statusBekalan.id = '$id'");
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
