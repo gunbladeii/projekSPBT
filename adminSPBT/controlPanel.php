@@ -265,10 +265,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        
-        </div>
-      </section>
-      <section class="content">
+    
         <div id="row">
         <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
@@ -378,6 +375,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           </div>
           <!-- /.col -->       
  </section>
+</div>
 </div>
 <!-- ./wrapper -->
 
