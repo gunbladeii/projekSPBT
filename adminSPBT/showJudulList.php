@@ -23,7 +23,7 @@ $year = date('Y');
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
-<?php if (!empty($RID['name'])){?>
+<?php if (!empty($RID['state'])){?>
                 <div class="table-responsive">
                   <table class="table m-0">
                     <thead>
