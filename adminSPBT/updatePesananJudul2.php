@@ -27,7 +27,7 @@ $totBekalan = $_POST['totBekalan'];
 
     if (isset($_POST['submit'])) {
     $mysqli->query ("UPDATE `statusBekalan` SET `judul` = '$judul', `totPesanan` = '$totPesanan', `totBekalan` = '$totBekalan' WHERE `id` = '$id'");
-    header("location:controlPanel.php");
+    header("location:updatePesananJudul2.php");
     }
 
     $refID3 = $mysqli->query("SELECT statusBekalan.id, login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year' AND statusBekalan.id = '$id'");
