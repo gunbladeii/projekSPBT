@@ -21,7 +21,10 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
+    if (isset($_POST['submit'])) {
     mysqli->query ("UPDATE `statusBekalan` SET `judul` = '$judul', `totPesanan` = '$totPesanan', `totBekalan` = '$totBekalan' WHERE `id` = '$id'");
+    header("location:controlPanel.php");
+    }
 
     $refID3 = $mysqli->query("SELECT statusBekalan.id, login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year' AND statusBekalan.id = '$id'");
     $RID = mysqli_fetch_assoc($refID3);
@@ -29,7 +32,7 @@ $year = date('Y');
 ?>
 <?php if (!empty($RID['state'])){?>
                 <div class="table-responsive">
-                  <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
+                  <form method="post" action="updatePesananJudul2.php" role="form" enctype="multipart/form-data">
                             <div>
                               <div class="form-group">
                                 <div class="input-group mb-3">
