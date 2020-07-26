@@ -279,7 +279,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><div id="totalSuccessParcel"></div></h3>
+                <h3><div id="showTotalPenerbit"></div></h3>
 
                 <p>Jumlah Penerbit</p>
               </div>
@@ -482,7 +482,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 		   
 			setInterval(function () {
 				$('#showAttChart').load('showAttChart.php')
-				$('#totalSuccessParcel').load('totalSuccessParcel.php')
+				$('#showTotalPenerbit').load('showTotalPenerbit.php')
 				$('#percentSuccessParcel').load('percentSuccessParcel.php')
 				$('#totalSupervisor').load('totalSupervisor.php')
 				$('#totalpublisherSPBT').load('totalpublisherSPBT.php')
