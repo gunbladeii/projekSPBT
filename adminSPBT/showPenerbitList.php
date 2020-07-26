@@ -21,6 +21,7 @@ $year = date('Y');
 
     $refID3 = $mysqli->query("SELECT * FROM `login` WHERE role = 'publisherSPBT' AND year = '$year'");
     $RID = mysqli_fetch_assoc($refID3);
+    $a=1;
 ?>
 <?php if ($RID['role'] == 'publisherSPBT'){?>
                 <div class="table-responsive">
