@@ -316,7 +316,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="attendance.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -331,7 +331,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="icon">
                 <i class="ion ion-person"></i>
               </div>
-              <a href="attendance.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -487,7 +487,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 				$('#totalSupervisor').load('totalSupervisor.php')
 				$('#totalpublisherSPBT').load('totalpublisherSPBT.php')
 			    $('#odometer').load('../distiSPBT/liveOdometer.php')
-			    $('#show').load('../distiSPBT/liveAttendance.php')
+			    $('#show').load('../distiSPBT/live#')
 				$('#parcel').load('../distiSPBT/liveParcel.php')
 				$('#attStat').load('../distiSPBT/attStat.php')
 				$('#parcelStat').load('../distiSPBT/parcelStat.php')
