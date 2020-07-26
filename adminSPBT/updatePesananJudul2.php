@@ -71,7 +71,7 @@ $totBekalan = $_POST['totBekalan'];
                               <input type="hidden" name="status" value="active"/>
                               <input type="hidden" name="refID" value="<?php echo $RID['roleID'];?>"/>
                               <div class="modal-footer">
-                                  <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
+                                  <input type="submit" class="btn btn-primary" name="submit" value="Kemaskini rekod"/>&nbsp;
                                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>
                          </form>
