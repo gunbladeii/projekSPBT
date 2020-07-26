@@ -18,7 +18,7 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$Recordset = $mysqli->query("SELECT employeeData.noIC, employeeData.nama, employeeData.publisherSPBTFacePic, login.username FROM login INNER JOIN employeeData ON employeeData.noIC = login.noIC WHERE username = '$colname_Recordset'");
+$Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
