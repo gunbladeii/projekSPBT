@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT * FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE year = '$year'");
+    $refID3 = $mysqli->query("SELECT * FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year'");
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
