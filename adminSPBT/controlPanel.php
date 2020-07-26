@@ -303,63 +303,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
-                        <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
-                            <div>
-                              <div class="form-group">
-                                 <label style="padding-left: 15px">User Picture:</label>
-                                 <div class="input-group mb-3">
-                                    <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17">
-                                    <div class="input-group-append input-group-text">
-                                      <span class="fas fa-portrait"></span>
-                                    </div>
-                                </div>
-                               </div>
-
-                              <div class="form-group">
-                                <div class="input-group mb-3">
-                                <input type="text" name="roleID" class="form-control" placeholder="Cadangan Role ID" id="validationDefault01" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-id-card-alt"></span>
-                                </div>
-                               </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3">
-                                <input type="text" style="text-transform: uppercase;" class="form-control" placeholder="Taip nama pengedar" name="name" id="validationDefault02" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-user"></span>
-                                </div>
-                                </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3"> 
-                                <input type="email" name="username" class="form-control" placeholder="Masukkan cadangan username (e-mel)" id="validationDefault03" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                                </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3"> 
-                                     <input type="password" name="password" class="form-control" placeholder="Masukkan cadangan password" id="validationDefault04" required>
-                                     <div class="input-group-append input-group-text">
-                                        <span class="fas fa-lock"></span>
-                                     </div>
-                                </div>
-                              </div>
-                            </div>
-
-                              <input type="hidden" name="role" value="distiSPBT"/>
-                              <input type="hidden" name="status" value="active"/>
-                              <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
-                              <div class="modal-footer">
-                                  <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              </div>
-                         </form>
+                      <div id="daftarPengguna"></div>  
                   </div>
                 <!-- /.table-responsive -->
               </div>
@@ -445,17 +389,10 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 	<script type="text/javascript">
 		$(document).ready(function() {
 		    
-        $('#showJudulList').load('showJudulList.php');
+        $('#daftarPengguna').load('daftarPengguna.php');
         $('#updatePesananJudul').load('updatePesananJudul.php'); 
 			setInterval(function () {
 				$('#showAttChart').load('showAttChart.php')
-				$('#showTotalPenerbit').load('showTotalPenerbit.php')
-				$('#showTotalJudul').load('showTotalJudul.php')
-				$('#showTotalPesanan').load('showTotalPesanan.php')
-				$('#showTotalPembekalan').load('showTotalPembekalan.php')
-			  $('#odometer').load('../distiSPBT/liveOdometer.php')
-				$('#attStat').load('../distiSPBT/attStat.php')
-				$('#parcelStat').load('../distiSPBT/parcelStat.php')
 			}, 5000);
 		});
 </script>
