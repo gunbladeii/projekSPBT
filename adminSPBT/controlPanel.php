@@ -402,6 +402,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       </div>
       <!-- /.modal -->
     <!-- End salary modal -->
+  </div>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
