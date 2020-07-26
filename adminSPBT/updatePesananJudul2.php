@@ -26,7 +26,7 @@ $totPesanan = $_POST['totPesanan'];
 $totBekalan = $_POST['totBekalan'];
 
     if (isset($_POST['submit'])) {
-    mysqli->query ("UPDATE `statusBekalan` SET `judul` = '$judul', `totPesanan` = '$totPesanan', `totBekalan` = '$totBekalan' WHERE `id` = '$id'");
+    $mysqli->query ("UPDATE `statusBekalan` SET `judul` = '$judul', `totPesanan` = '$totPesanan', `totBekalan` = '$totBekalan' WHERE `id` = '$id'");
     header("location:controlPanel.php");
     }
 
