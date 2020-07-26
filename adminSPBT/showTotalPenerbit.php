@@ -18,7 +18,7 @@ date_default_timezone_set("asia/kuala_lumpur");
 $date = date('Y-m-d'); 
 $time = date('H:i:s');
 
-    $refID3 = $mysqli->query("SELECT *, COUNT(refID) AS `jumPenerbit` FROM `login` WHERE role = 'publisherSPBT'");
+    $refID3 = $mysqli->query("SELECT *, COUNT(roleID) AS `jumPenerbit` FROM `login` WHERE role = 'publisherSPBT'");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 <?php
