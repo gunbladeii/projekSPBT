@@ -392,13 +392,8 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- /.card -->
           </div>
           <!-- /.col -->        
-        </div>
-        <!-- /.row -->
-      </section>
-
-      <section class="content">
-        <div id="row">
-        <div class="col-lg-12">
+      
+        <div class="col-md-6">
            <!-- TABLE: list of odometer -->
             <div class="card">
               <div class="card-header border-transparent">
