@@ -55,8 +55,28 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
+   <!-- Begin salary modal -->
+      <div class="modal fade" id="updatePesananJudulModal">
+        <div class="modal-dialog">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h4 class="modal-title">Kemaskini Pesanan Judul</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="dash2"></div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    <!-- End salary modal -->
+
+<div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom">
     <!-- Left navbar links -->
@@ -378,26 +398,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
        </section>
   </div>
 <!-- ./wrapper -->
-
-<!-- Begin salary modal -->
-      <div class="modal fade" id="updatePesananJudulModal">
-        <div class="modal-dialog">
-          <div class="modal-content bg-light">
-            <div class="modal-header">
-              <h4 class="modal-title">Kemaskini Pesanan Judul</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="dash2"></div>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-    <!-- End salary modal -->
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
