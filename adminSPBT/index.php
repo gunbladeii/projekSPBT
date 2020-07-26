@@ -339,7 +339,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       </section>
       <section class="content">
         <div class="row">
-        <div class="col-md-12">
+          <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
@@ -362,93 +362,96 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
                   </div>
                 <!-- /.table-responsive -->
               </div>
-              </div>
-              </div>
+            </div>
+          </div>
+        </div>
             
           <div class="row">  
             <div class="col-md-4"> 
               <!-- TABLE: parcel delivery publisherSPBT -->
-            <div class="card">
-              <div class="card-header border-transparent">
-                <h3 class="card-title">Senarai judul</h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
-              <!-- /.card-body -->
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
+                <div class="card">
+                  <div class="card-header border-transparent">
+                      <h3 class="card-title">Senarai judul</h3>
+                      <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
+                        <!-- /.card-body -->
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-widget="collapse">
+                            <i class="fas fa-minus"></i></button>
+                          <button type="button" class="btn btn-tool" data-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body p-0">
+                    <div class="table-responsive">
+                      <div id="showJudulList"></div>
+                    </div>
+                    <!-- /.table-responsive -->
                 </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                  <div id="showJudulList"></div>
-                </div>
-                <!-- /.table-responsive -->
-              </div>
+                <!-- /.card -->
             </div>
-            <!-- /.card -->
+            <!-- /.col -->
           </div>
-          <!-- /.col -->        
+          <!-- /.row -->        
       
-        <div class="col-md-4">
-           <!-- TABLE: list of odometer -->
-            <div class="card">
-              <div class="card-header border-transparent">
-                <h3 class="card-title">Senarai </h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                    <div id="odometer"></div>
+          <div class="row">  
+              <div class="col-md-4"> 
+                <!-- TABLE: parcel delivery publisherSPBT -->
+                  <div class="card">
+                    <div class="card-header border-transparent">
+                        <h3 class="card-title">Senarai judul</h3>
+                        <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
+                          <!-- /.card-body -->
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                              <i class="fas fa-minus"></i></button>
+                            <button type="button" class="btn btn-tool" data-widget="remove">
+                              <i class="fas fa-times"></i>
+                            </button>
+                          </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                      <div class="table-responsive">
+                        <div id="showJudulList"></div>
+                      </div>
+                      <!-- /.table-responsive -->
                   </div>
-                <!-- /.table-responsive -->
+                  <!-- /.card -->
               </div>
+              <!-- /.col -->
             </div>
-          </div>
-         </div>
+            <!-- /.row --> 
 
-         <div class="col-md-4">
-           <!-- TABLE: list of odometer -->
-            <div class="card">
-              <div class="card-header border-transparent">
-                <h3 class="card-title">Senarai </h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
+             <div class="row">  
+                <div class="col-md-4"> 
+                  <!-- TABLE: parcel delivery publisherSPBT -->
+                    <div class="card">
+                      <div class="card-header border-transparent">
+                          <h3 class="card-title">Senarai judul</h3>
+                          <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
+                            <!-- /.card-body -->
+                            <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                              <button type="button" class="btn btn-tool" data-widget="remove">
+                                <i class="fas fa-times"></i>
+                              </button>
+                            </div>
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <div id="showJudulList"></div>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.card -->
                 </div>
+                <!-- /.col -->
               </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                    <div id="odometer"></div>
-                  </div>
-                <!-- /.table-responsive -->
-              </div>
-            </div>
-          </div>
-         </div>
-
-       </div>
+              <!-- /.row --> 
         
  </section>
 </div>
