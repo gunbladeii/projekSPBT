@@ -203,7 +203,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo $row_Recordset['name'];?></a>
+          <a href="#" class="d-block"><?php echo strtoupper($row_Recordset['name']);?></a>
         </div>
       </div>
 
