@@ -25,7 +25,7 @@ $year = date('Y');
 ?>
 <?php if (!empty($RID['state'])){?>
                 <div class="table-responsive">
-                  <table id="example1" class="table m-0">
+                  <table id="tablePesananJudul" class="table m-0">
                     <thead>
                     <tr>
                       <th>No</th>
@@ -61,7 +61,7 @@ $year = date('Y');
 <script src="plugins/datatables/dataTables.bootstrap4.js"></script>
 <script>
   $(function () {
-    $("#example1").DataTable();
+    $("#tablePesananJudul").DataTable();
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
