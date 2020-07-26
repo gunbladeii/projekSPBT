@@ -364,7 +364,8 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               </div>
               </div>
               </div>
-              
+            
+          <div id="row">  
             <div class="col-md-6"> 
               <!-- TABLE: parcel delivery publisherSPBT -->
             <div class="card">
@@ -419,11 +420,8 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             </div>
           </div>
          </div>
+       </div>
         
-        <!-- /.row -->
-        <!-- Main row -->
-        <div class="row"></div>
-  <!-- /.content-wrapper -->
  </section>
 </div>
 <!-- ./wrapper -->
