@@ -378,12 +378,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           </div>
           <!-- /.col -->        
       
-      
-        
- </section>
-</div>
-<!-- ./wrapper -->
-<!-- Begin salary modal -->
+      <!-- Begin salary modal -->
       <div class="modal fade" id="updatePesananJudul">
         <div class="modal-dialog">
           <div class="modal-content bg-light">
@@ -402,7 +397,10 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       </div>
       <!-- /.modal -->
     <!-- End salary modal -->
-  </div>
+        
+ </section>
+</div>
+<!-- ./wrapper -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
