@@ -265,21 +265,20 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-    
         <div id="row">
-        <div class="col-md-12">
+          <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
                 <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Daftar Pengguna Sistem</h3>
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
@@ -344,8 +343,8 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
                   </div>
                 <!-- /.table-responsive -->
               </div>
-              </div>
-              </div>
+          </div>
+      </div>
             
           <div class="row">  
             <div class="col-md-12"> 
@@ -373,11 +372,11 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             </div>
             <!-- /.card -->
           </div>
-          <!-- /.col -->       
+          <!-- /.col --> 
+        </div>
+
        </section>
       </div>
-    </div>
-</div>
 <!-- ./wrapper -->
 
 <!-- Begin salary modal -->
