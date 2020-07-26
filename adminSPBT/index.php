@@ -358,7 +358,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
-                    <div id="show"></div>
+                    <div id="showPenerbitList"></div>
                   </div>
                 <!-- /.table-responsive -->
               </div>
@@ -486,8 +486,8 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 				$('#showTotalJudul').load('showTotalJudul.php')
 				$('#showTotalPesanan').load('showTotalPesanan.php')
 				$('#showTotalPembekalan').load('showTotalPembekalan.php')
-			    $('#odometer').load('../distiSPBT/liveOdometer.php')
-			    $('#show').load('../distiSPBT/live#')
+        $('#showPenerbitList').load('showPenerbitList.php')
+			  $('#odometer').load('../distiSPBT/liveOdometer.php')
 				$('#parcel').load('../distiSPBT/liveParcel.php')
 				$('#attStat').load('../distiSPBT/attStat.php')
 				$('#parcelStat').load('../distiSPBT/parcelStat.php')
