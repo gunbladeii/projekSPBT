@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT * FROM `judul` WHERE year = '$year'");
+    $refID3 = $mysqli->query("SELECT * FROM `statusBekalan` WHERE year = '$year'");
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
@@ -30,15 +30,25 @@ $year = date('Y');
                     <tr>
                       <th>No</th>
                       <th>Nama Judul</th>
+                      <th>Negeri</th>
+                      <th>Zon</th>
+                      <th>Jumlah Pesanan</th>
+                      <th>Jumlah Pembekalan</th>
                       <th>Tahun</th>
+                      <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php do {?>
                     <tr>
                       <td><?php echo $a++;?></td>
-                      <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
+                      <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>"><span class="badge badge-info"><?php echo strtoupper($RID['judul']);?></span></a></td>
+                      <td><?php echo $RID['negeri'];?></td>
+                      <td><?php echo $RID['zon'];?></td>
+                      <td><?php echo $RID['totPesanan'];?></td>
+                      <td><?php echo $RID['totBekalan'];?></td>
                       <td><?php echo $RID['year']?></td>
+                      <td><?php if($RID['totPesanan'] == $RID['totBekalan']){echo '<span class="badge badge-success">Selesai</span>';}else if($RID['totPesanan'] > $RID['totBekalan']){echo '<span class="badge badge-warning">Belum selesai</span>';}else if($RID['totPesanan'] < $RID['totBekalan']){echo '<span class="badge badge-danger">Semak semula</span>';}?></td>
                     </tr>
                     <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>
                     </tbody>
