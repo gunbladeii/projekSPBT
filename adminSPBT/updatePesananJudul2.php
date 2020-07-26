@@ -21,7 +21,9 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year' AND statusBekalan.id = '$id'");
+    mysqli->query ("UPDATE `statusBekalan` SET `judul` = '$judul', `totPesanan` = '$totPesanan', `totBekalan` = '$totBekalan' WHERE `id` = '$id'");
+
+    $refID3 = $mysqli->query("SELECT statusBekalan.id, login.name, statusBekalan.roleID,statusBekalan.state, statusBekalan.zon, statusBekalan.totPesanan, statusBekalan.totBekalan, statusBekalan.year, statusBekalan.judul FROM `statusBekalan` INNER JOIN login ON statusBekalan.roleID = login.roleID WHERE statusBekalan.year = '$year' AND statusBekalan.id = '$id'");
     $RID = mysqli_fetch_assoc($refID3);
     $a=1;
 ?>
@@ -30,18 +32,8 @@ $year = date('Y');
                   <form method="post" action="indexPublisher.php" role="form" enctype="multipart/form-data">
                             <div>
                               <div class="form-group">
-                                 <label style="padding-left: 15px">User Picture:</label>
-                                 <div class="input-group mb-3">
-                                    <input type="file" name="publisherSPBTFacePic" id="image2" class="form-control" accept="image/*" id="validationDefault17">
-                                    <div class="input-group-append input-group-text">
-                                      <span class="fas fa-portrait"></span>
-                                    </div>
-                                </div>
-                               </div>
-
-                              <div class="form-group">
                                 <div class="input-group mb-3">
-                                <input type="text" name="roleID" class="form-control" placeholder="Cadangan Role ID" id="validationDefault01" required>
+                                <input type="text" name="judul" class="form-control" placeholder="<?php echo strtoupper($RID['judul']);?>" id="validationDefault01"value="<?php echo $RID['judul'];?>" required>
                                 <div class="input-group-append input-group-text">
                                     <span class="fas fa-id-card-alt"></span>
                                 </div>
@@ -50,7 +42,7 @@ $year = date('Y');
                               
                               <div class="form-group">
                                 <div class="input-group mb-3">
-                                <input type="text" style="text-transform: uppercase;" class="form-control" placeholder="Taip nama pengedar" name="name" id="validationDefault02" required>
+                                <input type="number" style="text-transform: uppercase;" class="form-control" placeholder="Masukkan jumlah pesanan" name="totPesanan" id="validationDefault02" value="<?php echo $RID['totPesanan'];?>" required>
                                 <div class="input-group-append input-group-text">
                                     <span class="fas fa-user"></span>
                                 </div>
@@ -59,26 +51,18 @@ $year = date('Y');
                               
                               <div class="form-group">
                                 <div class="input-group mb-3"> 
-                                <input type="email" name="username" class="form-control" placeholder="Masukkan cadangan username (e-mel)" id="validationDefault03" required>
+                                <input type="number" name="totBekalan" class="form-control" placeholder="Masukkan jumlah pembekalan" id="validationDefault03" value="<?php echo $RID['totBekalan'];?>" required>
                                 <div class="input-group-append input-group-text">
                                     <span class="fas fa-envelope"></span>
                                 </div>
                                 </div>
                               </div>
-                              
-                              <div class="form-group">
-                                <div class="input-group mb-3"> 
-                                     <input type="password" name="password" class="form-control" placeholder="Masukkan cadangan password" id="validationDefault04" required>
-                                     <div class="input-group-append input-group-text">
-                                        <span class="fas fa-lock"></span>
-                                     </div>
-                                </div>
-                              </div>
+
                             </div>
 
-                              <input type="hidden" name="role" value="distiSPBT"/>
+                              <input type="hidden" name="id" value="<?php echo $id;?>"/>
                               <input type="hidden" name="status" value="active"/>
-                              <input type="hidden" name="refID" value="<?php echo $LC['roleID'];?>"/>
+                              <input type="hidden" name="refID" value="<?php echo $RID['roleID'];?>"/>
                               <div class="modal-footer">
                                   <input type="submit" class="btn btn-primary" name="submit" value="Daftar Pengguna Baharu"/>&nbsp;
                                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
