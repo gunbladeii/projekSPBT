@@ -25,7 +25,7 @@ $year = date('Y');
 ?>
 <?php if (!empty($RID['role'])){?>
                 <div class="table-responsive">
-                  <table class="table m-0">
+                  <table class="table m-0 table-sm">
                     <thead>
                     <tr>
                       <th>No</th>
