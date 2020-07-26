@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT *, COUNT(roleID) AS `jumPenerbit` FROM `login` WHERE role = 'publisherSPBT' AND year = '$year'");
+    $refID3 = $mysqli->query("SELECT * FROM `login` WHERE role = 'publisherSPBT' AND year = '$year'");
     $RID = mysqli_fetch_assoc($refID3);
 ?>
 <?php if ($RID['role'] == 'publisherSPBT'){?>
