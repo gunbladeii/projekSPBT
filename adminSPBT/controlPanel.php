@@ -376,7 +376,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
         </div>
 
        </section>
-      </div>
+  </div>
 <!-- ./wrapper -->
 
 <!-- Begin salary modal -->
