@@ -382,7 +382,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
         
  </section>
 </div>
-</div>
 <!-- ./wrapper -->
 <!-- Begin salary modal -->
       <div class="modal fade" id="updatePesananJudul">
