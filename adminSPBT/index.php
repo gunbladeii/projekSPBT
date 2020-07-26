@@ -52,8 +52,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">
   <!-- chart.js plugin -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
@@ -273,7 +272,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3 style="font-family: 'Fugaz One', cursive;font-family: 'Titan One', cursive;"><div id="showTotalPenerbit"></div></h3>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPenerbit"></div></h3>
                 <p>Jumlah Penerbit</p>
               </div>
               <div class="icon">
