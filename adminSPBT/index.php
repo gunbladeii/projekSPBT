@@ -456,6 +456,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
         
  </section>
 </div>
+</div>
 <!-- ./wrapper -->
 
 <!-- jQuery -->
