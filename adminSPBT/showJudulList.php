@@ -43,7 +43,7 @@ $year = date('Y');
                     <tr>
                       <td><?php echo $a++;?></td>
                       <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>"><span class="badge badge-info"><?php echo strtoupper($RID['judul']);?></span></a></td>
-                      <td><?php echo $RID['negeri'];?></td>
+                      <td><?php echo $RID['state'];?></td>
                       <td><?php echo $RID['zon'];?></td>
                       <td><?php echo $RID['totPesanan'];?></td>
                       <td><?php echo $RID['totBekalan'];?></td>
