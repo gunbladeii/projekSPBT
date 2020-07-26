@@ -275,8 +275,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <div class="card">
               <div class="card-header border-transparent">
                 <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Daftar Pengguna Sistem</h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
-
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-widget="collapse">
                     <i class="fas fa-minus"></i>
@@ -358,7 +356,6 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <div class="card">
               <div class="card-header border-transparent">
                 <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Daftar Pesanan (Judul)</h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
               <!-- /.card-body -->
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-widget="collapse">
