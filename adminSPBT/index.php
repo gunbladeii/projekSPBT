@@ -274,7 +274,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
+        
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
