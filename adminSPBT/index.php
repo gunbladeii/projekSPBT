@@ -284,7 +284,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
                 <p>Jumlah Penerbit</p>
               </div>
               <div class="icon">
-                <i class="icon icon-clipboard"></i>
+                <i class="ion ion-clipboard"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
