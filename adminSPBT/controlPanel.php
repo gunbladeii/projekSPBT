@@ -376,10 +376,13 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             </div>
             <!-- /.card -->
           </div>
-          <!-- /.col -->        
-      
-      <!-- Begin salary modal -->
-      <div class="modal fade" id="updatePesananJudul">
+          <!-- /.col -->       
+ </section>
+</div>
+<!-- ./wrapper -->
+
+<!-- Begin salary modal -->
+      <div class="modal fade" id="updatePesananJudulModal">
         <div class="modal-dialog">
           <div class="modal-content bg-light">
             <div class="modal-header">
@@ -397,10 +400,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
       </div>
       <!-- /.modal -->
     <!-- End salary modal -->
-        
- </section>
-</div>
-<!-- ./wrapper -->
+
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -464,7 +464,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     /*updatePesananJudul*/
-    $('#updatePesananJudul').on('show.bs.modal', function (event) {
+    $('#updatePesananJudulModal').on('show.bs.modal', function (event) {
           var button = $(event.relatedTarget) // Button that triggered the modal
           var recipient = button.data('whatever') // Extract info from data-* attributes
           //var recipient2 = button.data('whatever2') // Extract info from data-* attributes
