@@ -346,7 +346,7 @@ $a=1;
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Penghantaran</span>
-                <div id="showJumlahHantar"></div>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahHantar"></div></h3>
               </div>
               <!-- /.info-box-content -->
             </div></a>
@@ -363,7 +363,7 @@ $a=1;
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Pesanan</span>
-                <div id="showJumlahPesanan"></div>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahPesanan"></div></h3>
               </div>
               <!-- /.info-box-content -->
             </div></a>
