@@ -212,7 +212,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     <a href="index.php" class="brand-link">
       <img src="dist/img/logo_kpm.png" alt="altus Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-dark">eSPBT2.0</span>
+      <span class="brand-text font-weight-dark" style="font-family: 'Fugaz One', cursive;">eSPBT2.0</span>
     </a>
 
     <!-- Sidebar -->
