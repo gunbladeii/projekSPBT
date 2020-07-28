@@ -50,8 +50,8 @@ $refID3 = $mysqli->query("SELECT login.name, login.role, statusBekalan.state, st
                             <td><span class="badge badge-info"><?php echo strtoupper($RID2['name'])?></span></td>
                             <td><span class="badge badge-success"><?php echo strtoupper($RID2['state']);?></span></td>
                             <td><span class="badge badge-warning"><?php echo strtoupper($RID2['zon']);?></span></td>
-                            <td><?php if (!empty($RID2['totPesanan'])){echo '<span class="badge badge-success">'.strtoupper($RID2["totPesanan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
-                            <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">'.strtoupper($RID2["totBekalan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
+                            <td><?php if (!empty($RID2['totPesanan'])){echo '<span class="badge badge-success">'.number_format($RID2["totPesanan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
+                            <td><?php if (!empty($RID2['totBekalan'])){echo '<span class="badge badge-success">'.number_format($RID2["totBekalan"]).'</span>';}else {echo '<span class="badge badge-danger">0</span>';}?></td>
                             <td><?php if (!empty($RID2['totBekalan']) && $RID2['totBekalan'] == $RID2['totPesanan']){echo '<span class="badge badge-success">Selesai</span>';}elseif ($RID2['totBekalan'] < $RID2['totPesanan']){echo '<span class="badge badge-danger">Belum selesai</span>';}elseif ($RID2['totBekalan'] > $RID2['totPesanan']){echo '<span class="badge badge-danger">Semak semula</span>';}elseif ($RID2['totBekalan'] == 0){echo '<span class="badge badge-danger">Belum selesai</span>';}?></td>
                           </tr>
                           <?php } while ($RID2 = mysqli_fetch_assoc($refID3)); ?>
