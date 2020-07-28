@@ -23,7 +23,7 @@ $refIDPublisher = $row_Recordset['roleID'];
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 
-<?php if ($RID2['roleID'] != NULL || !empty($RID2['roleID'])) {echo $RID2['jumPenerbit'];}else{echo '<span class="badge badge-danger">Tiada rekod</span>';}?>
+<?php if ($RID2['roleID'] != NULL || !empty($RID2['roleID'])) {echo number_format($RID2['jumPenerbit']);}else{echo '<span class="badge badge-danger">Tiada rekod</span>';}?>
 
 
 
