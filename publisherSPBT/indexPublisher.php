@@ -88,6 +88,8 @@ $a=1;
   <link rel="stylesheet" href="../adminSPBT/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">
   <!-- chart.js plugin -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
@@ -331,7 +333,7 @@ $a=1;
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Pembekal</span>
-                <div id="showJumlahPembekal"></div>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahPembekal" style=""></div></h3>
               </div>
               <!-- /.info-box-content -->
             </div></a>
