@@ -311,7 +311,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                          <form method="post" action="updatePesananJudul2.php" role="form" enctype="multipart/form-data">
+                          <form method="post" action="main2.php" role="form" enctype="multipart/form-data">
                             <table id="example1" class="table m-0">
                               <thead>
                                 <tr>
