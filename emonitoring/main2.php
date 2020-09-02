@@ -18,14 +18,13 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$namaSekolah = $_POST['namaSekolah'];
-$get_namaSekolah = $_GET['namaSekolah'];
+$kodSekolah = $_GET['kodSekolah'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
-$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$get_namaSekolah%'");
+$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$kodSekolah'");
 $dataSekolah = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
@@ -301,21 +300,27 @@ $a = 1;
                             <table id="example1" class="table m-0">
                               <thead>
                               <tr>
-                                <th>No</th>
-                                <th>Kod Sekolah</th>
-                                <th>Nama Sekolah</th>
-                                <th>Negeri</th>
+                                <th colspan="3">Maklumat Sekolah</th>
                               </tr>
                               </thead>
                               <tbody>
-                              <?php do {?>
+                              <?php //do {?>
                               <tr>
-                                <td><?php echo $a++;?></td>
-                                <td><a href="main2.php?kodSekolah=<?php echo $dataSekolah['kodSekolah'];?>"><span class="badge badge-info"><?php echo strtoupper($dataSekolah['kodSekolah']);?></span></a></td>
+                                <td>
+                                    <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="judul" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td></td>
                                 <td><?php echo $dataSekolah['namaSekolah'];?></td>
                                 <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
                               </tr>
-                              <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
+                              <?php //} while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
                               </tbody>
                             </table>
                           </div>
