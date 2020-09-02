@@ -264,12 +264,12 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
     </div>
     <!-- /.content-header -->
     <!-- Main content -->
-    <section class="content">
+    <!--<section class="content">
       <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
+       
         <div class="row">
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+           
             <div class="small-box bg-info">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPenerbit"></div></h3>
@@ -281,9 +281,9 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+         
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            
             <div class="small-box bg-success">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalJudul"></div></h3>
@@ -296,9 +296,9 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+         
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPesanan"></div></h3>
@@ -311,9 +311,9 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+         
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+           
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPembekalan"></div></h3>
@@ -326,9 +326,9 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+         
         </div>
-      </section>
+      </section>-->
       <section class="content">
         <div id="row">
         <div class="col-md-12">
