@@ -19,20 +19,10 @@ if (isset($_SESSION['user'])) {
 $kodSekolah = $_GET['kodSekolah'];
 $kodSekolah2 = $_POST['kodSekolah'];
 $namaSekolah = $_POST['namaSekolah'];
-$noTelefon = $_POST['noTelefon'];
-$daerah = $_POST['daerah'];
-$negeri = $_POST['negeri'];
-$namaPenyelaras = $_POST['namaPenyelaras'];
-$noHP = $_POST['noHP'];
-$tarikhPemantauan = $_POST['tarikhPemantauan'];
-$namaPegawai1 = $_POST['namaPegawai1'];
-$namaPegawai2 = $_POST['namaPegawai2'];
-$namaPegawai3 = $_POST['namaPegawai3'];
-$namaPegawai4 = $_POST['namaPegawai4'];
-$jawatan1 = $_POST['jawatan1'];
-$jawatan2 = $_POST['jawatan2'];
-$jawatan3 = $_POST['jawatan3'];
-$jawatan4 = $_POST['jawatan4'];
+$judulSekolah = $_POST['judulSekolah'];
+$bukuLebihan = $_POST['bukuLebihan'];
+$kodJudul = $_POST['kodJudul'];
+
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
@@ -47,8 +37,8 @@ $dataJudul = mysqli_fetch_assoc($Recordset3);
 $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `namaPegawai2` = '$namaPegawai2', `namaPegawai3` = '$namaPegawai3', `namaPegawai4` = '$namaPegawai4', `jawatan1` = '$jawatan1', `jawatan2` = '$jawatan2', `jawatan3` = '$jawatan3', `jawatan4` = '$jawatan4' WHERE `kodSekolah` = '$kodSekolah2'");
-    header("location:main2.php?kodSekolah=$kodSekolah");
+    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah2`,`namaSekolah`,`judulSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$judulSekolah','$kodJudul','$bukuLebihan')");
+    header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
 $a = 1;
@@ -408,6 +398,7 @@ $a = 1;
                               </tbody>
                              </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $rekodPemantauan['kodSekolah'];?>"/>
+                                <input type="hidden" name="namaSekolah" value="<?php echo $rekodPemantauan['namaSekolah'];?>"/>
                                 <input type="hidden" name="kodJudul" value="<?php echo $rekodPemantauan['kodJudul'];?>"/>
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
