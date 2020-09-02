@@ -380,6 +380,7 @@ $a = 1;
                                                 <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                             <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
                                         </select>
+                                        <span class="select2 select2-container select2-container--default select2-container--focus" dir="ltr" data-select2-id="select2-data-2-u1cz" style="width: 824px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-o8be-container"><span class="select2-selection__rendered" id="select2-o8be-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                           </div>
                                         </div>
                                       </div>
