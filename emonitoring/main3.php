@@ -80,6 +80,7 @@ $a = 1;
   <!-- summernote -->
   <link rel="stylesheet" href="../adminSPBT/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="styleSearchJudul.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">
@@ -374,12 +375,18 @@ $a = 1;
                                    <div class="form-group">
                                       Judul: 
                                       <div class="input-group mb-3">
-                                        <input type="text" placeholder="Taip untuk saring nama judul" autocomplete="off" /> <br>
-                                         <select name="judulSekolah" class="custom-select browser-default" required>
-                                          <?php do {?>
-                                            <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
-                                         <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                          </select>
+
+                                        <div class="dropdown">
+                                          <button onclick="myFunction()" class="dropbtn">Pilih Judul</button>
+                                          <div id="myDropdown" class="dropdown-content">
+                                            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                            <select name="judulSekolah" id="myInput2">
+                                                 <?php do {?>
+                                                   <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
+                                                 <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
+                                          </div>
+                                        </div>
+                                        
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -468,32 +475,25 @@ $a = 1;
 		});
 </script>
 <script type="text/javascript">
-  $(document).ready(function() {
-   (function() {
-            const select = document.querySelectorAll('select');
-            const options = Array.from(select[0].options);
-            const input = document.querySelector('input');
+        function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
 
-            function findMatches (search, options) {
-              return options.filter(option => {
-                const regex = new RegExp(search, 'gi');
-                return option.text.match(regex);
-              });
-            }
-
-            function filterOptions () {
-              options.forEach(option => { 
-                option.remove();
-                option.selected = false;
-              });
-              const matchArray = findMatches(this.value, options);
-              select[0].append(...matchArray);
-            }
-
-            input.addEventListener('change', filterOptions);
-            input.addEventListener('keyup', filterOptions);
-          })();
-    });
+      function filterFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("myDropdown");
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+          txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+          } else {
+            a[i].style.display = "none";
+          }
+        }
+      }
 </script>
 <!-- DataTables -->
 <script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
