@@ -380,16 +380,14 @@ $a = 1;
                                 <tr>
                                   <td>
                                    <div class="form-group">
-                                      Judul:
+                                      Judul: 
                                       <div class="input-group mb-3">
-                                         <input type="text" placeholder="Taip untuk saring nama judul" autocomplete="off" />
-                                         <br />
-                                         <select name="judulSekolah">
+                                        <input type="text" placeholder="Taip untuk saring nama judul" autocomplete="off" /> <br>
+                                         <select name="judulSekolah" class="custom-select browser-default" required>
                                           <?php do {?>
                                             <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                          </select>
                                          <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                      <input type="text" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
