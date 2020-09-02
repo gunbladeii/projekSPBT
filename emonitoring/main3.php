@@ -329,8 +329,7 @@ $a = 1;
                                     <div class="form-group">
                                       <div class="input-group mb-3">
                                       Nama Sekolah: <?php echo $dataSekolah['namaSekolah'];?>
-                                      <div class="input-group-append input-group-text">
-                                      </div>
+                                     
                                       </div>
                                     </div>
                                 </td>
@@ -340,8 +339,7 @@ $a = 1;
                                     <div class="form-group">
                                       <div class="input-group mb-3">
                                       Kod Sekolah: <?php echo $dataSekolah['kodSekolah'];?>
-                                      <div class="input-group-append input-group-text">
-                                      </div>
+                                      
                                       </div>
                                     </div>
                                 </td>
@@ -352,8 +350,7 @@ $a = 1;
                                    <div class="form-group">
                                       <div class="input-group mb-3">
                                       Negeri: <?php echo $dataSekolah['negeri'];?>
-                                      <div class="input-group-append input-group-text">
-                                      </div>
+                                      
                                       </div>
                                     </div>
                                 </td>
@@ -363,8 +360,7 @@ $a = 1;
                                    <div class="form-group">
                                       <div class="input-group mb-3">
                                       Nama Guru Penyelaras SPBT: <?php echo $dataSekolah['namaPenyelaras'];?>
-                                      <div class="input-group-append input-group-text">
-                                      </div>
+                                     
                                       </div>
                                     </div>
                                 </td>
@@ -382,9 +378,10 @@ $a = 1;
                                          <select name="judulSekolah" class="custom-select browser-default" required>
                                           <?php do {?>
                                             <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
-                                         </select>
                                          <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
+                                          </select>
                                       <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
                                       </div>
                                       </div>
                                     </div>
