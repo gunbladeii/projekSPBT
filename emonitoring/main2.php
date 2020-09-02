@@ -300,7 +300,7 @@ $a = 1;
                             <table id="example1" class="table m-0">
                               <thead>
                                 <tr>
-                                  <th colspan="3" style="text-align: center;"><h4>Maklumat Sekolah</h4></th>
+                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
                                 </tr>
                               </thead>
                               <tbody>
