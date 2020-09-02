@@ -19,11 +19,22 @@ if (isset($_SESSION['user'])) {
 }
 
 $namaSekolah = $_POST['namaSekolah'];
+$get_namaSekolah = $_GET['namaSekolah'];
 
-$Recordset = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
-$dataSekolah = mysqli_fetch_assoc($Recordset);
+$Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
+$row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
+$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$get_namaSekolah%'");
+$dataSekolah = mysqli_fetch_assoc($Recordset2);
+$totalRows_Recordset2 = mysqli_num_rows($Recordset2);
+
+if (isset($_POST['submit'])) {
+    $mysqli->query ("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
+    header("location:main1.php");
+    }
+
+$a = 1;
 ?>
 <!DOCTYPE html>
 <html>
@@ -295,13 +306,17 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 
                               <div class="form-group">
                                 <div class="input-group mb-3">
-                                <input type="text" name="namaSekolah" class="form-control" id="validationDefault01"value="<?php echo $dataSekolah['namaSekolah'];?>" required>
+                                <input type="text" name="namaSekolah" placeholder="Carian Sekolah (masukkan kata kunci sahaja)" class="form-control" id="validationDefault01" value="" required>
                                 <div class="input-group-append input-group-text">
                                     <span class="fas fa-id-card-alt"></span>
                                 </div>
                                </div>
                               </div>
                              
+                              <div class="modal-footer">
+                                  <input type="submit" class="btn btn-primary" name="submit" value="Carian Sekolah"/>
+                              </div>
+
                             </tr>
                             </tbody>
                           </table>
@@ -313,10 +328,33 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               </div>
               </div>
               </div>
-            
-        
-      
-      
+
+                      <?php if($dataSekolah > 0) {?>
+                          <div class="table-responsive">
+                            <table id="tablePesananJudul" class="table m-0">
+                              <thead>
+                              <tr>
+                                <th>No</th>
+                                <th>Kod Sekolah</th>
+                                <th>Nama Sekolah</th>
+                                <th>Daerah</th>
+                                <th>Negeri</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <?php do {?>
+                              <tr>
+                                <td><?php echo $a++;?></td>
+                                <td><a><span class="badge badge-info"><?php echo strtoupper($dataSekolah['kodSekolah']);?></span></a></td>
+                                <td><?php echo $dataSekolah['namaSekolah'];?></td>
+                                <td><?php echo ucwords($dataSekolah['daerah']);?></td>
+                                <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
+                              </tr>
+                              <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
+                              </tbody>
+                            </table>
+                          </div>
+                      <?php ;}else {echo 'Tiada dalam rekod';}?>
         
  </section>
 </div>
