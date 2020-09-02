@@ -42,9 +42,13 @@ $Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$
 $dataSekolah = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
+$Recordset3 = $mysqli->query("SELECT * FROM dataJudul");
+$dataJudul = mysqli_fetch_assoc($Recordset3);
+$totalRows_Recordset3 = mysqli_num_rows($Recordset3);
+
 if (isset($_POST['submit'])) {
     $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `namaPegawai2` = '$namaPegawai2', `namaPegawai3` = '$namaPegawai3', `namaPegawai4` = '$namaPegawai4', `jawatan1` = '$jawatan1', `jawatan2` = '$jawatan2', `jawatan3` = '$jawatan3', `jawatan4` = '$jawatan4' WHERE `kodSekolah` = '$kodSekolah2'");
-    header("location:main3.php?kodSekolah=$kodSekolah2");
+    header("location:main2.php?kodSekolah=$kodSekolah");
     }
 
 $a = 1;
@@ -323,9 +327,8 @@ $a = 1;
                               <tr>
                                 <td>
                                     <div class="form-group">
-                                      Nama Sekolah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" required>
+                                      Nama Sekolah: <?php echo $dataSekolah['namaSekolah'];?>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -336,9 +339,8 @@ $a = 1;
                                 <tr>
                                   <td>
                                     <div class="form-group">
-                                      Kod Sekolah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
+                                      Kod Sekolah: <?php echo $dataSekolah['kodSekolah'];?>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -346,25 +348,12 @@ $a = 1;
                                     </div>
                                 </td>
                                </tr>
-                               <tr>
+                                
+                              <tr>
                                   <td>
                                    <div class="form-group">
-                                      No. Telefon Pejabat:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="noTelefon" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTelefon'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Daerah:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" required>
+                                      Negeri: <?php echo $dataSekolah['negeri'];?>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -375,9 +364,8 @@ $a = 1;
                               <tr>
                                   <td>
                                    <div class="form-group">
-                                      Negeri:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="negeri" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['negeri'];?>" required>
+                                      Nama Guru Penyelaras SPBT: <?php echo $dataSekolah['namaPenyelaras'];?>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -385,155 +373,23 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Guru Penyelaras SPBT:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPenyelaras" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPenyelaras'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      No. Telefon Bimbit:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="noHP" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['noHP'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-                              <?php //} while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
                                  <tr>
-                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pemantau</h4></th>
+                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
                                 </tr>
 
                                 <tr>
                                   <td>
                                    <div class="form-group">
-                                      Tarikh Pemantauan:
+                                      Judul:
                                       <div class="input-group mb-3">
+                                         <input type="text" placeholder="Taip untuk saring nama judul" autocomplete="off" />
+                                         <br />
+                                         <select name="judulSekolah">
+                                          <?php do {?>
+                                            <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
+                                         </select>
+                                         <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
                                       <input type="text" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 1:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai1'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan1'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 2:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai2'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan2" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan2'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 3:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai3'];?>">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan3'];?>">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 4:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai4'];?>">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan4'];?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -617,6 +473,34 @@ $a = 1;
 				$('#attStat').load('../distiSPBT/attStat.php')
 				$('#parcelStat').load('../distiSPBT/parcelStat.php')
 			}, 5000);
+
+      (function() {
+            const select = document.querySelectorAll('select');
+            const options = Array.from(select[0].options);
+            const input = document.querySelector('input');
+
+            function findMatches (search, options) {
+              return options.filter(option => {
+                const regex = new RegExp(search, 'gi');
+                return option.text.match(regex);
+              });
+            }
+
+            function filterOptions () {
+              options.forEach(option => { 
+                option.remove();
+                option.selected = false;
+              });
+              const matchArray = findMatches(this.value, options);
+              select[0].append(...matchArray);
+            }
+
+            input.addEventListener('change', filterOptions);
+            input.addEventListener('keyup', filterOptions);
+          })();
+
+
+
 		});
 </script>
 <!-- DataTables -->
