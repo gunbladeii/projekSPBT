@@ -464,7 +464,12 @@ $a = 1;
 				$('#parcelStat').load('../distiSPBT/parcelStat.php')
 			}, 5000);
 
-      (function() {
+     
+		});
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+   (function() {
             const select = document.querySelectorAll('select');
             const options = Array.from(select[0].options);
             const input = document.querySelector('input');
@@ -488,10 +493,7 @@ $a = 1;
             input.addEventListener('change', filterOptions);
             input.addEventListener('keyup', filterOptions);
           })();
-
-
-
-		});
+    });
 </script>
 <!-- DataTables -->
 <script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
