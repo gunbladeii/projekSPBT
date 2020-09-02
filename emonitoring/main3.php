@@ -36,6 +36,10 @@ $Recordset3 = $mysqli->query("SELECT * FROM dataJudul");
 $dataJudul = mysqli_fetch_assoc($Recordset3);
 $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
 
+$Recordset4 = $mysqli->query("SELECT * FROM rekodPemantauan WHERE kodSekolah = '$kodSekolah'");
+$rekodPemantauan = mysqli_fetch_assoc($Recordset4);
+$totalRows_Recordset3 = mysqli_num_rows($Recordset4);
+
 if (isset($_POST['submit'])) {
     $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah2`,`namaSekolah`,`judulSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$judulSekolah','$kodJudul','$bukuLebihan')");
     header("location:main3.php?kodSekolah=$kodSekolah2");
@@ -406,6 +410,28 @@ $a = 1;
                             </form>
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
+
+                      <?php if($rekodPemantauan > 0) {?>
+                        <div class="table-responsive">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Bil</th>
+                                <th>Judul</th>
+                                <th>Lebihan buku</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><?php echo $a++;?></td>
+                                <td><?php echo strtoupper($rekodPemantauan['judulSekolah']);?></td>
+                                <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                      <?php ;}?>
         
                 <!-- /.table-responsive -->
               </div>
