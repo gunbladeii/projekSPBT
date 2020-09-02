@@ -44,7 +44,7 @@ $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
 if (isset($_POST['submit'])) {
     $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `namaPegawai2` = '$namaPegawai2', `namaPegawai3` = '$namaPegawai3', `namaPegawai4` = '$namaPegawai4', `jawatan1` = '$jawatan1', `jawatan2` = '$jawatan2', `jawatan3` = '$jawatan3', `jawatan4` = '$jawatan4' WHERE `kodSekolah` = '$kodSekolah2'");
-    header("location:main2.php");
+    header("location:main2.php?kodSekolah=$kodSekolah");
     }
 
 $a = 1;
