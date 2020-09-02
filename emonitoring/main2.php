@@ -331,7 +331,7 @@ $a = 1;
                                 <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      <input type="text" name="noTel" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat"> value="<?php echo $dataSekolah['noTel'];?>" required>
+                                      <input type="text" name="noTel" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTel'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
