@@ -40,7 +40,7 @@ $rekodPemantauan = mysqli_fetch_assoc($Recordset4);
 $totalRows_Recordset3 = mysqli_num_rows($Recordset4);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah2`,`namaSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan')");
+    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan')");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
