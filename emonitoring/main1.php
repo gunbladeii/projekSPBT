@@ -289,7 +289,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
                           <table id="example3" class="table m-0 table-sm">
                             <tbody>
                             <tr>
-                              <td><input type="text" name="namaSekolah"></td>
+                              <td><input type="text" name="namaSekolah" placeholder="Carian nama sekolah (masukkan kata kunci sahaja)"></td>
                             </tr>
                             </tbody>
                           </table>
