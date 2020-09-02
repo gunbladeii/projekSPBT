@@ -262,73 +262,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
-    <!-- Main content -->
-    <!--<section class="content">
-      <div class="container-fluid">
-       
-        <div class="row">
-          <div class="col-lg-3 col-6">
-           
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPenerbit"></div></h3>
-                <p>Jumlah Penerbit</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-clipboard"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-         
-          <div class="col-lg-3 col-6">
-            
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalJudul"></div></h3>
-
-                <p>Jumlah Judul</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-         
-          <div class="col-lg-3 col-6">
-            
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPesanan"></div></h3>
-
-                <p>Jumlah Pesanan</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-         
-          <div class="col-lg-3 col-6">
-           
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3 style="font-family: 'Anton', sans-serif;"><div id="showTotalPembekalan"></div></h3>
-
-                <p>Jumlah Pembekalan</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-         
-        </div>
-      </section>-->
+   
       <section class="content">
         <div id="row">
         <div class="col-md-12">
@@ -336,7 +270,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
             <div class="card">
               <div class="card-header border-transparent">
                 <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
+                <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-widget="collapse">
