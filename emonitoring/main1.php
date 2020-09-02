@@ -296,42 +296,9 @@ $a = 1;
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                <div class="table-responsive">
-                    <div>
-                    <form method="post" action="main1.php" role="form" enctype="multipart/form-data">
-                      <div class="table-responsive">
-                          <table id="example3" class="table m-0 table-sm">
-                            <tbody>
-                            <tr>
-
-                              <div class="form-group">
-                                <div class="input-group mb-3">
-                                <input type="text" name="namaSekolah" placeholder="Carian Sekolah (masukkan kata kunci sahaja)" class="form-control" id="validationDefault01" value="" required>
-                                <div class="input-group-append input-group-text">
-                                    <span class="fas fa-id-card-alt"></span>
-                                </div>
-                               </div>
-                              </div>
-                             
-                              <div class="modal-footer">
-                                  <input type="submit" class="btn btn-primary" name="submit" value="Carian Sekolah"/>
-                              </div>
-
-                            </tr>
-                            </tbody>
-                          </table>
-                      </div>
-                    </form>
-                    </div>
-                  </div>
-                <!-- /.table-responsive -->
-              </div>
-              </div>
-              </div>
-
-                      <?php if($dataSekolah > 0) {?>
+                        <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                            <table id="tablePesananJudul" class="table m-0">
+                            <table id="example1" class="table m-0">
                               <thead>
                               <tr>
                                 <th>No</th>
@@ -356,6 +323,12 @@ $a = 1;
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
         
+                <!-- /.table-responsive -->
+              </div>
+              </div>
+              </div>
+
+                     
  </section>
 </div>
 <!-- ./wrapper -->
