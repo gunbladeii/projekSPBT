@@ -1,4 +1,4 @@
-<?php require('adminSPBT/conn.php'); ?>
+<?php require('conn.php'); ?>
 <?php
       session_start();
       function locationHeader()
