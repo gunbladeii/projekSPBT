@@ -375,12 +375,15 @@ $a = 1;
                                    <div class="form-group">
                                       Judul: 
                                       <div class="input-group mb-3">
-                                       <select class="js-example-matcher-start js-states form-control select2-hidden-accessible" data-select2-id="select2-data-1-i05c" tabindex="-1" aria-hidden="true" name="judulSekolah">
-                                            <?php do {?>
-                                                <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
-                                            <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                        </select>
-                                        <span class="select2 select2-container select2-container--default select2-container--focus" dir="ltr" data-select2-id="select2-data-2-u1cz" style="width: 824px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-o8be-container"><span class="select2-selection__rendered" id="select2-o8be-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        <div class="dropdown">
+                                          <a onclick="myFunction()" class="dropbtn">Pilih Judul (klik sini)</a>
+                                          <div id="myDropdown" class="dropdown-content">
+                                            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                               <select name="judulSekolah" id="myInput2" class="custom-select browser-default" required>
+                                                 <?php do {?>
+                                                   <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
+                                                 <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
+                                               </select>
                                           </div>
                                         </div>
                                       </div>
@@ -459,7 +462,6 @@ $a = 1;
 <script src="../adminSPBT/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../adminSPBT/dist/js/demo.js"></script>
-<script src="select.js"></script>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -484,46 +486,28 @@ $a = 1;
      
 		});
 </script>
-<script type="text/javascript" class="js-code-example-matcher">
-
-function matchStart(params, data) {
-  // If there are no search terms, return all of the data
-  if ($.trim(params.term) === '') {
-    return data;
-  }
-
-  // Skip if there is no 'children' property
-  if (typeof data.children === 'undefined') {
-    return null;
-  }
-
-  // `data.children` contains the actual options that we are matching against
-  var filteredChildren = [];
-  $.each(data.children, function (idx, child) {
-    if (child.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
-      filteredChildren.push(child);
-    }
-  });
-
-  // If we matched any of the timezone group's children, then set the matched children on the group
-  // and return the group object
-  if (filteredChildren.length) {
-    var modifiedData = $.extend({}, data, true);
-    modifiedData.children = filteredChildren;
-
-    // You can return modified objects from here
-    // This includes matching the `children` how you want in nested data sets
-    return modifiedData;
-  }
-
-  // Return `null` if the term should not be displayed
-  return null;
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
-$(".js-example-matcher-start").select2({
-  matcher: matchStart
-});
-
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = document.getElementById("myInput2");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
 </script>
 <!-- DataTables -->
 <script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
