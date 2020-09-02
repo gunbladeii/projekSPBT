@@ -377,7 +377,7 @@ $a = 1;
                                       <div class="input-group mb-3">
 
                                         <div class="dropdown">
-                                          <button onclick="myFunction()" class="dropbtn">Pilih Judul</button>
+                                          <a onclick="myFunction()" class="dropbtn">Pilih Judul</a>
                                           <div id="myDropdown" class="dropdown-content">
                                             <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                                             <select name="judulSekolah" id="myInput2">
@@ -386,7 +386,7 @@ $a = 1;
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
                                           </div>
                                         </div>
-                                        
+
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
