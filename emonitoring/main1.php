@@ -192,7 +192,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
-      <img src="dist/img/logo_kpm.png" alt="altus Logo" class="brand-image img-circle elevation-3"
+      <img src="../adminSPBT/dist/img/logo_kpm.png" alt="altus Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-dark" style="font-family: 'Fugaz One', cursive;">eSPBT 2.0</span>
     </a>
@@ -335,7 +335,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Senarai pengguna sistem</h3>
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h3>
                 <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
