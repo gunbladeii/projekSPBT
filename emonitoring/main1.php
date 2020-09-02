@@ -284,7 +284,34 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <!-- /.card-header -->
               <div class="card-body p-0">
                 <div class="table-responsive">
-                    <div id="showUserList"></div>
+                    <div>
+                      <div class="table-responsive">
+                          <table id="example3" class="table m-0 table-sm">
+                            <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Nama Penerbit</th>
+                              <th>Username</th>
+                              <th>Password</th>
+                              <th>Peranan</th>
+                              <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php do {?>
+                            <tr>
+                              <td><?php echo $a++;?></td>
+                              <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>" class="nav-link"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
+                              <td><?php echo $RID['username']?></td>
+                              <td><?php echo $RID['password']?></td>
+                              <td><?php if($RID['role'] == 'admin'){echo 'Administrator';}else if($RID['role'] == 'publisherSPBT'){echo 'Penerbit';}else if($RID['role'] == 'distiSPBT'){echo 'Pengedar';}?></td>
+                              <td><span class="badge badge-warning"><?php echo strtoupper($RID['status']);?></span></td>
+                            </tr>
+                            <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>
+                            </tbody>
+                          </table>
+                </div>
+                    </div>
                   </div>
                 <!-- /.table-responsive -->
               </div>
