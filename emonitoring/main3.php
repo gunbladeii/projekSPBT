@@ -367,8 +367,8 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       Judul: 
+                                      <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
                                       <div class="input-group mb-3">
-                                               <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" > <br>
                                                <select name="kodJudul" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
