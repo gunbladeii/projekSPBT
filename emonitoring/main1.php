@@ -18,8 +18,10 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
-$row_Recordset = mysqli_fetch_assoc($Recordset);
+$namaSekolah = $_POST['namaSekolah'];
+
+$Recordset = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
+$dataSekolah = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
 ?>
@@ -285,15 +287,26 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               <div class="card-body p-0">
                 <div class="table-responsive">
                     <div>
+                    <form method="post" action="main1.php" role="form" enctype="multipart/form-data">
                       <div class="table-responsive">
                           <table id="example3" class="table m-0 table-sm">
                             <tbody>
                             <tr>
-                              <td><input type="text" name="namaSekolah" placeholder="Carian nama sekolah (masukkan kata kunci sahaja)"></td>
+
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                <input type="text" name="namaSekolah" class="form-control" id="validationDefault01"value="<?php echo $dataSekolah['namaSekolah'];?>" required>
+                                <div class="input-group-append input-group-text">
+                                    <span class="fas fa-id-card-alt"></span>
+                                </div>
+                               </div>
+                              </div>
+                             
                             </tr>
                             </tbody>
                           </table>
-                </div>
+                      </div>
+                    </form>
                     </div>
                   </div>
                 <!-- /.table-responsive -->
