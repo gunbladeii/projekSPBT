@@ -304,7 +304,6 @@ $a = 1;
                                 <th>No</th>
                                 <th>Kod Sekolah</th>
                                 <th>Nama Sekolah</th>
-                                <th>Daerah</th>
                                 <th>Negeri</th>
                               </tr>
                               </thead>
@@ -314,7 +313,6 @@ $a = 1;
                                 <td><?php echo $a++;?></td>
                                 <td><a><span class="badge badge-info"><?php echo strtoupper($dataSekolah['kodSekolah']);?></span></a></td>
                                 <td><?php echo $dataSekolah['namaSekolah'];?></td>
-                                <td><?php echo ucwords($dataSekolah['daerah']);?></td>
                                 <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
                               </tr>
                               <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
