@@ -368,7 +368,7 @@ $a = 1;
                                    <div class="form-group">
                                       Judul: 
                                       <div class="input-group mb-3">
-                                               <input type="text" placeholder="Carian Judul..">&nbsp;
+                                               <input type="text" id="carianJudul" placeholder="Carian Judul..">&nbsp;
                                                <select name="kodJudul" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
@@ -535,7 +535,7 @@ $a = 1;
     // You could use it like this:
 
     $(function() {
-      $('select').filterByText($('input'));
+      $('select').filterByText($('#carianJudul'));
     });
 </script>
 <script>
