@@ -368,18 +368,12 @@ $a = 1;
                                    <div class="form-group">
                                       Judul: 
                                       <div class="input-group mb-3">
-                                        <div class="dropdown">
-                                          <a onclick="myFunction()" class="dropbtn">Pilih Judul (klik sini)</a>
-                                          <div id="myDropdown" class="dropdown-content">
-                                            <div><input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"></div>&nbsp; 
-                                               <div><select name="kodJudul" id="myInput2" class="custom-select browser-default" required>
+                                               <input type="text" placeholder="Carian Judul..">&nbsp;
+                                               <select name="kodJudul" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                               </select></div>
-                                          </div>
-                                        </div>
-                                      </div>
+                                               </select>
                                     </div>
                                 </td>
                               </tr>
@@ -506,6 +500,43 @@ $a = 1;
 
      
 		});
+</script>
+<script type="text/javascript">
+            //jQuery extension method:
+    jQuery.fn.filterByText = function(textbox) {
+      return this.each(function() {
+        var select = this;
+        var options = [];
+        $(select).find('option').each(function() {
+          options.push({
+            value: $(this).val(),
+            text: $(this).text()
+          });
+        });
+        $(select).data('options', options);
+
+        $(textbox).bind('change keyup', function() {
+          var options = $(select).empty().data('options');
+          var search = $.trim($(this).val());
+          var regex = new RegExp(search, "gi");
+
+          $.each(options, function(i) {
+            var option = options[i];
+            if (option.text.match(regex) !== null) {
+              $(select).append(
+                $('<option>').text(option.text).val(option.value)
+              );
+            }
+          });
+        });
+      });
+    };
+
+    // You could use it like this:
+
+    $(function() {
+      $('select').filterByText($('input'));
+    });
 </script>
 <script>
 /* When the user clicks on the button,
