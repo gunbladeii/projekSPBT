@@ -362,18 +362,25 @@ $a = 1;
                                  <tr>
                                   <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>
-
+ 
                                 <tr>
                                   <td>
                                    <div class="form-group">
-                                      Judul: 
+                                    Judul: 
                                       <div class="input-group mb-3">
-                                               <div><input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.."></div><br>
-                                               <div><select name="kodJudul" class="custom-select browser-default" required>
+                                              <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas..">
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                               <select name="kodJudul" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                               </select></div>
+                                               </select>
                                     </div>
                                 </td>
                               </tr>
