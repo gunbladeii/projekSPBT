@@ -362,20 +362,13 @@ $a = 1;
                                  <tr>
                                   <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>
- 
+                                
                                 <tr>
                                   <td>
                                    <div class="form-group">
-                                    Judul: 
+                                      Judul: 
                                       <div class="input-group mb-3">
-                                              <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas..">
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
+                                               <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
                                                <select name="kodJudul" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
