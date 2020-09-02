@@ -256,7 +256,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">eSPBT 2.0 | Dashboard</li>
+              <li class="breadcrumb-item active">eSPBT 2.0 | Pengesanan Stok</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -357,34 +357,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
               </div>
               </div>
             
-          <div class="row">  
-            <div class="col-md-12"> 
-              <!-- TABLE: parcel delivery publisherSPBT -->
-            <div class="card">
-              <div class="card-header border-transparent">
-                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Status pembekalan mengikut judul dan negeri</h3>
-                <h2 class="card-title" style="font-size:14px;">(As of <?php echo $date.' '.$time;?>)</h2>
-              <!-- /.card-body -->
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                  <div id="showJudulList"></div>
-                </div>
-                <!-- /.table-responsive -->
-              </div>
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->        
+        
       
       
         
