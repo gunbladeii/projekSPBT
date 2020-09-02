@@ -379,7 +379,7 @@ $a = 1;
                                           <a onclick="myFunction()" class="dropbtn">Pilih Judul</a>
                                           <div id="myDropdown" class="dropdown-content">
                                             <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                               <select name="judulSekolah" id="myInput2">
+                                               <select name="judulSekolah" multiple id="myInput2">
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
