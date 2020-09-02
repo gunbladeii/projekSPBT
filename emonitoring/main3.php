@@ -368,12 +368,12 @@ $a = 1;
                                    <div class="form-group">
                                       Judul: 
                                       <div class="input-group mb-3">
-                                               <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas"><br>
-                                               <select name="kodJudul" class="custom-select browser-default" required>
+                                               <div><input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.."></div><br>
+                                               <div><select name="kodJudul" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                               </select>
+                                               </select></div>
                                     </div>
                                 </td>
                               </tr>
