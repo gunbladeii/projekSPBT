@@ -321,6 +321,7 @@ $a = 1;
                                 <tr>
                                   <td>
                                     <div class="form-group">
+                                      Kod Sekolah:
                                       <div class="input-group mb-3">
                                       <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
                                       <div class="input-group-append input-group-text">
@@ -333,6 +334,7 @@ $a = 1;
                                <tr>
                                   <td>
                                    <div class="form-group">
+                                      No. Telefon Pejabat:
                                       <div class="input-group mb-3">
                                       <input type="text" name="noTel" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTel'];?>" required>
                                       <div class="input-group-append input-group-text">
@@ -345,8 +347,48 @@ $a = 1;
                                 <tr>
                                   <td>
                                    <div class="form-group">
+                                      Daerah:
                                       <div class="input-group mb-3">
                                       <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Negeri:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="negeri" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['negeri'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Nama Guru Penyelaras SPBT:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="namaPenyelaras" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPenyelaras'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      No. Telefon Bimbit:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="noHP" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['noHP'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
