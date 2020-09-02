@@ -462,7 +462,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan2' class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan2'];?>" required>
+                                      <input type="text" name="jawatan2" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan2'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
