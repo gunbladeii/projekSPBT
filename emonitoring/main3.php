@@ -316,7 +316,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                          <form method="post" action="main2.php" role="form" enctype="multipart/form-data">
+                          <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
                             <table id="example1" class="table m-0">
                               <thead>
                                 <tr>
@@ -376,10 +376,10 @@ $a = 1;
                                       Judul: 
                                       <div class="input-group mb-3">
                                         <div class="dropdown">
-                                          <a onclick="myFunction()" class="dropbtn">Pilih Judul</a>
+                                          <a onclick="myFunction()" class="dropbtn">Pilih Judul (klik sini)</a>
                                           <div id="myDropdown" class="dropdown-content">
                                             <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                               <select name="judulSekolah" multiple id="myInput2">
+                                               <select name="judulSekolah" multiple id="myInput2" class="custom-select browser-default" required>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
@@ -391,8 +391,24 @@ $a = 1;
                                 </td>
                               </tr>
 
+                               <tr>
+                                  <td>
+                                    <div class="form-group">
+                                      Jumlah Naskah Lebihan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="bukuLebihan" class="form-control"  id="validationDefault01" value="<?php echo $rekodPemantauan['bukuLebihan'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                               </tr>
+
                               </tbody>
                              </table>
+                                <input type="hidden" name="kodSekolah" value="<?php echo $rekodPemantauan['kodSekolah'];?>"/>
+                                <input type="hidden" name="kodJudul" value="<?php echo $rekodPemantauan['kodJudul'];?>"/>
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
