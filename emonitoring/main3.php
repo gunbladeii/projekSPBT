@@ -401,9 +401,9 @@ $a = 1;
 
                               </tbody>
                              </table>
-                                <input type="hidden" name="kodSekolah" value="<?php echo $rekodPemantauan['kodSekolah'];?>"/>
-                                <input type="hidden" name="namaSekolah" value="<?php echo $rekodPemantauan['namaSekolah'];?>"/>
-                                <input type="hidden" name="kodJudul" value="<?php echo $rekodPemantauan['kodJudul'];?>"/>
+                                <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
+                                <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
+                                <input type="hidden" name="kodJudul" value="<?php echo $dataJudul['kodJudul'];?>"/>
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
