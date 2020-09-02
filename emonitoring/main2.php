@@ -397,6 +397,9 @@ $a = 1;
                                 </td>
                               </tr>
                               <?php //} while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
+                                 <tr>
+                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pemantau</h4></th>
+                                </tr>
                               </tbody>
                             </table>
                           </div>
