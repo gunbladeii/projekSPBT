@@ -414,6 +414,9 @@ $a = 1;
                           <table class="table m-0">
                             <thead>
                               <tr>
+                                <th colspan="4" style="background-color: black"><h4 style="color: white">Senarai judul yang dipantau</h4></th>
+                              </tr>
+                              <tr>
                                 <th>Bil</th>
                                 <th>Kod judul</th>
                                 <th>Judul</th>
