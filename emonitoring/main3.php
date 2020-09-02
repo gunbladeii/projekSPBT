@@ -421,12 +421,14 @@ $a = 1;
                               </tr>
                             </thead>
                             <tbody>
+                              <?php do {?>
                               <tr>
                                 <td><?php echo $a++;?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['kodJudul']);?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['judulSekolah']);?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
                               </tr>
+                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                             </tbody>
                           </table>
 
