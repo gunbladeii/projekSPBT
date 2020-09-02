@@ -400,6 +400,137 @@ $a = 1;
                                  <tr>
                                   <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pemantau</h4></th>
                                 </tr>
+
+                                <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Tarikh Pemantauan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Nama Pegawai Pemantau 1:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai1'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Jawatan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan1'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Nama Pegawai Pemantau 2:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai2'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Jawatan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="jawatan2' class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan2'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Nama Pegawai Pemantau 3:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="namaPegawai3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai3'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Jawatan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="jawatan3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan3'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Nama Pegawai Pemantau 4:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="namaPegawai4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai4'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Jawatan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="jawatan4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan4'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+
+
+
+
                               </tbody>
                             </table>
                           </div>
