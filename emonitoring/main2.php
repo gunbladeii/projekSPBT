@@ -542,13 +542,12 @@ $a = 1;
                                 </td>
                               </tr>
 
-                                 <div class="modal-footer">
+                              </tbody>
+                             </table>
+                                <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
-                             </form>
-
-                              </tbody>
-                            </table>
+                            </form>
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
         
