@@ -30,9 +30,9 @@ $namaPegawai2 = $_POST['namaPegawai2'];
 $namaPegawai3 = $_POST['namaPegawai3'];
 $namaPegawai4 = $_POST['namaPegawai4'];
 $jawatan1 = $_POST['jawatan1'];
-$jawatan2 = $_POST['namaSekolah'];
+$jawatan2 = $_POST['jawatan2'];
 $jawatan3 = $_POST['jawatan3'];
-$jawatan4 = $_POST['namaSekolah'];
+$jawatan4 = $_POST['jawatan4'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
