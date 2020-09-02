@@ -383,7 +383,7 @@ $a = 1;
                                     <div class="form-group">
                                       Jumlah Naskah Lebihan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="bukuLebihan" class="form-control"  id="validationDefault01" value="<?php echo $rekodPemantauan['bukuLebihan'];?>" required>
+                                      <input type="number" name="bukuLebihan" class="form-control"  id="validationDefault01" value="<?php echo $rekodPemantauan['bukuLebihan'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
