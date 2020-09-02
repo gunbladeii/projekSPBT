@@ -299,9 +299,9 @@ $a = 1;
                           <div class="table-responsive">
                             <table id="example1" class="table m-0">
                               <thead>
-                              <tr>
-                                <th colspan="3">Maklumat Sekolah</th>
-                              </tr>
+                                <tr>
+                                  <th colspan="3" style="text-align: center;">Maklumat Sekolah</th>
+                                </tr>
                               </thead>
                               <tbody>
                               <?php //do {?>
@@ -316,7 +316,9 @@ $a = 1;
                                       </div>
                                     </div>
                                 </td>
-                                <td>
+                                </tr>
+                                <tr>
+                                  <td>
                                     <div class="form-group">
                                       <div class="input-group mb-3">
                                       <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
@@ -326,9 +328,9 @@ $a = 1;
                                       </div>
                                     </div>
                                 </td>
-                              </tr>
-                              <tr>
-                                <td>
+                               </tr>
+                               <tr>
+                                  <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
                                       <input type="text" name="noTel" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTel'];?>" required>
@@ -337,8 +339,10 @@ $a = 1;
                                       </div>
                                       </div>
                                     </div>
-                                </td>
-                                <td>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
                                       <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" required>
