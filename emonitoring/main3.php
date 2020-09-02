@@ -411,7 +411,7 @@ $a = 1;
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
-                          <table>
+                          <table class="table m-0">
                             <thead>
                               <tr>
                                 <th>Bil</th>
@@ -431,7 +431,6 @@ $a = 1;
                                <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                             </tbody>
                           </table>
-
                         </div>
                       <?php ;}?>
         
