@@ -47,21 +47,21 @@ session_start();
                 $_SESSION['user'] = $res['username'];
                 $_SESSION['role'] = $res["role"];
                 $_SESSION['password'] = $res["password"];
-                header('Location:../adminSPBT/index.php');
+                header('Location:main1.php');
             }
             else if($res["role"] == "publisherSPBT")
             {
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
-            header('Location:publisherSPBT/indexPublisher.php');
+            header('Location:../publisherSPBT/indexPublisher.php');
             }
             else if($res["role"] == "distiSPBT")
             {
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
-            header('Location:distiSPBT/index.php');
+            header('Location:../distiSPBT/index.php');
             }
             else if($res["role"] != "admin" || $res["role"] != "distiSPBT" ||$res["role"] != "publisherSPBT")
             {
