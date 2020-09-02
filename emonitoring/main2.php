@@ -491,7 +491,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau 3:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai3'];?>" required>
+                                      <input type="text" name="namaPegawai3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai3'];?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -505,7 +505,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan3'];?>" required>
+                                      <input type="text" name="jawatan3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan3'];?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -519,7 +519,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau 4:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai4'];?>" required>
+                                      <input type="text" name="namaPegawai4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai4'];?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -533,7 +533,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan4'];?>" required>
+                                      <input type="text" name="jawatan4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan4'];?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
