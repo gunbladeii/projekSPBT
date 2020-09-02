@@ -375,7 +375,6 @@ $a = 1;
                                    <div class="form-group">
                                       Judul: 
                                       <div class="input-group mb-3">
-
                                         <div class="dropdown">
                                           <a onclick="myFunction()" class="dropbtn">Pilih Judul</a>
                                           <div id="myDropdown" class="dropdown-content">
@@ -387,10 +386,6 @@ $a = 1;
                                                </select>
                                           </div>
                                         </div>
-
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
                                       </div>
                                     </div>
                                 </td>
