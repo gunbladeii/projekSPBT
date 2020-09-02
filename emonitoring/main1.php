@@ -241,7 +241,7 @@ $a = 1;
             </ul>
           </li>
           <li class="nav-item">
-            <a href="controlPanel.php" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Control panel
