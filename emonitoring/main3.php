@@ -19,7 +19,6 @@ if (isset($_SESSION['user'])) {
 $kodSekolah = $_GET['kodSekolah'];
 $kodSekolah2 = $_POST['kodSekolah'];
 $namaSekolah = $_POST['namaSekolah'];
-$judulSekolah = $_POST['judulSekolah'];
 $bukuLebihan = $_POST['bukuLebihan'];
 $kodJudul = $_POST['kodJudul'];
 
@@ -41,7 +40,7 @@ $rekodPemantauan = mysqli_fetch_assoc($Recordset4);
 $totalRows_Recordset3 = mysqli_num_rows($Recordset4);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah2`,`namaSekolah`,`judulSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$judulSekolah','$kodJudul','$bukuLebihan')");
+    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah2`,`namaSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan')");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
@@ -373,9 +372,9 @@ $a = 1;
                                           <a onclick="myFunction()" class="dropbtn">Pilih Judul (klik sini)</a>
                                           <div id="myDropdown" class="dropdown-content">
                                             <div><input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"></div>&nbsp; 
-                                               <div><select name="judulSekolah" id="myInput2" class="custom-select browser-default" required>
+                                               <div><select name="kodJudul" id="myInput2" class="custom-select browser-default" required>
                                                  <?php do {?>
-                                                   <option value="<?php echo $dataJudul['judul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
+                                                   <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
                                                  <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
                                                </select></div>
                                           </div>
@@ -403,7 +402,6 @@ $a = 1;
                              </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
                                 <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
-                                <input type="hidden" name="kodJudul" value="<?php echo $dataJudul['kodJudul'];?>"/>
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
@@ -417,6 +415,7 @@ $a = 1;
                             <thead>
                               <tr>
                                 <th>Bil</th>
+                                <th>Kod judul</th>
                                 <th>Judul</th>
                                 <th>Lebihan buku</th>
                               </tr>
@@ -424,6 +423,7 @@ $a = 1;
                             <tbody>
                               <tr>
                                 <td><?php echo $a++;?></td>
+                                <td><?php echo strtoupper($rekodPemantauan['kodJudul']);?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['judulSekolah']);?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
                               </tr>
