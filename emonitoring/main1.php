@@ -369,9 +369,6 @@ $a = 1;
 <script src="../adminSPBT/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../adminSPBT/dist/js/demo.js"></script>
-<!-- DataTables -->
-<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
-<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -394,6 +391,9 @@ $a = 1;
 			}, 5000);
 		});
 </script>
+<!-- DataTables -->
+<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
+<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable();
