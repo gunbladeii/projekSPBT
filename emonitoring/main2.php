@@ -308,6 +308,7 @@ $a = 1;
                               <tr>
                                 <td>
                                     <div class="form-group">
+                                      Nama Sekolah:
                                       <div class="input-group mb-3">
                                       <input type="text" name="namaSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" required>
                                       <div class="input-group-append input-group-text">
