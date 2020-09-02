@@ -360,7 +360,7 @@ $a = 1;
                                 </td>
                               </tr>
                                  <tr>
-                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
+                                  <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>
 
                                 <tr>
@@ -414,7 +414,7 @@ $a = 1;
                           <table class="table m-0">
                             <thead>
                               <tr>
-                                <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Senarai judul yang dipantau</h4></th>
+                                <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
                               </tr>
                               <tr>
                                 <th>Bil</th>
