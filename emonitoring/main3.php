@@ -428,6 +428,9 @@ $a = 1;
                                <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                             </tbody>
                           </table>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-primary" name="submit" value="Jana Laporan"/>
+                                </div>
                         </div>
                       <?php ;}?>
         
