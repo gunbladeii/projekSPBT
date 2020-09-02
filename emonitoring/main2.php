@@ -309,16 +309,45 @@ $a = 1;
                                 <td>
                                     <div class="form-group">
                                       <div class="input-group mb-3">
-                                      <input type="text" name="judul" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" required>
+                                      <input type="text" name="namaSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
                                       </div>
                                     </div>
                                 </td>
-                                <td></td>
-                                <td><?php echo $dataSekolah['namaSekolah'];?></td>
-                                <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
+                                <td>
+                                    <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="noTel" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat"> value="<?php echo $dataSekolah['noTel'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
                               </tr>
                               <?php //} while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
                               </tbody>
