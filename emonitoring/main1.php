@@ -287,19 +287,10 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
                     <div>
                       <div class="table-responsive">
                           <table id="example3" class="table m-0 table-sm">
-                            <thead>
-                            <tr>
-                              <th>Carian Sekolah</th>
-                              <th>Nama Penerbit</th>
-                            </tr>
-                            </thead>
                             <tbody>
-                            <?php do {?>
                             <tr>
-                              <td><?php echo $a++;?></td>
-                              <td><a data-toggle="modal" data-target="#" data-whatever="<?php echo $RID['id'];?>" class="nav-link"><span class="badge badge-info"><?php echo strtoupper($RID['name']);?></span></a></td>
+                              <td><input type="text" name="namaSekolah"></td>
                             </tr>
-                            <?php } while ($RID = mysqli_fetch_assoc($refID3)); ?>
                             </tbody>
                           </table>
                 </div>
