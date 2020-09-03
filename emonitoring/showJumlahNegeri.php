@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT id,COUNT(negeri) AS jumlahNegeri FROM dataSekolah WHERE remark = 'observe'");
+    $refID3 = $mysqli->query("SELECT id,COUNT(negeri) AS jumlahNegeri FROM dataSekolah WHERE remark = 'observe' GROUP BY negeri");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 <?php
