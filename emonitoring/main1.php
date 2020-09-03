@@ -286,7 +286,7 @@ $a = 1;
               <div class="card-body p-0">
                         
                           <div class="table-responsive">
-                            <form method="post" action="searching.php" role="form" enctype="multipart/form-data">
+                            <form method="post" action="searching.php" role="form">
                             <table id="example1" class="table table-sm">
                               <tbody>
                               <tr>
