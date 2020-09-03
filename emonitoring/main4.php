@@ -578,6 +578,46 @@ $a = 1;
       $('select').filterByText($('#carianJudul'));
     });
 </script>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = document.getElementById("myInput2");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+<!-- DataTables -->
+<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
+<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+  });
+</script>
+</body>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
 <script>  
@@ -682,44 +722,4 @@ $a = 1;
     })(jQuery);  
   
 </script>  
-<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = document.getElementById("myInput2");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-</script>
-<!-- DataTables -->
-<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
-<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
-</script>
-</body>
 </html>
