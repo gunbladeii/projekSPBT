@@ -554,10 +554,7 @@ $a = 1;
                                   <div class="form-group">
                                       Ulasan:
                                       <div class="input-group mb-3">
-                                      <input type="textbox" name="comment" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['comment'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
+                                      <textarea name="comment" class="form-control" id="validationDefault01"  rows="3" value="<?php echo $dataSekolah['comment'];?>></textarea>
                                       </div>
                                     </div>
                                 </td>
@@ -566,7 +563,7 @@ $a = 1;
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
-                                    <input type="submit2" class="btn btn-primary" name="submit" value="Jana Laporan"/>
+                                    <input type="submit" class="btn btn-primary" name="submit2" value="Jana Laporan"/>
                                 </div>
                           </form>
                         </div>
