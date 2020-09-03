@@ -583,6 +583,7 @@ $a = 1;
       $('select').filterByText($('#carianJudul'));
     });
 </script>
+<script type="text/javascript" src="jspdf.min.js"></script>
 <script>
   var doc = new jsPDF();
     var specialElementHandlers = {
