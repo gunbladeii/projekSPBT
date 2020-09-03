@@ -462,9 +462,7 @@ $a = 1;
                               </tr>
                               <tr>
                                 <td colspan="4">
-                                  <div class="form-group">
-                                      Ulasan:
-                                    </div>
+                                      *Laporan ini adalah untuk tujuan cetakan digital. Tiada tandatangan diperlukan.
                                 </td>
                               </tr>
                             </tbody>
