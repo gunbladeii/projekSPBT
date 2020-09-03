@@ -24,7 +24,10 @@ $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
 $namaSekolah = $_POST['namaSekolah'];
-
+if (isset($_POST['submit'])) {
+    $mysqli->query ("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
+    header("location:searching.php");
+    }
 $a = 1;
 ?>
 <!DOCTYPE html>
