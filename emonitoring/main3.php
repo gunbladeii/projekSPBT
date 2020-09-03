@@ -21,6 +21,7 @@ $kodSekolah2 = $_POST['kodSekolah'];
 $namaSekolah = $_POST['namaSekolah'];
 $bukuLebihan = $_POST['bukuLebihan'];
 $kodJudul = $_POST['kodJudul'];
+$comment = $_POST['comment'];
 
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
@@ -41,6 +42,11 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset4);
 
 if (isset($_POST['submit'])) {
     $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan')");
+    header("location:main3.php?kodSekolah=$kodSekolah2");
+    }
+
+if (isset($_POST['submit2'])) {
+    $mysqli->query ("UPDATE `dataSekolah` SET `comment` = '$comment' WHERE `kodSekolah` = '$kodSekolah2'");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
@@ -518,7 +524,8 @@ $a = 1;
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
-                          <table class="table m-0">
+                          <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
+                          <table class="table sm">
                             <thead>
                               <tr>
                                 <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
@@ -539,11 +546,29 @@ $a = 1;
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
                               </tr>
                                <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
+                               <tr>
+                                <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Ulasan Keseluruhan</h4></th>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="form-group">
+                                      Ulasan:
+                                      <div class="input-group mb-3">
+                                      <input type="textbox" name="comment" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['comment'];?>" required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
                             </tbody>
                           </table>
+                                <input type="hidden" name="kodSekolah" value="<?php $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Jana Laporan"/>
                                 </div>
+                          </form>
                         </div>
                       <?php ;}?>
         
