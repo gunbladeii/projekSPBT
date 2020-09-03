@@ -425,7 +425,7 @@ $a = 1;
                               <tr>
                                   <td>
                                    <div class="form-group">
-                                      Nama Pegawai Pemantau 1:
+                                      Nama Pegawai Pemantau:
                                       <div class="input-group mb-3">
                                       <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai1'];?>" required>
                                       <div class="input-group-append input-group-text">

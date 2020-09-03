@@ -403,7 +403,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Nama Pegawai Pemantau 1: <u><?php echo $dataSekolah['namaPegawai1'];?></u>
+                                      Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai1'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -418,7 +418,7 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-                              
+
                                  <tr>
                                   <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>
