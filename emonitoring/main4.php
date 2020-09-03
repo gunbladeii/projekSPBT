@@ -312,7 +312,6 @@ $a = 1;
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                        <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
                             <table class="table table-sm">
                               <thead>
@@ -419,17 +418,7 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-                          </tbody>
-                          </table>  
-                        
-                          </div>
-                      <?php ;}else {echo 'Tiada dalam rekod';}?>
-
-                      <?php if($rekodPemantauan > 0) {?>
-                        <div class="table-responsive">
                           
-                          <table class="table sm">
-                            <thead>
                               <tr>
                                 <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
                               </tr>
@@ -439,9 +428,7 @@ $a = 1;
                                 <th>Judul</th>
                                 <th>Lebihan buku</th>
                               </tr>
-                            </thead>
-                            <tbody>
-                              <?php do {?>
+
                               <tr>
                                 <td><?php echo $a++;?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['kodJudul']);?></td>
@@ -471,7 +458,7 @@ $a = 1;
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                         </div>
-                      <?php ;}?>
+            
         
                 <!-- /.table-responsive -->
               </div>
