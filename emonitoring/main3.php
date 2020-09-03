@@ -346,6 +346,16 @@ $a = 1;
                                 </td>
                               </tr>
                               <tr>
+                                  <td>
+                                     <div class="form-group">
+                                        <div class="input-group mb-3">
+                                        Negeri: <?php echo $dataSekolah['negeri'];?>
+                                        
+                                        </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
                                    <td>
                                       <div class="form-group">
                                         <div class="input-group mb-3">
@@ -357,20 +367,9 @@ $a = 1;
                               </tr>
                               <tr>
                                   <td>
-                                     <div class="form-group">
-                                        <div class="input-group mb-3">
-                                        Negeri: <?php echo $dataSekolah['negeri'];?>
-                                        
-                                        </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
                                       Nama Guru Penyelaras SPBT: <?php echo $dataSekolah['namaPenyelaras'];?>
-                                     
                                       </div>
                                     </div>
                                 </td>
