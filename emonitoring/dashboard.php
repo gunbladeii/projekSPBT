@@ -276,168 +276,61 @@ $a = 1;
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">eSPBT 2.0 | Pengesanan Stok</li>
+              <li class="breadcrumb-item active">eSPBT 2.0 | Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
    
-      <section class="content">
-        <div id="row">
-        <div class="col-md-12">
-           <!-- TABLE: list of publisherSPBT -->
-            <div class="card">
-              <div class="card-header border-transparent">
-                <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
-                <h4 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Sila lengkapkan semua maklumat berikut sebelum membuat pengisian maklumat stok buku teks</h4>
-                <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
+   <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showSekolahPantau"></div></h3>
+                <p>jumlah sekolah dipantau</p>
               </div>
-              <!-- /.card-header -->
-              <div class="card-body p-0">
-                        <?php if($dataSekolah > 0) {?>
-                          <div class="table-responsive">
-                          <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
-                            <table id="example1" class="table m-0">
-                              <thead>
-                                <tr>
-                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                              <?php //do {?>
-                              <tr>
-                                <td>
-                                    <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Nama Sekolah: <?php echo $dataSekolah['namaSekolah'];?>
-                                     
-                                      </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Kod Sekolah: <?php echo $dataSekolah['kodSekolah'];?>
-                                      
-                                      </div>
-                                    </div>
-                                </td>
-                               </tr>
-                                
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Negeri: <?php echo $dataSekolah['negeri'];?>
-                                      
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Nama Guru Penyelaras SPBT: <?php echo $dataSekolah['namaPenyelaras'];?>
-                                     
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-                                 <tr>
-                                  <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
-                                </tr>
-
-                                <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Judul: 
-                                      <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
-                                      <div class="input-group mb-3">
-                                               <select name="kodJudul" class="custom-select browser-default" required>
-                                                 <?php do {?>
-                                                   <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
-                                                 <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                               </select>
-                                    </div>
-                                </td>
-                              </tr>
-
-                               <tr>
-                                  <td>
-                                    <div class="form-group">
-                                      Jumlah Naskah Lebihan:
-                                      <div class="input-group mb-3">
-                                      <input type="number" name="bukuLebihan" class="form-control"  id="validationDefault01" value="<?php echo $rekodPemantauan['bukuLebihan'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                               </tr>
-
-                              </tbody>
-                             </table>
-                                <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
-                                <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
-                                </div>
-                            </form>
-                          </div>
-                      <?php ;}else {echo 'Tiada dalam rekod';}?>
-
-                      <?php if($rekodPemantauan > 0) {?>
-                        <div class="table-responsive">
-                          <table class="table m-0">
-                            <thead>
-                              <tr>
-                                <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
-                              </tr>
-                              <tr>
-                                <th>Bil</th>
-                                <th>Kod judul</th>
-                                <th>Judul</th>
-                                <th>Lebihan buku</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <?php do {?>
-                              <tr>
-                                <td><?php echo $a++;?></td>
-                                <td><?php echo strtoupper($rekodPemantauan['kodJudul']);?></td>
-                                <td><?php echo strtoupper($rekodPemantauan['judul']);?></td>
-                                <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
-                              </tr>
-                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
-                            </tbody>
-                          </table>
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit" value="Jana Laporan"/>
-                                </div>
-                        </div>
-                      <?php ;}?>
-        
-                <!-- /.table-responsive -->
+              <div class="icon">
+                <i class="ion ion-clipboard"></i>
               </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahNegeri"></div></h3>
+                <p>jumlah negeri terlibat</p>
               </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
               </div>
-
-                     
- </section>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahLebihan"></div></h3>
+                <p>jumlah lebihan</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+      </section>
 </div>
 <!-- ./wrapper -->
 
