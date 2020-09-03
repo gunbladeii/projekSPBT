@@ -227,9 +227,6 @@ $a = 1;
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="data:image/jpeg;base64,<?php echo base64_encode($row_Recordset['publisherSPBTFacePic']);?>" style="max-width:100%"/>
-        </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo strtoupper($row_Recordset['name']);?></a>
         </div>
