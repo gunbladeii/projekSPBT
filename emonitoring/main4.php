@@ -289,8 +289,7 @@ $a = 1;
       </div><!-- /.container-fluid -->
     </div>
    
-      <div id="print">
-      <section class="content">
+      <section class="content" id="print">
         <div id="row">
         <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
@@ -469,6 +468,10 @@ $a = 1;
                             </tbody>
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
+                                <div class="modal-footer">
+                                   <button class="btn btn-info" onclick="printDiv('print')">Cetak</button>
+                                </div>
+                          
                         </div>
                       <?php ;}?>
         
@@ -478,12 +481,7 @@ $a = 1;
               </div>
 
                      
-   </section>
-  </div>
-  <div class="modal-footer">
-     <div id="editor"></div>
-     <button class="btn btn-info" id="cmd">Cetak</button>
-  </div>
+ </section>
 </div>
 <!-- ./wrapper -->
 
@@ -584,22 +582,17 @@ $a = 1;
       $('select').filterByText($('#carianJudul'));
     });
 </script>
-<script type="text/javascript" src="jspdf.min.js"></script>
 <script>
-  var doc = new jsPDF();
-    var specialElementHandlers = {
-        '#editor': function (element, renderer) {
-            return true;
-        }
-    };
+  function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
 
-    $('#cmd').click(function () {
-        doc.fromHTML($('#print').html(), 15, 15, {
-            'width': 170,
-                'elementHandlers': specialElementHandlers
-        });
-        doc.save('laporan_semakan.pdf');
-    });
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
 </script>
 <script>
 /* When the user clicks on the button,
