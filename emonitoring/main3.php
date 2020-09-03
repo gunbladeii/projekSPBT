@@ -580,6 +580,25 @@ $a = 1;
      
 		});
 </script>
+<!-- Begin salary modal -->
+      <div class="modal fade" id="delJudulModal">
+        <div class="modal-dialog">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h4 class="modal-title">Pengesahan</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="dash2"></div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    <!-- End salary modal -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     /*updatePesananJudul*/
@@ -682,23 +701,4 @@ function filterFunction() {
   });
 </script>
 </body>
-<!-- Begin salary modal -->
-      <div class="modal fade" id="delJudulModal">
-        <div class="modal-dialog">
-          <div class="modal-content bg-light">
-            <div class="modal-header">
-              <h4 class="modal-title">Pengesahan</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="dash2"></div>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-    <!-- End salary modal -->
 </html>
