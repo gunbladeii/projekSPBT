@@ -31,8 +31,7 @@ $year = date('Y');
 	$totalRows_Recordset3 = mysqli_num_rows($Recordset4);
     $a=1;
 ?>
-<?php if (!empty($RID['state'])){?>
-                
+
                   <form method="post" action="delJudul.php" role="form" enctype="multipart/form-data">
                             <div> Anda pasti untuk hapus rekod?</div>
                             <input type="hidden" name="id" value="<?php $rekodPemantauan['id'];?>">
@@ -42,4 +41,4 @@ $year = date('Y');
                               </div>
                          </form>
                
-<?php } else {echo '<div style="padding-left: 15px"><span class="badge badge-danger">Tiada data setakat ini</span></div>';}?>
+
