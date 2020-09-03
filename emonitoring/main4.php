@@ -298,7 +298,7 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <img src="https://www.moe.gov.my/templates/yootheme/cache/logo_bm_new-dfbe324b.webp" class="rounded mx-auto d-block">
+                <img src="logo_kpm.png" class="rounded mx-auto d-block">
                 <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;text-align: center;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
                 <h2 class="card-title" style="font-size:14px;text-align: center;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
                 <div class="card-tools">
