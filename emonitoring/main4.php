@@ -289,7 +289,7 @@ $a = 1;
       </div><!-- /.container-fluid -->
     </div>
    
-      <section class="content">
+      <section class="content" id="print">
         <div id="row">
         <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
@@ -311,7 +311,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                          <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
+                         
                             <table id="example1" class="table table-sm">
                               <thead>
                                 <tr>
@@ -419,13 +419,13 @@ $a = 1;
                               </tr>
                           </tbody>
                           </table>  
-                        </form>
+                        
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
-                          <form method="post" action="main4.php" role="form" enctype="multipart/form-data">
+                          
                           <table class="table sm">
                             <thead>
                               <tr>
@@ -455,8 +455,15 @@ $a = 1;
                                   <div class="form-group">
                                       Ulasan:
                                       
-                                      <textarea name="comment" class="form-control" id="validationDefault01"  rows="3" placeholder="<?php echo $dataSekolah['comment'];?>"></textarea>
+                                      <textarea name="comment" class="form-control" id="validationDefault01"  rows="3" placeholder="<?php echo $dataSekolah['comment'];?>" readonly></textarea>
                                      
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="4">
+                                  <div class="form-group">
+                                      Ulasan:
                                     </div>
                                 </td>
                               </tr>
@@ -464,9 +471,9 @@ $a = 1;
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
-                                   <button class="btn btn-info">Cetak</button>
+                                   <button class="btn btn-info" onclick="printDiv('print')">Cetak</button>
                                 </div>
-                          </form>
+                          
                         </div>
                       <?php ;}?>
         
@@ -576,6 +583,18 @@ $a = 1;
     $(function() {
       $('select').filterByText($('#carianJudul'));
     });
+</script>
+<script type="text/javascript">
+  function printDiv('print') {
+     var printContents = document.getElementById('print').innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
 </script>
 <script>
 /* When the user clicks on the button,
