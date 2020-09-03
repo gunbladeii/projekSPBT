@@ -26,13 +26,7 @@ $namaPenyelaras = $_POST['namaPenyelaras'];
 $noHP = $_POST['noHP'];
 $tarikhPemantauan = $_POST['tarikhPemantauan'];
 $namaPegawai1 = $_POST['namaPegawai1'];
-$namaPegawai2 = $_POST['namaPegawai2'];
-$namaPegawai3 = $_POST['namaPegawai3'];
-$namaPegawai4 = $_POST['namaPegawai4'];
 $jawatan1 = $_POST['jawatan1'];
-$jawatan2 = $_POST['jawatan2'];
-$jawatan3 = $_POST['jawatan3'];
-$jawatan4 = $_POST['jawatan4'];
 $remark = $_POST['remark'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
@@ -44,7 +38,7 @@ $dataSekolah = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `namaPegawai2` = '$namaPegawai2', `namaPegawai3` = '$namaPegawai3', `namaPegawai4` = '$namaPegawai4', `jawatan1` = '$jawatan1', `jawatan2` = '$jawatan2', `jawatan3` = '$jawatan3', `jawatan4` = '$jawatan4', `remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
+    $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `jawatan1` = '$jawatan1', `remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
@@ -448,90 +442,6 @@ $a = 1;
                                       Jawatan:
                                       <div class="input-group mb-3">
                                       <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan1'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 2:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai2'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan2" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan2'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 3:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai3'];?>">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan3" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan3'];?>">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Nama Pegawai Pemantau 4:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai4'];?>">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Jawatan:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="jawatan4" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan4'];?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
