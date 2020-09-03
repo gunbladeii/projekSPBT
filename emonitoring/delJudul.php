@@ -11,6 +11,7 @@ if (isset($_SESSION['user'])) {
 
 $id = $_GET['id'];
 $kodSekolah = $_GET['kodSekolah'];
+$id2 = $_POST['id'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
@@ -23,7 +24,7 @@ $time = date('H:i:s');
 $year = date('Y');
 
     if (isset($_POST['submit'])) {
-    $mysqli->query ("DELETE FROM rekodPemantauan WHERE `id` = '$id'");
+    $mysqli->query ("DELETE FROM rekodPemantauan WHERE `id` = '$id2'");
     header("location:main3.php?kodSekolah=$kodSekolah");
     }
 
