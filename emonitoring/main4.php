@@ -320,7 +320,6 @@ $a = 1;
                                 </tr>
                               </thead>
                               <tbody>
-                              <?php //do {?>
                               <tr>
                                 <td>
                                     <div class="form-group">
@@ -435,7 +434,7 @@ $a = 1;
                                 <td><?php echo strtoupper($rekodPemantauan['judul']);?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
                               </tr>
-                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
+                              
                                <tr>
                                 <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Ulasan Keseluruhan</h4></th>
                               </tr>
