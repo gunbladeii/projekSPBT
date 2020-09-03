@@ -610,7 +610,7 @@ $a = 1;
   
         // create canvas object  
         function getCanvas() {  
-            form.width((a4[0] * 1.33333) - 80).css('max-width', '100%');  
+            form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');  
             return html2canvas(form, {  
                 imageTimeout: 2000,  
                 removeContainer: true  
