@@ -288,7 +288,7 @@ $a = 1;
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-   <form class="form" style="max-width: 100%; ">
+   
       <section class="content" id="content">
         <div id="row">
         <div class="col-md-12">
@@ -475,10 +475,7 @@ $a = 1;
               </div>
               </div>
               </div>
-
-                     
  </section>
-</form>
  <div class="modal-footer">
    <div id="editor"></div>
       <input class="btn btn-info" type="button" id="create_pdf" value="Cetak">
@@ -588,7 +585,7 @@ $a = 1;
 <script>  
     (function () {  
         var  
-         form = $('.form'),  
+         form = $('#content'),  
          cache_width = form.width(),  
          a4 = [595.28, 841.89]; // for a4 size paper width and height  
   
@@ -606,14 +603,14 @@ $a = 1;
                      format: 'a4'  
                  });  
                 doc.addImage(img, 'JPEG', 20, 20);  
-                doc.save('Bhavdip-html-to-pdf.pdf');  
+                doc.save('laporan_pemantauan.pdf');  
                 form.width(cache_width);  
             });  
         }  
   
         // create canvas object  
         function getCanvas() {  
-            form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');  
+            form.width((a4[0] * 1.33333) - 80).css('max-width', '100%');  
             return html2canvas(form, {  
                 imageTimeout: 2000,  
                 removeContainer: true  
