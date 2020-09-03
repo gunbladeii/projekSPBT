@@ -470,7 +470,7 @@ $a = 1;
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
                                    <div id="editor"></div>
-                                   <button class="btn btn-info" id="cmd" onclick="printDiv('print')">Cetak</button>
+                                   <button class="btn btn-info" id="cmd">Cetak</button>
                                 </div>
                           
                         </div>
