@@ -549,8 +549,8 @@ $a = 1;
                                <tr>
                                 <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Ulasan Keseluruhan</h4></th>
                               </tr>
-                              <tr colspan="4">
-                                <td>
+                              <tr>
+                                <td colspan="4">
                                   <div class="form-group">
                                       Ulasan:
                                       
