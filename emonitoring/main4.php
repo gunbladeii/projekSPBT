@@ -469,11 +469,6 @@ $a = 1;
                             </tbody>
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
-                                <div class="modal-footer">
-                                   <div id="editor"></div>
-                                   <button class="btn btn-info" id="cmd">Cetak</button>
-                                </div>
-                          
                         </div>
                       <?php ;}?>
         
@@ -484,6 +479,10 @@ $a = 1;
 
                      
    </section>
+  </div>
+  <div class="modal-footer">
+     <div id="editor"></div>
+     <button class="btn btn-info" id="cmd">Cetak</button>
   </div>
 </div>
 <!-- ./wrapper -->
