@@ -324,7 +324,8 @@ $a = 1;
                                       </div>
                                     </div>
                                 </td>
-
+                              </tr>
+                              <tr>
                                 <td>
                                     <div class="form-group">
                                       <div class="input-group mb-3">
@@ -333,33 +334,26 @@ $a = 1;
                                       </div>
                                     </div>
                                 </td>
+                              </tr>
+                              <tr>
                                 <td>
                                    <div class="form-group">
-                                      Daerah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
+                                      Daerah:<?php echo $dataSekolah['daerah'];?>
                                       </div>
                                       </div>
                                     </div>
                                 </td>
-
                               </tr>
-
                               <tr>
                                    <td>
                                       <div class="form-group">
-                                        No. Telefon Pejabat:
                                         <div class="input-group mb-3">
-                                        <input type="text" name="noTelefon" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTelefon'];?>" required>
-                                        <div class="input-group-append input-group-text">
-                                            <span class="fas fa-id-card-alt"></span>
+                                        No. Telefon Pejabat:<?php echo $dataSekolah['noTelefon'];?>
                                         </div>
                                         </div>
                                       </div>
                                   </td>
-                                  
                               </tr>
                               <tr>
                                   <td>
@@ -370,6 +364,8 @@ $a = 1;
                                         </div>
                                       </div>
                                   </td>
+                              </tr>
+                              <tr>
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
