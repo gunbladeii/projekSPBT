@@ -288,6 +288,9 @@ $a = 1;
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+      <div class="modal-footer">
+          <input class="btn btn-info" type="button" id="create_pdf" value="Cetak">
+       </div>
    
       <section class="content" id="content">
         <div id="row">
@@ -475,10 +478,6 @@ $a = 1;
               </div>
              
  </section>
- <div class="modal-footer">
-   <div id="editor"></div>
-      <input class="btn btn-info" type="button" id="create_pdf" value="Cetak">
-   </div>
 </div>
 <!-- ./wrapper -->
 
