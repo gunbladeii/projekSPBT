@@ -289,7 +289,8 @@ $a = 1;
       </div><!-- /.container-fluid -->
     </div>
    
-      <section class="content" id="print">
+      <div id="print">
+      <section class="content">
         <div id="row">
         <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
@@ -482,7 +483,8 @@ $a = 1;
               </div>
 
                      
- </section>
+   </section>
+  </div>
 </div>
 <!-- ./wrapper -->
 
