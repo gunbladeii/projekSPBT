@@ -314,8 +314,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                         
-                            <table id="example1" class="table table-sm">
+                            <table class="table table-sm">
                               <thead>
                                 <tr>
                                   <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
