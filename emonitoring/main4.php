@@ -582,9 +582,9 @@ $a = 1;
       $('select').filterByText($('#carianJudul'));
     });
 </script>
-<script type="text/javascript">
-  function printDiv('print') {
-     var printContents = document.getElementById('print').innerHTML;
+<script>
+  function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
      var originalContents = document.body.innerHTML;
 
      document.body.innerHTML = printContents;
