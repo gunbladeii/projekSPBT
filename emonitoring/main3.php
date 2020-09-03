@@ -377,12 +377,97 @@ $a = 1;
                               <tr>
                                 <td>
                                    <div class="form-group">
-                                      No. Telefon Bimbit:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="noHP" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['noHP'];?>" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
+                                      No. Telefon Bimbit: <?php echo $dataSekolah['noHP'];?>
                                       </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      Tarikh Pemantauan: <?php echo $dataSekolah['tarikhPemantauan'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      Nama Pegawai Pemantau 1: <?php echo $dataSekolah['namaPegawai1'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      Jawatan: <?php echo $dataSekolah['jawatan1'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                     Nama Pegawai Pemantau 2: <?php echo $dataSekolah['namaPegawai2'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      Jawatan: <?php echo $dataSekolah['jawatan2'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                       Nama Pegawai Pemantau 3: <?php echo $dataSekolah['namaPegawai3'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                     Jawatan: <?php echo $dataSekolah['jawatan3'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                     Nama Pegawai Pemantau 4: <?php echo $dataSekolah['namaPegawai4'];?>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      Jawatan: <?php echo $dataSekolah['jawatan4'];?>
                                       </div>
                                     </div>
                                 </td>
