@@ -520,25 +520,6 @@ $a = 1;
  </section>
 </div>
 <!-- ./wrapper -->
-<!-- Begin salary modal -->
-      <div class="modal fade" id="delJudulModal">
-        <div class="modal-dialog">
-          <div class="modal-content bg-light">
-            <div class="modal-header">
-              <h4 class="modal-title">Pengesahan</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="dash2"></div>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-    <!-- End salary modal -->
 <!-- jQuery -->
 <script src="../adminSPBT/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -701,4 +682,23 @@ function filterFunction() {
   });
 </script>
 </body>
+<!-- Begin salary modal -->
+      <div class="modal fade" id="delJudulModal">
+        <div class="modal-dialog">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h4 class="modal-title">Pengesahan</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="dash2"></div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    <!-- End salary modal -->
 </html>
