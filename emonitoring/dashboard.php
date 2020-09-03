@@ -306,7 +306,7 @@ $a = 1;
             <div class="small-box bg-success">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showbelumPantau"></div></h3>
-                <p>jumlah belum pantau</p>
+                <p>jumlah sekolah belum dipantau</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -320,7 +320,7 @@ $a = 1;
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahLebihan"></div></h3>
-                <p>jumlah lebihan</p>
+                <p>jumlah lebihan buku</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
