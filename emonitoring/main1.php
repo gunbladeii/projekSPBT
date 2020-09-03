@@ -26,7 +26,7 @@ $totalRows_Recordset = mysqli_num_rows($Recordset);
 $namaSekolah = $_POST['namaSekolah'];
 if (isset($_POST['submit'])) {
     $mysqli->query ("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
-    header("location:searching.php");
+    header("location:searching.php?namaSekolah=$namaSekolah");
     }
 $a = 1;
 ?>
@@ -289,7 +289,7 @@ $a = 1;
               <div class="card-body p-0">
                         
                           <div class="table-responsive">
-                            <form method="post" action="searching.php" role="form">
+                            <form method="post" action="searching.php">
                             <table id="example1" class="table table-sm">
                               <tbody>
                               <tr>
