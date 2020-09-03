@@ -87,7 +87,9 @@ $a = 1;
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-   <!-- Begin salary modal -->
+   
+<div class="wrapper">
+  <!-- Begin salary modal -->
       <div class="modal fade" id="delJudulModal">
         <div class="modal-dialog">
           <div class="modal-content bg-light">
@@ -106,7 +108,6 @@ $a = 1;
       </div>
       <!-- /.modal -->
     <!-- End salary modal -->
-<div class="wrapper">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom">
