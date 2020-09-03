@@ -566,7 +566,7 @@ $a = 1;
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit" value="Jana Laporan"/>
+                                    <input type="submit2" class="btn btn-primary" name="submit" value="Jana Laporan"/>
                                 </div>
                           </form>
                         </div>
