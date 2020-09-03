@@ -473,8 +473,7 @@ $a = 1;
         
                 <!-- /.table-responsive -->
               </div>
-              </div>
-              </div>
+             
  </section>
  <div class="modal-footer">
    <div id="editor"></div>
