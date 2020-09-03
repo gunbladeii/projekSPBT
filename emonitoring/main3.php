@@ -561,7 +561,7 @@ $a = 1;
                               </tr>
                             </tbody>
                           </table>
-                                <input type="hidden" name="kodSekolah" value="<?php $dataSekolah['kodSekolah'];?>">
+                                <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit2" value="Jana Laporan"/>
                                 </div>
