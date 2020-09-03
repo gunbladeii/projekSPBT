@@ -18,19 +18,19 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
-$namaSekolah = $_POST['namaSekolah'];
-$get_namaSekolah = $_GET['namaSekolah'];
+$namaSekolah = $_GET['namaSekolah'];
+$namaSekolah2 = $_POST['namaSekolah'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
-$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$get_namaSekolah%'");
+$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
 $dataSekolah = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
+    $mysqli->query ("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah2%'");
     header("location:main1.php");
     }
 
@@ -295,7 +295,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                            <table id="example1" class="table m-0">
+                            <table class="table m-0">
                               <thead>
                               <tr>
                                 <th>No</th>
