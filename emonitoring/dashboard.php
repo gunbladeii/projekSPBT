@@ -361,6 +361,7 @@ $a = 1;
                                 <th>Kod Sekolah</th>
                                 <th>Nama Sekolah</th>
                                 <th>Negeri</th>
+                                <th>Status</th>
                               </tr>
                               </thead>
                               <tbody>
@@ -370,6 +371,7 @@ $a = 1;
                                 <td><a href="main2.php?kodSekolah=<?php echo $dataSekolah['kodSekolah'];?>"><span class="badge badge-info"><?php echo strtoupper($dataSekolah['kodSekolah']);?></span></a></td>
                                 <td><?php echo $dataSekolah['namaSekolah'];?></td>
                                 <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
+                                <td><i class="far fa-check-circle"></i></td>
                               </tr>
                               <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
                               </tbody>
