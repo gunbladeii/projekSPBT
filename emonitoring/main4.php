@@ -288,7 +288,7 @@ $a = 1;
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-   <form class="form" style="max-width: none; width: 1005px;">
+   <form class="form" style="max-width: 100%; ">
       <section class="content" id="content">
         <div id="row">
         <div class="col-md-12">
