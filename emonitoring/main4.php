@@ -289,7 +289,7 @@ $a = 1;
       </div><!-- /.container-fluid -->
     </div>
    
-      <section class="content" id="content">
+      <section class="content" id="content" style="max-width: 100%;">
         <div id="row">
         <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
