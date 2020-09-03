@@ -495,7 +495,7 @@ $a = 1;
                                   <div class="form-group">
                                       Ulasan:
                                       
-                                      <textarea name="comment" class="form-control" id="validationDefault01"  rows="3" value="<?php echo $dataSekolah['comment'];?>"></textarea>
+                                      <textarea name="comment" class="form-control" id="validationDefault01"  rows="3" placeholder="<?php echo $dataSekolah['comment'];?>"></textarea>
                                      
                                     </div>
                                 </td>
