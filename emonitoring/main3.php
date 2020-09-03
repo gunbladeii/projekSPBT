@@ -319,7 +319,7 @@ $a = 1;
                                 <td>
                                     <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Nama Sekolah: <?php echo $dataSekolah['namaSekolah'];?>
+                                      Nama Sekolah: <u><?php echo $dataSekolah['namaSekolah'];?></u>
                                      
                                       </div>
                                     </div>
@@ -329,7 +329,7 @@ $a = 1;
                                 <td>
                                     <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Kod Sekolah: <?php echo $dataSekolah['kodSekolah'];?>
+                                      Kod Sekolah: <u><?php echo $dataSekolah['kodSekolah'];?></u>
                                       
                                       </div>
                                     </div>
@@ -339,7 +339,7 @@ $a = 1;
                                 <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Daerah:<?php echo $dataSekolah['daerah'];?>
+                                      Daerah: <u><?php echo $dataSekolah['daerah'];?></u>
                                       </div>
                                       </div>
                                     </div>
@@ -349,7 +349,7 @@ $a = 1;
                                   <td>
                                      <div class="form-group">
                                         <div class="input-group mb-3">
-                                        Negeri: <?php echo $dataSekolah['negeri'];?>
+                                        Negeri: <u><?php echo $dataSekolah['negeri'];?></u>
                                         
                                         </div>
                                       </div>
@@ -359,7 +359,7 @@ $a = 1;
                                    <td>
                                       <div class="form-group">
                                         <div class="input-group mb-3">
-                                        No. Telefon Pejabat:<?php echo $dataSekolah['noTelefon'];?>
+                                        No. Telefon Pejabat: <u><?php echo $dataSekolah['noTelefon'];?></u>
                                         </div>
                                         </div>
                                       </div>
@@ -369,7 +369,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Nama Guru Penyelaras SPBT: <?php echo $dataSekolah['namaPenyelaras'];?>
+                                      Nama Guru Penyelaras SPBT: <u><?php echo $dataSekolah['namaPenyelaras'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -378,7 +378,7 @@ $a = 1;
                                 <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      No. Telefon Bimbit: <?php echo $dataSekolah['noHP'];?>
+                                      No. Telefon Bimbit: <u><?php echo $dataSekolah['noHP'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -387,17 +387,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Tarikh Pemantauan: <?php echo $dataSekolah['tarikhPemantauan'];?>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Nama Pegawai Pemantau 1: <?php echo $dataSekolah['namaPegawai1'];?>
+                                      Tarikh Pemantauan: <u><?php echo $dataSekolah['tarikhPemantauan'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -407,7 +397,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Jawatan: <?php echo $dataSekolah['jawatan1'];?>
+                                      Nama Pegawai Pemantau 1: <u><?php echo $dataSekolah['namaPegawai1'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -417,7 +407,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                     Nama Pegawai Pemantau 2: <?php echo $dataSekolah['namaPegawai2'];?>
+                                      Jawatan: <u><?php echo $dataSekolah['jawatan1'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -427,7 +417,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Jawatan: <?php echo $dataSekolah['jawatan2'];?>
+                                     Nama Pegawai Pemantau 2: <u><?php echo $dataSekolah['namaPegawai2'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -437,7 +427,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                       Nama Pegawai Pemantau 3: <?php echo $dataSekolah['namaPegawai3'];?>
+                                      Jawatan: <u><?php echo $dataSekolah['jawatan2'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -447,7 +437,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                     Jawatan: <?php echo $dataSekolah['jawatan3'];?>
+                                       Nama Pegawai Pemantau 3: <u><?php echo $dataSekolah['namaPegawai3'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -457,7 +447,7 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                     Nama Pegawai Pemantau 4: <?php echo $dataSekolah['namaPegawai4'];?>
+                                     Jawatan: <u><?php echo $dataSekolah['jawatan3'];?></u>
                                       </div>
                                     </div>
                                 </td>
@@ -467,7 +457,17 @@ $a = 1;
                                   <td>
                                    <div class="form-group">
                                       <div class="input-group mb-3">
-                                      Jawatan: <?php echo $dataSekolah['jawatan4'];?>
+                                     Nama Pegawai Pemantau 4: <u><?php echo $dataSekolah['namaPegawai4'];?></u>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      <div class="input-group mb-3">
+                                      Jawatan: <u><?php echo $dataSekolah['jawatan4'];?></u>
                                       </div>
                                     </div>
                                 </td>
