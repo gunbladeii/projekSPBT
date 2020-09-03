@@ -18,12 +18,21 @@ if (isset($_SESSION['user'])) {
   $colname_Recordset = $_SESSION['user'];
 }
 
+$namaSekolah = $_POST['namaSekolah'];
+$get_namaSekolah = $_GET['namaSekolah'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
-$namaSekolah = $_POST['namaSekolah'];
+$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$get_namaSekolah%'");
+$dataSekolah = mysqli_fetch_assoc($Recordset2);
+$totalRows_Recordset2 = mysqli_num_rows($Recordset2);
+
+if (isset($_POST['submit'])) {
+    $mysqli->query ("SELECT * FROM dataSekolah WHERE namaSekolah LIKE '%$namaSekolah%'");
+    header("location:main1.php");
+    }
 
 $a = 1;
 ?>
@@ -270,7 +279,7 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">SISTEM PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h3>
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h3>
                 <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
 
                 <div class="card-tools">
@@ -284,32 +293,30 @@ $a = 1;
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                        
+                        <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                            <form method="post" action="searching.php" role="form" enctype="multipart/form-data">
-                            <table id="example1" class="table table-sm">
-                              <tbody>
+                            <table id="example1" class="table m-0">
+                              <thead>
                               <tr>
-                                <td>
-                                     <div class="form-group">
-                                      Carian pantas sekolah:
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="namaSekolah" class="form-control"  id="validationDefault01" placeholder="Taip kata kunci nama sekolah.." value="" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-school"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
+                                <th>No</th>
+                                <th>Kod Sekolah</th>
+                                <th>Nama Sekolah</th>
+                                <th>Negeri</th>
                               </tr>
+                              </thead>
+                              <tbody>
+                              <?php do {?>
+                              <tr>
+                                <td><?php echo $a++;?></td>
+                                <td><a href="main2.php?kodSekolah=<?php echo $dataSekolah['kodSekolah'];?>"><span class="badge badge-info"><?php echo strtoupper($dataSekolah['kodSekolah']);?></span></a></td>
+                                <td><?php echo $dataSekolah['namaSekolah'];?></td>
+                                <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
+                              </tr>
+                              <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
                               </tbody>
                             </table>
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit" value="Carian sekolah"/>
-                                </div>
-                          </form>
                           </div>
-                    
+                      <?php ;}else {echo 'Tiada dalam rekod';}?>
         
                 <!-- /.table-responsive -->
               </div>
