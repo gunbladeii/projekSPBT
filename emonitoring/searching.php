@@ -279,7 +279,7 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <div style="text-align: center;"><button class="btn btn-warning">Carian semula <i class="fas fa-search"></i></button></div>
+                <div style="text-align: center;"><a class="btn btn-warning" href="main1.php">Carian semula <i class="fas fa-search"></i></a></div>
                 <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">SENARAI CARIAN SEKOLAH BAGI "<?php echo strtoupper($namaSekolah);?>"</h3>
                 <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
 
