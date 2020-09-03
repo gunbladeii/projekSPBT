@@ -387,8 +387,8 @@ $a = 1;
 		});
 </script>
 <!-- DataTables -->
-<script src="../adminSPBT/plugins/datatables/jquery.dataTables.js"></script>
-<script src="../adminSPBT/plugins/datatables/dataTables.bootstrap4.js"></script>
+<script src="jquery.dataTables.js"></script>
+<script src="dataTables.bootstrap4.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable();
