@@ -11,6 +11,7 @@ if (isset($_SESSION['user'])) {
 
 $id = $_GET['id'];
 $kodSekolah = $_GET['kodSekolah'];
+$kodSekolah2 = $_POST['kodSekolah'];
 $id2 = $_POST['id'];
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
@@ -25,7 +26,7 @@ $year = date('Y');
 
     if (isset($_POST['submit'])) {
     $mysqli->query ("DELETE FROM rekodPemantauan WHERE `id` = '$id2'");
-    header("location:main3.php?kodSekolah=$kodSekolah");
+    header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
     $Recordset4 = $mysqli->query("SELECT rekodPemantauan.id, rekodPemantauan.kodJudul, dataJudul.judul, rekodPemantauan.bukuLebihan FROM rekodPemantauan INNER JOIN dataJudul ON rekodPemantauan.kodJudul = dataJudul.kodJudul WHERE kodSekolah = '$kodSekolah'");
@@ -37,6 +38,7 @@ $year = date('Y');
                         <form method="post" action="delJudul.php" role="form" enctype="multipart/form-data">
                             <div> Anda pasti untuk hapus rekod?</div>
                             <input type="hidden" name="id" value="<?php echo $id;?>">
+                            <input type="hidden" name="kodSekolah" value="<?php echo $kodSekolah2;?>">
                               <div class="modal-footer">
                                   <input type="submit" class="btn btn-primary" name="submit" value="Ya"/>&nbsp;
                                   <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
