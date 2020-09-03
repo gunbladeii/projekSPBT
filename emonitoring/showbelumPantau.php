@@ -19,7 +19,7 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT id,COUNT(negeri) AS belumPantau FROM dataSekolah WHERE remark = NULL);
+    $refID3 = $mysqli->query("SELECT id,COUNT(negeri) AS belumPantau FROM dataSekolah WHERE remark NOT LIKE 'observe'");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 <?php
