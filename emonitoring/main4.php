@@ -295,10 +295,9 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
-                <h4 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Sila lengkapkan semua maklumat berikut sebelum membuat pengisian maklumat stok buku teks</h4>
-                <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
-
+                <img src="https://www.moe.gov.my/templates/yootheme/cache/logo_bm_new-dfbe324b.webp" class="img-thumbnail">
+                <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;text-align: center;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
+                <h2 class="card-title" style="font-size:14px;text-align: center;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-widget="collapse">
                     <i class="fas fa-minus"></i>
@@ -418,42 +417,8 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-
-                                 <tr>
-                                  <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
-                                </tr>
-
-                                <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      Judul: 
-                                      <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
-                                      <div class="input-group mb-3">
-                                               <select name="kodJudul" class="custom-select browser-default" required>
-                                                 <?php do {?>
-                                                   <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
-                                                 <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
-                                               </select>
-                                    </div>
-                                </td>
-                              </tr>
-
-                               <tr>
-                                  <td>
-                                    <div class="form-group">
-                                      Jumlah Naskah Lebihan:
-                                      <div class="input-group mb-3">
-                                      <input type="number" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                               </tr>
-
-                              </tbody>
-                             </table>
+                          </tbody>
+                          </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
                                 <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                 <div class="modal-footer">
@@ -504,7 +469,7 @@ $a = 1;
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit2" value="Jana Laporan"/>
+                                   <button class="btn btn-info">Cetak</button>
                                 </div>
                           </form>
                         </div>
