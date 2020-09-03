@@ -19,10 +19,10 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT id,COUNT(negeri) AS jumlahNegeri FROM dataSekolah WHERE remark = 'observe' GROUP BY negeri");
+    $refID3 = $mysqli->query("SELECT id,COUNT(negeri) AS belumPantau FROM dataSekolah WHERE remark NOT LIKE 'observe');
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 <?php
-if (!empty($RID2['id'])){echo $RID2['jumlahNegeri'];}else{echo 0;}
+if (!empty($RID2['id'])){echo $RID2['belumPantau'];}else{echo 0;}
 ?>
 

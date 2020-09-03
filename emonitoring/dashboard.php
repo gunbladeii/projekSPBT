@@ -305,8 +305,8 @@ $a = 1;
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahNegeri"></div></h3>
-                <p>jumlah negeri terlibat</p>
+                <h3 style="font-family: 'Anton', sans-serif;"><div id="showbelumPantau"></div></h3>
+                <p>jumlah belum pantau</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -436,7 +436,7 @@ $a = 1;
         $('#showUserList').load('showUserList.php'); 
 			setInterval(function () {
 				$('#showSekolahPantau').load('showSekolahPantau.php')
-				$('#showJumlahNegeri').load('showJumlahNegeri.php')
+				$('#showbelumPantau').load('showbelumPantau.php')
         $('#showJumlahLebihan').load('showJumlahLebihan.php')
 			}, 5000);
 
