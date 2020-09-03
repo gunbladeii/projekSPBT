@@ -418,66 +418,7 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                     Nama Pegawai Pemantau 2: <u><?php echo $dataSekolah['namaPegawai2'];?></u>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Jawatan: <u><?php echo $dataSekolah['jawatan2'];?></u>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                       Nama Pegawai Pemantau 3: <u><?php echo $dataSekolah['namaPegawai3'];?></u>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                     Jawatan: <u><?php echo $dataSekolah['jawatan3'];?></u>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                     Nama Pegawai Pemantau 4: <u><?php echo $dataSekolah['namaPegawai4'];?></u>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
-
-                              <tr>
-                                  <td>
-                                   <div class="form-group">
-                                      <div class="input-group mb-3">
-                                      Jawatan: <u><?php echo $dataSekolah['jawatan4'];?></u>
-                                      </div>
-                                    </div>
-                                </td>
-                              </tr>
+                              
                                  <tr>
                                   <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>
