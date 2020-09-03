@@ -27,7 +27,7 @@ $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Reco
 $row_Recordset = mysqli_fetch_assoc($Recordset);
 $totalRows_Recordset = mysqli_num_rows($Recordset);
 
-$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$kodSekolah'");
+$Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE remark LIKE 'observe'");
 $dataSekolah = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
@@ -331,6 +331,58 @@ $a = 1;
           <!-- ./col -->
         </div>
       </section>
+
+       <section class="content">
+        <div id="row">
+        <div class="col-md-12">
+           <!-- TABLE: list of publisherSPBT -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Senarai sekolah selesai pemantauan</h3>
+                <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                        <?php if($dataSekolah > 0) {?>
+                          <div class="table-responsive">
+                            <table id="example1" class="table m-0">
+                              <thead>
+                              <tr>
+                                <th>No</th>
+                                <th>Kod Sekolah</th>
+                                <th>Nama Sekolah</th>
+                                <th>Negeri</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <?php do {?>
+                              <tr>
+                                <td><?php echo $a++;?></td>
+                                <td><a href="main2.php?kodSekolah=<?php echo $dataSekolah['kodSekolah'];?>"><span class="badge badge-info"><?php echo strtoupper($dataSekolah['kodSekolah']);?></span></a></td>
+                                <td><?php echo $dataSekolah['namaSekolah'];?></td>
+                                <td><?php echo strtoupper($dataSekolah['negeri']);?></td>
+                              </tr>
+                              <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
+                              </tbody>
+                            </table>
+                          </div>
+                      <?php ;}else {echo 'Tiada rekod sekolah dipantau setakat ini';}?>
+        
+                <!-- /.table-responsive -->
+              </div>
+              </div>
+              </div>
+          </section>
+
 </div>
 <!-- ./wrapper -->
 
