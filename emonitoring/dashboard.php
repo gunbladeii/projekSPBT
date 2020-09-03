@@ -381,14 +381,9 @@ $a = 1;
         $('#showJudulList').load('showJudulList.php');
         $('#showUserList').load('showUserList.php'); 
 			setInterval(function () {
-				$('#showAttChart').load('showAttChart.php')
-				$('#showTotalPenerbit').load('showTotalPenerbit.php')
-				$('#showTotalJudul').load('showTotalJudul.php')
-				$('#showTotalPesanan').load('showTotalPesanan.php')
-				$('#showTotalPembekalan').load('showTotalPembekalan.php')
-			  $('#odometer').load('../distiSPBT/liveOdometer.php')
-				$('#attStat').load('../distiSPBT/attStat.php')
-				$('#parcelStat').load('../distiSPBT/parcelStat.php')
+				$('#showSekolahPantau').load('showSekolahPantau.php')
+				$('#showJumlahNegeri').load('showJumlahNegeri.php')
+        $('#showJumlahLebihan').load('showJumlahLebihan.php')
 			}, 5000);
 
      
