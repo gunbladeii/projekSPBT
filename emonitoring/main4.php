@@ -469,7 +469,8 @@ $a = 1;
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
-                                   <button class="btn btn-info" onclick="printDiv('print')">Cetak</button>
+                                   <div id="editor"></div>
+                                   <button class="btn btn-info" id="cmd" onclick="printDiv('print')">Cetak</button>
                                 </div>
                           
                         </div>
@@ -583,16 +584,20 @@ $a = 1;
     });
 </script>
 <script>
-  function printDiv(divName) {
-     var printContents = document.getElementById(divName).innerHTML;
-     var originalContents = document.body.innerHTML;
+  var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+            return true;
+        }
+    };
 
-     document.body.innerHTML = printContents;
-
-     window.print();
-
-     document.body.innerHTML = originalContents;
-}
+    $('#cmd').click(function () {
+        doc.fromHTML($('#print').html(), 15, 15, {
+            'width': 170,
+                'elementHandlers': specialElementHandlers
+        });
+        doc.save('laporan_semakan.pdf');
+    });
 </script>
 <script>
 /* When the user clicks on the button,
