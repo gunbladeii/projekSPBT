@@ -547,7 +547,7 @@ $a = 1;
 <script src="../adminSPBT/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../adminSPBT/dist/js/demo.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.1.js" integrity="sha256-lGuUqJUPXJEMgQX/RRaM6mZkK6ono5i5bHuBME4qOCo=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 		    
