@@ -582,7 +582,7 @@ $a = 1;
     function sum() {
             var num1 = document.getElementsByName("bukuLebihan").value;
             var num2 = document.getElementByName("bukuWajib").value;
-      var result = parseInt(num1) - parseInt(num2);
+            var result = parseInt(num1) - parseInt(num2);
             if (!isNaN(result)) 
             {
         document.getElementByName("bukuStok").value = result;
