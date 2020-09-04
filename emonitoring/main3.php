@@ -340,10 +340,12 @@ $a = 1;
                                 </tr>
                               </thead>
                               <tbody>
-                              <?php //do {?>
                               <tr>
                                 <td>
-                                      Nama Sekolah: <u><?php echo $dataSekolah['namaSekolah'];?></u>
+                                      Nama Sekolah: 
+                                </td>
+                                <td>
+                                      <u><?php echo $dataSekolah['namaSekolah'];?></u>
                                 </td>
                               </tr>
                               <tr>
