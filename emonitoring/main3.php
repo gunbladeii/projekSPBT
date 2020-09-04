@@ -431,7 +431,7 @@ $a = 1;
                                     <div class="form-group">
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
-                                      <input type="text" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
+                                      <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
                                       <input type="text" id="bukuWajib" value="3">
                                       <input type="text" name="bukuStok" value="">
                                       <div class="input-group-append input-group-text">
@@ -572,12 +572,12 @@ $a = 1;
     $(document).ready(function() {
     //this calculates values automatically 
     sum();
-    $('[name="bukuLebihan"]','[name="bukuWajib"]').on("keydown keyup", function() {
+    $('#bukuLebihan','bukuWajib').on("keydown keyup", function() {
         sum();
     });
 
     function sum() {
-            var num1 = document.getElementsByName("bukuLebihan").value;
+            var num1 = document.getElementsById("bukuLebihan").value;
             var num2 = document.getElementById('bukuWajib').value;
             var result = parseInt(num1) - parseInt(num2);
             if (!isNaN(result)) 
