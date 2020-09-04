@@ -336,95 +336,65 @@ $a = 1;
                             <table class="table table-sm">
                               <thead>
                                 <tr>
-                                  <th colspan="4" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
+                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
                                 </tr>
                               </thead>
                               <tbody>
                               <tr>
                                 <td>
-                                      Nama Sekolah: 
-                                </td>
-                                <td>
-                                   <u><?php echo $dataSekolah['namaSekolah'];?></u>
+                                      Nama Sekolah: <u><?php echo $dataSekolah['namaSekolah'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                      Kod Sekolah: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['kodSekolah'];?></u>
+                                      Kod Sekolah: <u><?php echo $dataSekolah['kodSekolah'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                      Daerah: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['daerah'];?></u>
+                                      Daerah: <u><?php echo $dataSekolah['daerah'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                   <td>
-                                        Negeri: 
-                                  </td>
-                                  <td>
-                                    <u><?php echo $dataSekolah['negeri'];?></u>
+                                        Negeri: <u><?php echo $dataSekolah['negeri'];?></u>
                                   </td>
                               </tr>
                               <tr>
                                    <td>
-                                        No. Telefon Pejabat: 
-                                  </td>
-                                  <td>
-                                    <u><?php echo $dataSekolah['noTelefon'];?></u>
+                                        No. Telefon Pejabat: <u><?php echo $dataSekolah['noTelefon'];?></u>
                                   </td>
                               </tr>
                               <tr>
                                   <td>
-                                      Nama Guru Penyelaras SPBT: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['namaPenyelaras'];?></u>
+                                      Nama Guru Penyelaras SPBT: <u><?php echo $dataSekolah['namaPenyelaras'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                      No. Telefon Bimbit: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['noHP'];?></u>
+                                      No. Telefon Bimbit: <u><?php echo $dataSekolah['noHP'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                   <td>
-                                      Tarikh Pemantauan: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['tarikhPemantauan'];?></u>
+                                      Tarikh Pemantauan: <u><?php echo $dataSekolah['tarikhPemantauan'];?></u>
                                 </td>
                               </tr>
 
                               <tr>
                                   <td>
-                                      Nama Pegawai Pemantau: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['namaPegawai1'];?></u>
+                                      Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai1'];?></u>
                                 </td>
                               </tr>
 
                               <tr>
                                   <td>
-                                      Jawatan: 
-                                </td>
-                                <td>
-                                  <u><?php echo $dataSekolah['jawatan1'];?></u>
+                                      Jawatan: <u><?php echo $dataSekolah['jawatan1'];?></u>
                                 </td>
                               </tr>
 
                                  <tr>
-                                  <th colspan="4" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
+                                  <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>
 
                                 <tr>
