@@ -432,7 +432,7 @@ $a = 1;
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
-                                      <input type="text" name="bukuWajib" value="3">
+                                      <input type="text" id="bukuWajib" value="3">
                                       <input type="text" name="bukuStok" value="">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
@@ -578,7 +578,7 @@ $a = 1;
 
     function sum() {
             var num1 = document.getElementsByName("bukuLebihan").value;
-            var num2 = document.getElementByName("bukuWajib").value;
+            var num2 = document.getElementById('bukuWajib').value;
             var result = parseInt(num1) - parseInt(num2);
             if (!isNaN(result)) 
             {
