@@ -347,54 +347,81 @@ $a = 1;
                                       Nama Sekolah: 
                                 </td>
                                 <td>
-                                      <u><?php echo $dataSekolah['namaSekolah'];?></u>
+                                   <u><?php echo $dataSekolah['namaSekolah'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                      Kod Sekolah: <u><?php echo $dataSekolah['kodSekolah'];?></u>
+                                      Kod Sekolah: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['kodSekolah'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                      Daerah: <u><?php echo $dataSekolah['daerah'];?></u>
+                                      Daerah: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['daerah'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                   <td>
-                                        Negeri: <u><?php echo $dataSekolah['negeri'];?></u>
+                                        Negeri: 
+                                  </td>
+                                  <td>
+                                    <u><?php echo $dataSekolah['negeri'];?></u>
                                   </td>
                               </tr>
                               <tr>
                                    <td>
-                                        No. Telefon Pejabat: <u><?php echo $dataSekolah['noTelefon'];?></u>
+                                        No. Telefon Pejabat: 
+                                  </td>
+                                  <td>
+                                    <u><?php echo $dataSekolah['noTelefon'];?></u>
                                   </td>
                               </tr>
                               <tr>
                                   <td>
-                                      Nama Guru Penyelaras SPBT: <u><?php echo $dataSekolah['namaPenyelaras'];?></u>
+                                      Nama Guru Penyelaras SPBT: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['namaPenyelaras'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                      No. Telefon Bimbit: <u><?php echo $dataSekolah['noHP'];?></u>
+                                      No. Telefon Bimbit: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['noHP'];?></u>
                                 </td>
                               </tr>
                               <tr>
                                   <td>
-                                      Tarikh Pemantauan: <u><?php echo $dataSekolah['tarikhPemantauan'];?></u>
+                                      Tarikh Pemantauan: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['tarikhPemantauan'];?></u>
                                 </td>
                               </tr>
 
                               <tr>
                                   <td>
-                                      Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai1'];?></u>
+                                      Nama Pegawai Pemantau: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['namaPegawai1'];?></u>
                                 </td>
                               </tr>
 
                               <tr>
                                   <td>
-                                      Jawatan: <u><?php echo $dataSekolah['jawatan1'];?></u>
+                                      Jawatan: 
+                                </td>
+                                <td>
+                                  <u><?php echo $dataSekolah['jawatan1'];?></u>
                                 </td>
                               </tr>
 
