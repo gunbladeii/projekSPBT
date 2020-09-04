@@ -431,7 +431,7 @@ $a = 1;
                                     <div class="form-group">
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
-                                      <input type="number" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
+                                      <input type="text" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
                                       <input type="text" name="bukuWajib" value="3">
                                       <input type="text" name="bukuStok" value="">
                                       <div class="input-group-append input-group-text">
