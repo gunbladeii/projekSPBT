@@ -317,7 +317,7 @@ $a = 1;
                                     <div class="form-group">
                                       Nama Sekolah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" required>
+                                      <input type="text" name="namaSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaSekolah'];?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -330,7 +330,7 @@ $a = 1;
                                     <div class="form-group">
                                       Kod Sekolah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
+                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -343,7 +343,7 @@ $a = 1;
                                    <div class="form-group">
                                       No. Telefon Pejabat:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="noTelefon" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTelefon'];?>" required>
+                                      <input type="text" name="noTelefon" class="form-control"  id="validationDefault01" placeholder="Masukkan No. telefon Pejabat" value="<?php echo $dataSekolah['noTelefon'];?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -356,7 +356,7 @@ $a = 1;
                                    <div class="form-group">
                                       Daerah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" required>
+                                      <input type="text" name="daerah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['daerah'];?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -369,7 +369,7 @@ $a = 1;
                                    <div class="form-group">
                                       Negeri:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="negeri" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['negeri'];?>" required>
+                                      <input type="text" name="negeri" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['negeri'];?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -427,7 +427,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['nama']);?>" required>
+                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['nama']);?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -441,7 +441,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['jawatan']);?>" required>
+                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['jawatan']);?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
