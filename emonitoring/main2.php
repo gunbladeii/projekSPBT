@@ -463,7 +463,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPegawai2']);?>">
+                                      <input style="text-transform: uppercase;" type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPegawai2']);?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
