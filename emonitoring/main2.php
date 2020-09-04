@@ -382,7 +382,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Guru Penyelaras SPBT:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPenyelaras" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPenyelaras'];?>" required>
+                                      <input type="text" name="namaPenyelaras" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPenyelaras']);?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -413,7 +413,7 @@ $a = 1;
                                    <div class="form-group">
                                       Tarikh Pemantauan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
+                                      <input type="date" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -427,7 +427,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['namaPegawai1'];?>" required>
+                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['nama']);?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -441,7 +441,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['jawatan1'];?>" required>
+                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['jawatan']);?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
