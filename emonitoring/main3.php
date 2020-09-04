@@ -395,7 +395,7 @@ $a = 1;
 
                               <tr>
                                   <td>
-                                      Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai2'];?></u>
+                                      Nama Pegawai Pemantau: <u><?php echo strtoupper($dataSekolah['namaPegawai2']);?></u>
                                 </td>
                               </tr>
 
