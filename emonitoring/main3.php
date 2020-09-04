@@ -548,10 +548,6 @@ $a = 1;
 <!-- AdminLTE for demo purposes -->
 <script src="../adminSPBT/dist/js/demo.js"></script>
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 		    
