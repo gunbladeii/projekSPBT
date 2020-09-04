@@ -450,6 +450,38 @@ $a = 1;
                                 </td>
                               </tr>
 
+                              <tr>
+                                <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pengiring</h4></th>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Nama Pegawai Pemantau:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPegawai2']);?>" readonly required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                   <div class="form-group">
+                                      Jawatan:
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="jawatan2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['jawatan2']);?>" readonly required>
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+
                               </tbody>
                              </table>
                                 <input type="hidden" name="remark" value="observe">
