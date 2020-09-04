@@ -336,7 +336,9 @@ $a = 1;
                             <table class="table table-sm">
                               <thead>
                                 <tr>
-                                  <th style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
+                                  <th colspan="2" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Sekolah</h4></th>
+                                  <th></th>
+                                  <th></th>
                                 </tr>
                               </thead>
                               <tbody>
