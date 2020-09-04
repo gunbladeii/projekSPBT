@@ -415,7 +415,7 @@ $a = 1;
                                <tr>
                                   <td>
                                     <div class="form-group">
-                                      Jumlah Naskah Lebihan:
+                                      Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="number" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
                                       <div class="input-group-append input-group-text">
