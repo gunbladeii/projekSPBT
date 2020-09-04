@@ -441,7 +441,7 @@ $a = 1;
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
                           <form method="post" action="main4.php" role="form" enctype="multipart/form-data">
-                          <table class="table sm">
+                          <table class="table table-sm">
                             <thead>
                               <tr>
                                 <th colspan="4" style="text-align: center; background-color: black"><h4 style="color: white">Maklumat Pengurusan Stok Buku Teks</h4></th>
