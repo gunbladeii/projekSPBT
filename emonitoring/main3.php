@@ -20,6 +20,7 @@ $kodSekolah = $_GET['kodSekolah'];
 $kodSekolah2 = $_POST['kodSekolah'];
 $namaSekolah = $_POST['namaSekolah'];
 $bukuLebihan = $_POST['bukuLebihan'];
+$bukuStok = $_POST['bukuStok'];
 $kodJudul = $_POST['kodJudul'];
 $comment = $_POST['comment'];
 
@@ -41,7 +42,7 @@ $rekodPemantauan = mysqli_fetch_assoc($Recordset4);
 $totalRows_Recordset3 = mysqli_num_rows($Recordset4);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan')");
+    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan','$bukuStok')");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
@@ -430,6 +431,8 @@ $a = 1;
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="number" name="bukuLebihan" class="form-control"  id="validationDefault01" value="" required>
+                                      <input type="hidden" name="bukuWajib" value="3">
+                                      <input type="hidden" name="bukuStok" value="">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -460,7 +463,8 @@ $a = 1;
                               <tr>
                                 <th>Bil</th>
                                 <th>Judul</th>
-                                <th>Lebihan buku</th>
+                                <th>Jumlah Naskhah</th>
+                                <th>Stok</th>
                                 <th>Tindakan</th>
                               </tr>
                             </thead>
@@ -470,6 +474,7 @@ $a = 1;
                                 <td><?php echo $a++;?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['judul']);?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
+                                <td><?php echo $rekodPemantauan['bukuStok'];?></td>
                                 <td><a data-toggle="modal" data-target="#delJudulModal" data-whatever="<?php echo $rekodPemantauan['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><i class="fas fa-times"></i></a></td>
                               </tr>
                                <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
@@ -565,6 +570,28 @@ $a = 1;
      
 		});
 </script>
+
+<script>
+    $(document).ready(function() {
+    //this calculates values automatically 
+    sum();
+    $('[name="bukuLebihan"]','[name="bukuWajib"]').on("keydown keyup", function() {
+        sum();
+    });
+
+    function sum() {
+            var num1 = document.getElementsByName("bukuLebihan").value;
+            var num2 = document.getElementByName("bukuWajib").value;
+      var result = parseInt(num1) - parseInt(num2);
+            if (!isNaN(result)) 
+            {
+        document.getElementByName("bukuStok").value = result;
+            }
+           
+        }
+    });
+   </script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     /*updatePesananJudul*/
