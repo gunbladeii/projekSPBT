@@ -483,9 +483,7 @@ $a = 1;
                                                 <? }while ($dataJawatan = mysqli_fetch_assoc($Recordset3));?>
                                                </select>
                                       </div>
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
+                                      
                                       </div>
                                     </div>
                                 </td>
