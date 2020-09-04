@@ -393,6 +393,18 @@ $a = 1;
                                 </td>
                               </tr>
 
+                              <tr>
+                                  <td>
+                                      Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai2'];?></u>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                      Jawatan: <u><?php echo $dataSekolah['jawatan2'];?></u>
+                                </td>
+                              </tr>
+
                                  <tr>
                                   <th colspan="3" style="text-align: center; background-color: red;"><h4 style="color: white">Kemaskini Maklumat Stok</h4></th>
                                 </tr>

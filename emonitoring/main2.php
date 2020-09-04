@@ -37,6 +37,10 @@ $Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$
 $dataSekolah = mysqli_fetch_assoc($Recordset2);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
+$Recordset3 = $mysqli->query("SELECT * FROM dataJawatan");
+$dataJawatan = mysqli_fetch_assoc($Recordset3);
+$totalRows_Recordset2 = mysqli_num_rows($Recordset3);
+
 if (isset($_POST['submit'])) {
     $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `jawatan1` = '$jawatan1', `remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
     header("location:main3.php?kodSekolah=$kodSekolah2");
@@ -473,7 +477,12 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['jawatan2']);?>" readonly required>
+                                               <select name="jawatan2" class="custom-select browser-default" required>
+                                                <?php do {?>
+                                                   <option value="<?php echo ($dataJawatan['namaJawatan']);?>"><?php echo strtoupper($dataJawatan['namaJawatan']);?></option>
+                                                <? }while ($dataJawatan = mysqli_fetch_assoc($Recordset3));?>
+                                               </select>
+                                      </div>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
