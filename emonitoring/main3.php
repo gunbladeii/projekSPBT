@@ -577,7 +577,7 @@ $a = 1;
     });
 
     function sum() {
-            var num1 = document.getElementsById("bukuLebihan").value;
+            var num1 = document.getElementById("bukuLebihan").value;
             var num2 = document.getElementById('bukuWajib').value;
             var result = parseInt(num1) - parseInt(num2);
             if (!isNaN(result)) 
