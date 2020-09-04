@@ -409,7 +409,7 @@ $a = 1;
                               </tr>
                               <?php //} while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
                                  <tr>
-                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pemantau</h4></th>
+                                  <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pegawai Pemantau</h4></th>
                                 </tr>
 
                                 <tr>
@@ -455,7 +455,7 @@ $a = 1;
                               </tr>
 
                               <tr>
-                                <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pengiring</h4></th>
+                                <th colspan="3" style="text-align: center; background-color: #0d0d0d;"><h4 style="color: white">Maklumat Pegawai Pengiring</h4></th>
                               </tr>
 
                               <tr>
@@ -463,7 +463,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPegawai2']);?>" readonly required>
+                                      <input type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPegawai2']);?>">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -477,7 +477,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                               <select name="jawatan2" class="custom-select browser-default" required>
+                                               <select name="jawatan2" class="custom-select browser-default">
                                                 <?php do {?>
                                                    <option value="<?php echo ($dataJawatan['namaJawatan']);?>"><?php echo strtoupper($dataJawatan['namaJawatan']);?></option>
                                                 <? }while ($dataJawatan = mysqli_fetch_assoc($Recordset3));?>
