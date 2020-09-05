@@ -2,38 +2,40 @@
 <?php
     require('conn.php');
     $id = $_GET['id'];
+    $kodSekolah = $_GET['kodSekolah'];
     date_default_timezone_set("asia/kuala_lumpur"); 
     $date = date('Y-m-d');
 
-   $judul = $_POST['judul'];
-   $zon = $_POST['zon'];
-   $state = $_POST['state'];
-   $roleID2 = $_POST['roleID'];
-   $refID = $_POST['refID'];
+    $kodSekolah = $_GET['kodSekolah'];
+    $kodSekolah2 = $_POST['kodSekolah'];
+    $namaSekolah = $_POST['namaSekolah'];
+    $bukuLebihan = $_POST['bukuLebihan'];
+    $bukuStok = $_POST['bukuStok'];
+    $kodJudul = $_POST['kodJudul'];
+    $comment = $_POST['comment'];
+
+    $judul = $_POST['judul'];
+    $judul2 = $_GET['judul'];
+    $kodAliran = $_POST['kodAliran'];
+    $kodAliran2 = $_GET['kodAliran'];
     
-   if (isset($_POST['submit2'])) {
+   if (isset($_POST['submit'])) {
+    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan','$bukuStok')");
+    header("location:main3.php?kodSekolah=$kodSekolah2");
+    }
 
-      $mysqli->query("INSERT INTO `statusBekalan` (`roleID`, `refID`, `judul`, `state`, `zon`) VALUES ('$roleID2', '$refID', $judul', '$state', '$zon')");
-
-      header("location:indexPublisher.php");
-    } 
-
-    $id2 = $mysqli->query("SELECT * FROM `login` WHERE id =  '$id'");
+    $id2 = $mysqli->query("SELECT * FROM `dataJudul` WHERE id =  '$id'");
     $ReID = mysqli_fetch_assoc($id2);
 
-    $judulCall = $mysqli->query("SELECT * FROM `judul`");
-    $JC = mysqli_fetch_assoc($judulCall);
+    $Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$kodSekolah'");
+    $dataSekolah = mysqli_fetch_assoc($Recordset2);
+    $totalRows_Recordset2 = mysqli_num_rows($Recordset2);
 
-    $stateCall = $mysqli->query("SELECT * FROM `state`");
-    $SC = mysqli_fetch_assoc($stateCall);
-
-    $stateCall2 = $mysqli->query("SELECT * FROM `state` GROUP BY `zon`");
-    $SC2 = mysqli_fetch_assoc($stateCall2);
 ?>
 
 <!--start if employeeStatus=='temp'-->
 
-<?php if ($ReID['role'] == 'distiSPBT'){?>
+<?php if ($ReID > 0){?>
   <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
                <div class="form-group">
                                       Jumlah Naskhah (Lebihan):
@@ -48,11 +50,13 @@
                                     </div>
 
                                     <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
-                                    
+                                    <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
+                                    <input type="hidden" name="kodJudul" value="<?php echo $$ReID['kodJudul'];?>"/>
                                     <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                     <div class="modal-footer">
-                                        <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
-                                    </div>
+                                    <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
+               </div>
+  </form>
 <?php }?>
 
 
