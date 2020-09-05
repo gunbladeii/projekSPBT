@@ -457,6 +457,7 @@ $a = 1;
                                       2. Pilih Jenis Sekolah:
                                       <div class="input-group mb-3">
                                                <select name="aliran" class="custom-select browser-default" required>
+                                                <option value="" selected>Jenis sekolah..</option>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataAliranSekolah['aliran'];?>"><?php echo strtoupper($dataAliranSekolah['aliran']);?></option>
                                                  <? }while ($dataAliranSekolah = mysqli_fetch_assoc($Recordset5));?>
