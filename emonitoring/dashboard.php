@@ -419,7 +419,7 @@ $a = 1;
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                        <?php if($dataSekolah > 0) {?>
+                        <?php if($rekodPemantauan > 0) {?>
                           <div class="table-responsive">
                             <table id="example1" class="table m-0">
                               <thead>
