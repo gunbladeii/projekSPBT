@@ -35,58 +35,24 @@
 
 <?php if ($ReID['role'] == 'distiSPBT'){?>
   <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
-               <div>
-                <h6 class="badge badge-success"><?php echo strtoupper($ReID['name']);?></h6>
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <select name="judul" class="custom-select browser-default" required>
-                                  <option value="">Pilih judul yang dihantar</option>
-                                  <?php do{?>
-                                  <option value="<?php echo $JC['name'];?>"><?php echo ucwords($JC['name']);?></option>
-                                  <?php }while ($JC = mysqli_fetch_assoc($judulCall))?>
-                                </select>
-                                <div class="input-group-append input-group-text">
-                                  <span class="fas fa-book"></span>
-                               </div>
-                        </div>
-                    </div>
+               <div class="form-group">
+                                      Jumlah Naskhah (Lebihan):
+                                      <div class="input-group mb-3">
+                                      <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
+                                      <input type="text" id="bukuWajib" value="3">
+                                      <input type="text" id="bukuStok" name="bukuStok" value="">
+                                      <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                      </div>
+                                      </div>
+                                    </div>
 
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <select name="state" class="custom-select browser-default" required>
-                                  <option value="">Pilih negeri yang dihantar</option>
-                                  <?php do{?>
-                                  <option value="<?php echo $SC['state'];?>"><?php echo strtoupper($SC['state']);?></option>
-                                  <?php }while ($SC = mysqli_fetch_assoc($stateCall))?>
-                                </select>
-                                <div class="input-group-append input-group-text">
-                                  <span class="fas fa-book"></span>
-                               </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <select name="zon" class="custom-select browser-default" required>
-                                  <option value="">Pilih zon yang dihantar</option>
-                                  <?php do{?>
-                                  <option value="<?php echo $SC2['zon'];?>"><?php echo strtoupper($SC2['zon']);?></option>
-                                  <?php }while ($SC2 = mysqli_fetch_assoc($stateCall2))?>
-                                </select>
-                                <div class="input-group-append input-group-text">
-                                  <span class="fas fa-book"></span>
-                               </div>
-                        </div>
-                    </div>
-                </div>
-
-                  <input type="hidden" name="roleID" value="<?php echo $ReID['roleID'];?>"/>
-                  <input type="hidden" name="refID" value="<?php echo $ReID['refID'];?>"/>
-                  <div class="modal-footer">
-                      <input type="submit" class="btn btn-primary" name="submit2" value="Daftar tugas"/>&nbsp;
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-    </form> 
+                                    <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
+                                    
+    </form> <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
+                                    <div class="modal-footer">
+                                        <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
+                                    </div>
 <?php }?>
 
 
@@ -98,128 +64,25 @@
 <!--calculate total earning, deduction, grand total
 <script src="../calculateTotalSalary.js"></script>-->
 
-<script type="text/javascript">
-  $(function() {
-     'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+    //this calculates values automatically 
+    sum();
+    $('#bukuLebihan','#bukuWajib').on("keydown keyup", function() {
+        sum();
+     });
+
+    });
+
+    function sum() {
+            var num1 = document.getElementById('bukuLebihan').value;
+            var num2 = document.getElementById('bukuWajib').value;
+            var result = parseInt(num1) - parseInt(num2);
+            if (!isNaN(result)) 
+            {
+        document.getElementById('bukuStok').value = result;
+            }
+           
         }
-        form.classList.add('was-validated');
-      }, false);
-    });
-   }, false); 
-      
-    //Initialize Select2 Elements
-    $('.select2').select2()
-
-    //Datemask dd/mm/yyyy
-    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-    //Datemask2 mm/dd/yyyy
-    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
-    //Money Euro
-    $('[data-mask]').inputmask()
-
-    //Date range picker
-    $('#reservation').daterangepicker()
-    //Date range picker with time picker
-    $('#reservationtime').daterangepicker({
-      timePicker: true,
-      timePickerIncrement: 30,
-      locale: {
-        format: 'MM/DD/YYYY hh:mm A'
-      }
-    })
-    //Date range as a button
-    $('#daterange-btn').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        },
-        startDate: moment().subtract(29, 'days'),
-        endDate  : moment()
-      },
-      function (start, end) {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-      }
-    )
-
-    //Timepicker
-    $('#timepicker').datetimepicker({
-      format: 'LT'
-    })
-
-    //Colorpicker
-    $('.my-colorpicker1').colorpicker()
-    //color picker with addon
-    $('.my-colorpicker2').colorpicker()
-
-    $('.my-colorpicker2').on('colorpickerChange', function(event) {
-      $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
-    });  
-      
-      
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 10000
-    });
-
-    $('#swalDefaultSuccess').click(function() {
-      Toast.fire({
-        type: 'success',
-        title: 'Registration Succesfull.Thank you'
-      })
-    });
-    $('.swalDefaultInfo').click(function() {
-      Toast.fire({
-        type: 'info',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultError').click(function() {
-      Toast.fire({
-        type: 'error',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultWarning').click(function() {
-      Toast.fire({
-        type: 'warning',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-    $('.swalDefaultQuestion').click(function() {
-      Toast.fire({
-        type: 'question',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-
-    $('#toastrDefaultSuccess').click(function() {
-      toastr.success('Registration Succesfull.Thank you.')
-    });
-    $('.toastrDefaultInfo').click(function() {
-      toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultError').click(function() {
-      toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-    $('.toastrDefaultWarning').click(function() {
-      toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
-    });
-  });
-
-</script>
+   </script>

@@ -338,7 +338,6 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
-                          <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
                             <table class="table table-sm">
                               <thead>
                                 <tr>
@@ -418,8 +417,9 @@ $a = 1;
                                 <tr>
                                   <td>
                                    <div class="form-group">
-                                      Judul: 
-                                      <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
+                                      1. Taip Judul: 
+                                      <input type="text" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
+                                      2. Pilih Jenis Sekolah:
                                       <div class="input-group mb-3">
                                                <select name="aliran" class="custom-select browser-default" required>
                                                  <?php do {?>
@@ -429,31 +429,8 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-
-                               <tr>
-                                  <td>
-                                    <div class="form-group">
-                                      Jumlah Naskhah (Lebihan):
-                                      <div class="input-group mb-3">
-                                      <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
-                                      <input type="text" id="bukuWajib" value="3">
-                                      <input type="text" id="bukuStok" name="bukuStok" value="">
-                                      <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
-                                      </div>
-                                      </div>
-                                    </div>
-                                </td>
-                               </tr>
-
                               </tbody>
                              </table>
-                                <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
-                                <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
-                                </div>
-                            </form>
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
 
@@ -571,30 +548,6 @@ $a = 1;
      
 		});
 </script>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function() {
-    //this calculates values automatically 
-    sum();
-    $('#bukuLebihan','#bukuWajib').on("keydown keyup", function() {
-        sum();
-     });
-
-    });
-
-    function sum() {
-            var num1 = document.getElementById('bukuLebihan').value;
-            var num2 = document.getElementById('bukuWajib').value;
-            var result = parseInt(num1) - parseInt(num2);
-            if (!isNaN(result)) 
-            {
-        document.getElementById('bukuStok').value = result;
-            }
-           
-        }
-   
-   </script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     /*updatePesananJudul*/
