@@ -39,7 +39,11 @@ $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
 
 $Recordset4 = $mysqli->query("SELECT rekodPemantauan.id, rekodPemantauan.kodSekolah, rekodPemantauan.kodJudul, dataJudul.judul, rekodPemantauan.bukuLebihan, rekodPemantauan.bukuStok FROM rekodPemantauan INNER JOIN dataJudul ON rekodPemantauan.kodJudul = dataJudul.kodJudul WHERE kodSekolah = '$kodSekolah'");
 $rekodPemantauan = mysqli_fetch_assoc($Recordset4);
-$totalRows_Recordset3 = mysqli_num_rows($Recordset4);
+$totalRows_Recordset4 = mysqli_num_rows($Recordset4);
+
+$Recordset5 = $mysqli->query("SELECT * FROM dataJudul GROUP BY aliran");
+$dataAliranSekolah = mysqli_fetch_assoc($Recordset5);
+$totalRows_Recordset5 = mysqli_num_rows($Recordset5);
 
 if (isset($_POST['submit'])) {
     $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan','$bukuStok')");
@@ -417,10 +421,10 @@ $a = 1;
                                       Judul: 
                                       <input type="text" id="carianJudul" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
                                       <div class="input-group mb-3">
-                                               <select name="kodJudul" class="custom-select browser-default" required>
+                                               <select name="aliran" class="custom-select browser-default" required>
                                                  <?php do {?>
-                                                   <option value="<?php echo $dataJudul['kodJudul'];?>"><?php echo strtoupper($dataJudul['judul']);?></option>
-                                                 <? }while ($dataJudul = mysqli_fetch_assoc($Recordset3));?>
+                                                   <option value="<?php echo $dataAliranSekolah['aliran'];?>"><?php echo strtoupper($dataAliranSekolah['aliran']);?></option>
+                                                 <? }while ($dataAliranSekolah = mysqli_fetch_assoc($Recordset5));?>
                                                </select>
                                     </div>
                                 </td>
