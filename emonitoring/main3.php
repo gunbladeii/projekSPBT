@@ -26,8 +26,8 @@ $comment = $_POST['comment'];
 
 $judul = $_POST['judul'];
 $judul2 = $_GET['judul'];
-$kodAliran = $_POST['kodAliran'];
-$kodAliran2 = $_GET['kodAliran'];
+$jenisAliran = $_POST['jenisAliran'];
+$jenisAliran2 = $_GET['jenisAliran'];
 
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
@@ -46,11 +46,11 @@ $Recordset4 = $mysqli->query("SELECT rekodPemantauan.id, rekodPemantauan.kodSeko
 $rekodPemantauan = mysqli_fetch_assoc($Recordset4);
 $totalRows_Recordset4 = mysqli_num_rows($Recordset4);
 
-$Recordset5 = $mysqli->query("SELECT * FROM dataJudul GROUP BY aliran");
+$Recordset5 = $mysqli->query("SELECT * FROM dataJudul GROUP BY jenisAliran");
 $dataAliranSekolah = mysqli_fetch_assoc($Recordset5);
 $totalRows_Recordset5 = mysqli_num_rows($Recordset5);
 
-$Recordset6 = $mysqli->query("SELECT * FROM dataJudul WHERE judul LIKE '%$judul2%' AND kodAliran = '$kodAliran2'");
+$Recordset6 = $mysqli->query("SELECT * FROM dataJudul WHERE judul LIKE '%$judul2%' OR jenisAliran = '$jenisAliran2'");
 $dataJudul2 = mysqli_fetch_assoc($Recordset6);
 $totalRows_Recordset6 = mysqli_num_rows($Recordset6);
 
@@ -60,8 +60,8 @@ if (isset($_POST['submit2'])) {
     }
 
 if (isset($_POST['submit3'])) {
-    $mysqli->query ("SELECT * FROM dataJudul WHERE WHERE judul LIKE '%$judul%' AND kodAliran = '$kodAliran'");
-    header("location:main3.php?kodSekolah=$kodSekolah2&judul=$judul&kodAliran=$kodAliran");
+    $mysqli->query ("SELECT * FROM dataJudul WHERE WHERE judul LIKE '%$judul%' AND jenisAliran = '$jenisAliran'");
+    header("location:main3.php?kodSekolah=$kodSekolah2&judul=$judul&jenisAliran=$jenisAliran");
     }
 
 $a = 1;
@@ -451,10 +451,10 @@ $a = 1;
                                       <input type="text" name="judul" laceholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
                                       2. Pilih Jenis Sekolah:
                                       <div class="input-group mb-3">
-                                               <select name="kodAliran" class="custom-select browser-default">
+                                               <select name="jenisAliran" class="custom-select browser-default">
                                                 <option value="" selected>Jenis sekolah..</option>
                                                  <?php do {?>
-                                                   <option value="<?php echo $dataAliranSekolah['kodAliran'];?>"><?php echo strtoupper($dataAliranSekolah['aliran']);?></option>
+                                                   <option value="<?php echo $dataAliranSekolah['jenisAliran'];?>"><?php if($dataAliranSekolah['jenisAliran']=='SR'){echo 'SEKOLAH RENDAH'}elseif ($dataAliranSekolah['jenisAliran']=='SM') {echo 'SEKOLAH MENENGAH'}elseif ($dataAliranSekolah['jenisAliran']=='PERALIHAN') {echo 'PERALIHAN'};?></option>
                                                  <? }while ($dataAliranSekolah = mysqli_fetch_assoc($Recordset5));?>
                                                </select>
                                     </div>
