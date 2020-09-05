@@ -6,7 +6,7 @@
     date_default_timezone_set("asia/kuala_lumpur"); 
     $date = date('Y-m-d');
 
-    $kodSekolah = $_GET['kodSekolah'];
+    
     $kodSekolah2 = $_POST['kodSekolah'];
     $namaSekolah = $_POST['namaSekolah'];
     $bukuLebihan = $_POST['bukuLebihan'];
