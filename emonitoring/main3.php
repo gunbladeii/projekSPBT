@@ -492,7 +492,7 @@ $a = 1;
                             </tr>
                           </tbody>
                         </table>
-                        <?php ;} else {echo '<div style="align-content:center" class="btn btn-warning">Tiada padanan yang sesuai,Sila cuba carian semula</div>';}?>
+                        <?php ;} else {echo '<div class="input-group mb-3"><a class="btn btn-warning">Tiada padanan yang sesuai,Sila cuba carian semula</a></div>';}?>
                       </div>
                       
                       <?php if($rekodPemantauan > 0) {?>
