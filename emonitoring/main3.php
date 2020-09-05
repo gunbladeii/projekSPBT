@@ -484,7 +484,7 @@ $a = 1;
                             <?php do {?>
                             <tr>
                               <td><?php echo $a++;?></td>
-                              <td><a class="btn btn-info" data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul2['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul2['judul']; ?></a></td>
+                              <td><a class="badge badge-info" data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul2['kodJudul'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul2['judul']; ?></a></td>
                               <td><?php echo $dataJudul2['aliran']; ?></td>
                             </tr>
                             <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
@@ -641,7 +641,7 @@ $a = 1;
           var recipient4 = button.data('whatever4') // Extract info from data-* attributes
           //var recipient2 = button.data('whatever2') // Extract info from data-* attributes
           var modal = $(this);
-          var dataString = 'id=' + recipient3 + '&' + 'kodSekolah=' + recipient4;
+          var dataString = 'kodJudul=' + recipient3 + '&' + 'kodSekolah=' + recipient4;
 
             $.ajax({
                 type: "GET",

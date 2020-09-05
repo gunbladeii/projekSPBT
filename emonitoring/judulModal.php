@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php
     require('conn.php');
-    $id = $_GET['id'];
+    $kodJudul2 = $_GET['kodJudul'];
     $kodSekolah = $_GET['kodSekolah'];
     date_default_timezone_set("asia/kuala_lumpur"); 
     $date = date('Y-m-d');
@@ -24,7 +24,7 @@
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
-    $id2 = $mysqli->query("SELECT * FROM `dataJudul` WHERE id =  '$id'");
+    $id2 = $mysqli->query("SELECT * FROM `dataJudul` WHERE kodJudul =  '$kodJudul2'");
     $ReID = mysqli_fetch_assoc($id2);
 
     $Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$kodSekolah'");
