@@ -40,7 +40,7 @@
                </div>
 
                                     <div class="form-group"> 
-                                      Jumlah Naskhah (Lebihan):
+                                      Jumlah Naskhah (buku elok):
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
                                       <input type="hidden" id="bukuWajib" value="3">
@@ -51,7 +51,7 @@
                                     </div>
 
                                     <div class="form-group"> 
-                                        Jumlah Stok:
+                                        Jumlah Stok (Lebihan):
                                        <div class="input-group mb-3">
                                          <input type="text" id="bukuStok" name="bukuStok" class="form-control" value="" readonly required>
                                          <div class="input-group-append input-group-text">
