@@ -476,7 +476,7 @@ $a = 1;
 
                       <?php if($dataJudul2 > 0) {?>
                       <div class="table-responsive">
-                        <table class="table table-sm">
+                        <table id="example1" class="table table-sm">
                           <thead>
                             <tr>
                               <th>Bil</th>
