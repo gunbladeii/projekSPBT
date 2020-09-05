@@ -92,7 +92,7 @@ $a = 1;
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
-<!-- Begin salary modal -->
+    <!-- Begin salary modal -->
       <div class="modal fade" id="delJudulModal">
         <div class="modal-dialog">
           <div class="modal-content bg-light">
@@ -103,6 +103,25 @@ $a = 1;
             </div>
             <div class="modal-body">
               <div class="dash2"></div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    <!-- End salary modal -->
+    <!-- Begin salary modal -->
+      <div class="modal fade" id="judulModal">
+        <div class="modal-dialog">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h4 class="modal-title">Daftar Rekod Judul</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="dash3"></div>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -431,8 +450,29 @@ $a = 1;
                               </tr>
                               </tbody>
                              </table>
+                                        <div class="modal-footer">
+                                            <input type="submit" class="btn btn-primary" name="submit2" value="Carian rekod"/>
+                                        </div>
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
+                      <div class="table-responsive">
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th>Bil</th>
+                              <th>Judul</th>
+                              <th>Jenis Sekolah</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><?php echo $a++;?></td>
+                              <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul['judul']; ?></a></td>
+                              <td><?php echo $dataJudul['aliran']; ?></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
@@ -567,6 +607,31 @@ $a = 1;
                 success: function (data) {
                     console.log(data);
                     modal.find('.dash2').html(data);
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+    })
+ </script>
+ <script>
+    /*updatePesananJudul*/
+    $('#judulModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient3 = button.data('whatever3') // Extract info from data-* attributes
+          var recipient4 = button.data('whatever4') // Extract info from data-* attributes
+          //var recipient2 = button.data('whatever2') // Extract info from data-* attributes
+          var modal = $(this);
+          var dataString = 'id=' + recipient3 + '&' + 'kodSekolah=' + recipient4;
+
+            $.ajax({
+                type: "GET",
+                url: "judulModal.php",
+                data: dataString,
+                cache: false,
+                success: function (data) {
+                    console.log(data);
+                    modal.find('.dash3').html(data);
                 },
                 error: function(err) {
                     console.log(err);
