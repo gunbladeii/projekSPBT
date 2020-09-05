@@ -474,7 +474,7 @@ $a = 1;
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
 
-                      <?php if($dataJudul2 > 0) {?>
+                      <?php if(!empty($dataJudul2)) {?>
                       <div class="table-responsive">
                         <table class="table table-sm">
                           <thead>
