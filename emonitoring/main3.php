@@ -490,7 +490,7 @@ $a = 1;
                             <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
                           </tbody>
                         </table>
-                        <?php ;} else {echo '<div class="container"><a class="btn btn-warning">Tiada padanan yang sesuai,Sila klik carian judul</a></div>';}?>
+                        <?php ;} else {echo '<div class="container"><div class="input-group mb-3"><a class="btn btn-warning">Tiada padanan yang sesuai,Sila klik carian judul</a></div></div>';}?>
                       </div>
                       
                       <?php if($rekodPemantauan > 0) {?>
