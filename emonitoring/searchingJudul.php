@@ -487,8 +487,8 @@ $a = 1;
                           <tbody>
                             <tr>
                               <td><?php echo $a++;?></td>
-                              <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul['judul']; ?></a></td>
-                              <td><?php echo $dataJudul['aliran']; ?></td>
+                              <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul2['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul2['judul']; ?></a></td>
+                              <td><?php echo $dataJudul2['aliran']; ?></td>
                             </tr>
                           </tbody>
                         </table>
