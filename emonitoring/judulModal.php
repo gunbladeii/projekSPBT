@@ -80,7 +80,7 @@
 <!--calculate total earning, deduction, grand total
 <script src="../calculateTotalSalary.js"></script>-->
 
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
     //this calculates values automatically 
@@ -97,7 +97,7 @@
             var result = parseInt(num1) - parseInt(num2);
             if (!isNaN(result)) 
             {
-        document.getElementById('bukuStok').value = result;
+              document.getElementById('bukuStok').value = result;
             }
            
         }
