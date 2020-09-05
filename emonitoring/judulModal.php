@@ -69,27 +69,24 @@
                                     </div>
                
   </form>
-
-
-
-<script>
+  
+   <script>
     $(document).ready(function() {
     //this calculates values automatically 
     sum();
-    $('#bukuLebihan','#bukuWajib').on("keydown keyup", function() {
+    $("#bukuLebihan").on("keydown keyup", function() {
         sum();
-     });
-
+    });
 
     function sum() {
             var num1 = document.getElementById('bukuLebihan').value;
             var num2 = document.getElementById('bukuWajib').value;
-            var result = parseInt(num1) - parseInt(num2);
+      var result = parseInt(num1) - parseInt(num2);
             if (!isNaN(result)) 
             {
-              document.getElementById('bukuStok').value = result;
+        document.getElementById('bukuStok').value = result;
             }
-           
+            
         }
     });
    </script>
