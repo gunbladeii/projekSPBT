@@ -45,7 +45,7 @@
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
                                       <input type="hidden" id="bukuWajib" value="3">
                                       <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
+                                          <span class="fas fa-book"></span>
                                       </div>
                                       </div>
                                     </div>
@@ -55,7 +55,7 @@
                                        <div class="input-group mb-3">
                                          <input type="text" id="bukuStok" name="bukuStok" class="form-control" value="" required>
                                          <div class="input-group-append input-group-text">
-                                          <span class="fas fa-id-card-alt"></span>
+                                          <span class="fas fa-pen-fancy"></span>
                                          </div>
                                        </div>
                                      </div>
