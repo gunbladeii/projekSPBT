@@ -54,7 +54,7 @@
 
                                     <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
                                     <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
-                                    <input type="hidden" name="kodJudul" value="<?php echo $$ReID['kodJudul'];?>"/>
+                                    <input type="hidden" name="kodJudul" value="<?php echo $ReID['kodJudul'];?>"/>
                                     <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                     <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
