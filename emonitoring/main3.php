@@ -451,7 +451,7 @@ $a = 1;
                                       <input type="text" name="judul" laceholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
                                       2. Pilih Jenis Sekolah:
                                       <div class="input-group mb-3">
-                                               <select name="kodAliran" class="custom-select browser-default" required>
+                                               <select name="kodAliran" class="custom-select browser-default">
                                                 <option value="" selected>Jenis sekolah..</option>
                                                  <?php do {?>
                                                    <option value="<?php echo $dataAliranSekolah['kodAliran'];?>"><?php echo strtoupper($dataAliranSekolah['aliran']);?></option>
