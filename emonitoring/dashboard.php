@@ -45,6 +45,7 @@ if (isset($_POST['submit'])) {
     }
 
 $a = 1;
+$b = 1;
 ?>
 <!DOCTYPE html>
 <html>
@@ -434,7 +435,7 @@ $a = 1;
                               <tbody>
                               <?php do {?>
                               <tr>
-                                <td><?php echo $a++;?></td>
+                                <td><?php echo $b++;?></td>
                                 <td><span class="badge badge-info"><?php echo strtoupper($rekodPemantauan['kodJudul']);?></span></td>
                                 <td><?php echo $rekodPemantauan['judul'];?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
