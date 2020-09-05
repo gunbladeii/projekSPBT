@@ -72,14 +72,6 @@
 
 
 
-<!-- Select2 -->
-<script src="plugins/select2/js/select2.full.min.js"></script>
-<!-- InputMask -->
-<script src="plugins/inputmask/jquery.inputmask.bundle.js"></script>
-
-<!--calculate total earning, deduction, grand total
-<script src="../calculateTotalSalary.js"></script>-->
-
 <script>
     $(document).ready(function() {
     //this calculates values automatically 
