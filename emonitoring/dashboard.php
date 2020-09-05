@@ -35,9 +35,9 @@ $Recordset3 = $mysqli->query("SELECT * FROM dataJudul");
 $dataJudul = mysqli_fetch_assoc($Recordset3);
 $totalRows_Recordset3 = mysqli_num_rows($Recordset3);
 
-$Recordset4 = $mysqli->query("SELECT rekodPemantauan.kodJudul, dataJudul.judul, rekodPemantauan.bukuLebihan FROM rekodPemantauan INNER JOIN dataJudul ON rekodPemantauan.kodJudul = dataJudul.kodJudul WHERE kodSekolah = '$kodSekolah'");
+$Recordset4 = $mysqli->query("SELECT rekodPemantauan.kodJudul, dataJudul.judul, SUM(rekodPemantauan.bukuLebihan) AS bukuLebihan, SUM(rekodPemantauan.bukuStok) AS bukuStok FROM rekodPemantauan INNER JOIN dataJudul ON rekodPemantauan.kodJudul = dataJudul.kodJudul GROUP BY kodJudul");
 $rekodPemantauan = mysqli_fetch_assoc($Recordset4);
-$totalRows_Recordset3 = mysqli_num_rows($Recordset4);
+$totalRows_Recordset4 = mysqli_num_rows($Recordset4);
 
 if (isset($_POST['submit'])) {
     $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan')");
@@ -390,6 +390,59 @@ $a = 1;
                                 <td><i class="far fa-check-circle"></i></td>
                               </tr>
                               <?php } while ($dataSekolah = mysqli_fetch_assoc($Recordset2)); ?>
+                              </tbody>
+                            </table>
+                          </div>
+                      <?php ;}else {echo 'Tiada rekod sekolah dipantau setakat ini';}?>
+        
+                <!-- /.table-responsive -->
+              </div>
+              </div>
+              </div>
+
+              <div id="row">
+        <div class="col-md-12">
+           <!-- TABLE: list of publisherSPBT -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;">Senarai judul pemantauan</h3>
+                <h2 class="card-title" style="font-size:14px;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                        <?php if($dataSekolah > 0) {?>
+                          <div class="table-responsive">
+                            <table id="example1" class="table m-0">
+                              <thead>
+                              <tr>
+                                <th>No</th>
+                                <th>Kod Judul</th>
+                                <th>Nama Judul</th>
+                                <th>Naskhah (Lebihan)</th>
+                                <th>Stok</th>
+                                <th>Status</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <?php do {?>
+                              <tr>
+                                <td><?php echo $a++;?></td>
+                                <td><span class="badge badge-info"><?php echo strtoupper($rekodPemantauan['kodJudul']);?></span></td>
+                                <td><?php echo $rekodPemantauan['judul'];?></td>
+                                <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
+                                <td><?php echo $rekodPemantauan['bukuStok'];?></td>
+                                <td><i class="far fa-check-circle"></i></td>
+                              </tr>
+                              <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                               </tbody>
                             </table>
                           </div>
