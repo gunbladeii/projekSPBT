@@ -20,7 +20,7 @@
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
-    $id2 = $mysqli->query("SELECT * FROM `dataJudul` WHERE kodJudul =  '$kodJudul2'");
+    $id2 = $mysqli->query("SELECT * FROM `dataJudul` WHERE kodJudul =  '$kodJudul'");
     $ReID = mysqli_fetch_assoc($id2);
 
     $Recordset2 = $mysqli->query("SELECT * FROM dataSekolah WHERE kodSekolah LIKE '$kodSekolah'");
