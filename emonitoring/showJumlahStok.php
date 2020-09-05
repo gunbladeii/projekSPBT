@@ -19,10 +19,10 @@ $date = date('Y-m-d');
 $time = date('H:i:s');
 $year = date('Y');
 
-    $refID3 = $mysqli->query("SELECT id,SUM(bukuLebihan) AS bukuLebihan FROM rekodPemantauan");
+    $refID3 = $mysqli->query("SELECT id,SUM(bukuStok) AS bukuStok FROM rekodPemantauan");
     $RID2 = mysqli_fetch_assoc($refID3);
 ?>
 <?php
-if (!empty($RID2['id'])){echo $RID2['bukuLebihan'];}else{echo 0;}
+if (!empty($RID2['id'])){echo $RID2['bukuStok'];}else{echo 0;}
 ?>
 
