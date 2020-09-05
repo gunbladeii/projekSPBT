@@ -32,12 +32,20 @@
 
   <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
                <div class="form-group"> 
-                Kod Judul:<?php echo $kodJudul;?>
+                Kod Judul: <?php echo strtoupper($kodJudul);?>
+               </div>
+
+               <div class="form-group"> 
+               Judul: <?php echo strtoupper($ReID['judul']);?>
+               </div>
+
+               <div class="form-group"> 
+               
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
-                                      <input type="text" id="bukuWajib" value="3">
-                                      <input type="text" id="bukuStok" name="bukuStok" value="">
+                                      <input type="hidden" id="bukuWajib" value="3">
+                                      <input type="hidden" id="bukuStok" name="bukuStok" value="">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
