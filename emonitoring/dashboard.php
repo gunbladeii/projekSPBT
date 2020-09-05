@@ -454,6 +454,7 @@ $a = 1;
 				$('#showSekolahPantau').load('showSekolahPantau.php')
 				$('#showbelumPantau').load('showbelumPantau.php')
         $('#showJumlahLebihan').load('showJumlahLebihan.php')
+        $('#showJumlahStok').load('showJumlahStok.php')
 			}, 5000);
 
      
