@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php
     require('conn.php');
-    $kodJudul2 = $_GET['kodJudul'];
+    $kodJudul = $_GET['kodJudul'];
     $kodSekolah = $_GET['kodSekolah'];
     date_default_timezone_set("asia/kuala_lumpur"); 
     $date = date('Y-m-d');
@@ -11,12 +11,12 @@
     $namaSekolah = $_POST['namaSekolah'];
     $bukuLebihan = $_POST['bukuLebihan'];
     $bukuStok = $_POST['bukuStok'];
-    $kodJudul = $_POST['kodJudul'];
+    $kodJudul2 = $_POST['kodJudul'];
   
 
     
    if (isset($_POST['submit'])) {
-    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan','$bukuStok')");
+    $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul2','$bukuLebihan','$bukuStok')");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
