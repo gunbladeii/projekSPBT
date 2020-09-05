@@ -495,7 +495,7 @@ $a = 1;
                           </tbody>
                         </table>
                       </div>
-                      <?php ;} ?>
+                      <?php ;} else {echo '<span class="badge badge-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><span>'}?>
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
