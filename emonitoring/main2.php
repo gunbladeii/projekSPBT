@@ -388,7 +388,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Guru Penyelaras SPBT:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPenyelaras" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPenyelaras']);?>" required>
+                                      <input type="text" name="namaPenyelaras" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPenyelaras']);?>" style="text-transform: uppercase;" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -419,7 +419,7 @@ $a = 1;
                                    <div class="form-group">
                                       Tarikh Pemantauan:
                                       <div class="input-group mb-3">
-                                      <input type="date" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
+                                      <input type="text" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -463,7 +463,7 @@ $a = 1;
                               <tr>
                                   <td>
                                    <div class="form-group">
-                                      Nama Pegawai Pemantau:
+                                      Nama Pegawai Pengiring:
                                       <div class="input-group mb-3">
                                       <input style="text-transform: uppercase;" type="text" name="namaPegawai2" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($dataSekolah['namaPegawai2']);?>">
                                       <div class="input-group-append input-group-text">
