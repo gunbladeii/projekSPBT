@@ -316,63 +316,63 @@ $a = 1;
                             <table class="table table-sm">
                               <thead>
                                 <tr>
-                                  <th colspan="4" style="text-align: center; background-color: #0d0d0d;"><h5 style="color: white">Maklumat Sekolah</h5></th>
+                                  <th colspan="5" style="text-align: center; background-color: #0d0d0d;"><h5 style="color: white">Maklumat Sekolah</h5></th>
                                 </tr>
                               </thead>
                               <tbody>
                               <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                  <a>Nama Sekolah: <u><?php echo $dataSekolah['namaSekolah'];?></u></a>
                                 </td>
                               </tr>
                               <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                 <a>Kod Sekolah: <u><?php echo $dataSekolah['kodSekolah'];?></u></a>
                                 </td>
                               </tr>
                               <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                 <a>Daerah: <u><?php echo $dataSekolah['daerah'];?></u></a>
                                 </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>Negeri: <u><?php echo $dataSekolah['negeri'];?></u></a>
                               </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>No. Telefon Pejabat: <u><?php echo $dataSekolah['noTelefon'];?></u></a>
                               </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>Nama Guru Penyelaras SPBT: <u><?php echo $dataSekolah['namaPenyelaras'];?></u></a>
                               </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>No. Telefon Bimbit: <u><?php echo $dataSekolah['noHP'];?></u></a>
                               </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>Tarikh Pemantauan: <u><?php echo $dataSekolah['tarikhPemantauan'];?></u></a>
                               </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai1'];?></u></a>
                               </td>
                               </tr>
                               <tr>
-                              <td colspan="4">
+                              <td colspan="5">
                               <a>Jawatan: <u><?php echo $dataSekolah['jawatan1'];?></u></a>
                               </td>
                               </tr>
                           
                               <tr>
-                                <th colspan="4" style="text-align: center; background-color: black"><h5 style="color: white">Maklumat Pengurusan Stok Buku Teks</h5></th>
+                                <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Maklumat Pengurusan Stok Buku Teks</h5></th>
                               </tr>
                               <tr>
                                 <th>Bil</th>
@@ -391,10 +391,10 @@ $a = 1;
                               </tr>
                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                                <tr>
-                                <th colspan="4" style="text-align: center; background-color: black"><h5 style="color: white">Ulasan Keseluruhan</h5></th>
+                                <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Ulasan Keseluruhan</h5></th>
                               </tr>
                               <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                   <div class="form-group">
                                       Ulasan:
                                       
@@ -404,7 +404,7 @@ $a = 1;
                                 </td>
                               </tr>
                               <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                       *Laporan ini adalah untuk tujuan cetakan digital. Tiada tandatangan diperlukan.
                                 </td>
                               </tr>
