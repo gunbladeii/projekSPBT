@@ -492,9 +492,9 @@ $a = 1;
                             </tr>
                           </tbody>
                         </table>
+                        <?php ;} else {echo '<span class="badge badge-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><span>';}?>
                       </div>
-                      <?php ;} else {echo '<span class="badge badge-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><span>';}?>
-
+                      
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
                           <form method="post" action="main4.php" role="form" enctype="multipart/form-data">

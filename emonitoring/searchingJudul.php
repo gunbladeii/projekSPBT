@@ -494,8 +494,9 @@ $a = 1;
                           <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
                           </tbody>
                         </table>
+                        <?php ;} else {echo '<span class="badge badge-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><span>';}?>
                       </div>
-                      <?php ;} else {echo '<span class="badge badge-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><span>';}?>
+                      
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
