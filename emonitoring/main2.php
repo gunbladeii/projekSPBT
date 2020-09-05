@@ -419,7 +419,7 @@ $a = 1;
                                    <div class="form-group">
                                       Tarikh Pemantauan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
+                                      <input type="date" name="tarikhPemantauan" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['tarikhPemantauan'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
