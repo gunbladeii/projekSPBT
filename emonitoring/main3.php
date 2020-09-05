@@ -485,11 +485,13 @@ $a = 1;
                             </tr>
                           </thead>
                           <tbody>
+                            <?php do {?>
                             <tr>
                               <td><?php echo $a++;?></td>
                               <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul['judul']; ?></a></td>
                               <td><?php echo $dataJudul['aliran']; ?></td>
                             </tr>
+                            <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
                           </tbody>
                         </table>
                         <?php ;} else {echo '<div class="input-group mb-12"><a class="btn btn-warning">Tiada padanan yang sesuai,Sila cuba carian semula</a></div>';}?>
