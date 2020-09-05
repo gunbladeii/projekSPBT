@@ -455,6 +455,8 @@ $a = 1;
                                         </div>
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
+
+                      <?php if($dataSekolah2 > 0) {?>
                       <div class="table-responsive">
                         <table class="table table-sm">
                           <thead>
@@ -473,6 +475,7 @@ $a = 1;
                           </tbody>
                         </table>
                       </div>
+                      <?php ;}?>
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
