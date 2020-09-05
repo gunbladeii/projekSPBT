@@ -485,9 +485,6 @@ $a = 1;
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td><?php echo $judul2.','.$aliran2?></td>
-                            </tr>
                             <?php do {?>
                             <tr>
                               <td><?php echo $a++;?></td>
