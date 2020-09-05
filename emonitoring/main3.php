@@ -371,6 +371,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($dataSekolah > 0) {?>
                           <div class="table-responsive">
+                           <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
                             <table class="table table-sm">
                               <thead>
                                 <tr>
@@ -448,7 +449,7 @@ $a = 1;
                                 </tr>
 
                                 <tr>
-                                  <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
+                                 
                                   <td>
                                    <div class="form-group">
                                       1. Taip Judul: 
