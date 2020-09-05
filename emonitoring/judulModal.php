@@ -39,8 +39,7 @@
                Judul: <?php echo strtoupper($ReID['judul']);?>
                </div>
 
-               <div class="form-group"> 
-               
+                                    <div class="form-group"> 
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
@@ -51,22 +50,24 @@
                                       </div>
                                     </div>
 
+                                    <div class="form-group"> 
+                                        Jumlah Stok:
+                                       <div class="input-group mb-3">
+                                         <input type="text" id="bukuStok" name="bukuStok" value="" required>
+                                         <div class="input-group-append input-group-text">
+                                          <span class="fas fa-id-card-alt"></span>
+                                         </div>
+                                       </div>
+                                     </div>
+
                                     <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
                                     <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                     <input type="hidden" name="kodJudul" value="<?php echo $ReID['kodJudul'];?>"/>
                                     <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                     <div class="modal-footer">
-                                    <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
-               </div>
-               <div class="form-group"> 
-                  Jumlah Stok:
-                 <div class="input-group mb-3">
-                   <input type="text" id="bukuStok" name="bukuStok" value="" required>
-                   <div class="input-group-append input-group-text">
-                    <span class="fas fa-id-card-alt"></span>
-                   </div>
-                 </div>
-               </div>
+                                       <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
+                                    </div>
+               
   </form>
 
 
