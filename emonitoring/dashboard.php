@@ -331,7 +331,7 @@ $a = 1;
           <!-- ./col -->
            <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h3 style="font-family: 'Anton', sans-serif;"><div id="showJumlahStok"></div></h3>
                 <p>Stok (lebihan)</p>
