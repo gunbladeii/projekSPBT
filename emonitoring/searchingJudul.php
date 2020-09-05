@@ -494,7 +494,7 @@ $a = 1;
                           <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
                           </tbody>
                         </table>
-                        <?php ;} else {echo '<a style="text-align:center"><button class="btn btn-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><button></a>';}?>
+                        <?php ;} else {echo '<a style="align-content:center"><button class="btn btn-warning">Tiada padanan yang sesuai,Sila cuba carian semula<button></a>';}?>
                       </div>
                       
 
