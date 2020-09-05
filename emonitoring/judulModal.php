@@ -12,12 +12,8 @@
     $bukuLebihan = $_POST['bukuLebihan'];
     $bukuStok = $_POST['bukuStok'];
     $kodJudul = $_POST['kodJudul'];
-    $comment = $_POST['comment'];
+  
 
-    $judul = $_POST['judul'];
-    $judul2 = $_GET['judul'];
-    $kodAliran = $_POST['kodAliran'];
-    $kodAliran2 = $_GET['kodAliran'];
     
    if (isset($_POST['submit'])) {
     $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan','$bukuStok')");
