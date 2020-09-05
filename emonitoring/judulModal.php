@@ -31,7 +31,8 @@
 
 
   <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
-               <div class="form-group">
+               <div class="form-group"> 
+                Kod Judul:<?php echo $kodJudul2;?>
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
@@ -44,7 +45,7 @@
                                     </div>
 
                                     <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>"/>
-                                    <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
+                                    <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                     <input type="hidden" name="kodJudul" value="<?php echo $$ReID['kodJudul'];?>"/>
                                     <input type="hidden" name="namaSekolah" value="<?php echo $dataSekolah['namaSekolah'];?>"/>
                                     <div class="modal-footer">

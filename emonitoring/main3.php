@@ -125,7 +125,7 @@ $a = 1;
         <div class="modal-dialog">
           <div class="modal-content bg-light">
             <div class="modal-header">
-              <h4 class="modal-title">Daftar Rekod Judul</h4>
+              <h4 class="modal-title">Kemaskini bilangan Stok</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
             </div>
