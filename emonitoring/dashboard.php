@@ -427,8 +427,8 @@ $a = 1;
                                 <th>No</th>
                                 <th>Kod Judul</th>
                                 <th>Nama Judul</th>
-                                <th>Naskhah (Lebihan)</th>
-                                <th>Stok</th>
+                                <th>Naskhah (Buku elok)</th>
+                                <th>Stok (Lebihan)</th>
                                 <th>Status</th>
                               </tr>
                               </thead>
