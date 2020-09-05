@@ -80,7 +80,6 @@
         sum();
      });
 
-    });
 
     function sum() {
             var num1 = document.getElementById('bukuLebihan').value;
@@ -92,6 +91,7 @@
             }
            
         }
+    });
    </script>
 
    
