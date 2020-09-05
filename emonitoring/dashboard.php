@@ -421,7 +421,7 @@ $a = 1;
               <div class="card-body p-0">
                         <?php if($rekodPemantauan > 0) {?>
                           <div class="table-responsive">
-                            <table id="example1" class="table m-0">
+                            <table id="example3" class="table m-0">
                               <thead>
                               <tr>
                                 <th>No</th>
@@ -579,6 +579,7 @@ function filterFunction() {
 <script>
   $(function () {
     $("#example1").DataTable();
+    $("#example3").DataTable();
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
