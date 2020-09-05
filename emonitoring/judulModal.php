@@ -33,9 +33,7 @@
 
 ?>
 
-<!--start if employeeStatus=='temp'-->
 
-<?php if ($ReID > 0){?>
   <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
                <div class="form-group">
                                       Jumlah Naskhah (Lebihan):
@@ -57,7 +55,7 @@
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                </div>
   </form>
-<?php }?>
+
 
 
 <!-- Select2 -->
