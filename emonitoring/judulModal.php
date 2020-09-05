@@ -32,7 +32,7 @@
 
   <form method="post" action="judulModal.php" role="form" enctype="multipart/form-data">
                <div class="form-group"> 
-                Kod Judul:<?php echo $kodJudul2;?>
+                Kod Judul:<?php echo $kodJudul;?>
                                       Jumlah Naskhah (Lebihan):
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
