@@ -24,6 +24,11 @@ $bukuStok = $_POST['bukuStok'];
 $kodJudul = $_POST['kodJudul'];
 $comment = $_POST['comment'];
 
+$judul = $_POST['judul'];
+$judul2 = $_GET['judul'];
+$aliran = $_POST['aliran'];
+$aliran2 = $_GET['aliran'];
+
 
 $Recordset = $mysqli->query("SELECT * FROM login WHERE username = '$colname_Recordset'");
 $row_Recordset = mysqli_fetch_assoc($Recordset);
@@ -45,14 +50,23 @@ $Recordset5 = $mysqli->query("SELECT * FROM dataJudul GROUP BY aliran");
 $dataAliranSekolah = mysqli_fetch_assoc($Recordset5);
 $totalRows_Recordset5 = mysqli_num_rows($Recordset5);
 
+$Recordset6 = $mysqli->query("SELECT * FROM dataJudul WHERE judul LIKE '%$judul2%' AND aliran = '$aliran2'");
+$dataJudul2 = mysqli_fetch_assoc($Recordset6);
+$totalRows_Recordset6 = mysqli_num_rows($Recordset6);
+
 if (isset($_POST['submit'])) {
     $mysqli->query ("INSERT INTO `rekodPemantauan` (`kodSekolah`,`namaSekolah`,`kodJudul`,`bukuLebihan`,`bukuStok`) VALUES ('$kodSekolah2','$namaSekolah','$kodJudul','$bukuLebihan','$bukuStok')");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
 if (isset($_POST['submit2'])) {
-    $mysqli->query ("UPDATE `dataSekolah` SET `comment` = '$comment' WHERE `kodSekolah` = '$kodSekolah2'");
+    $mysqli->query ("UPDATE `dataSekolah` SET `comment` = '$comment' WHERE `kodSekolah` = '$aliran'");
     header("location:main4.php?kodSekolah=$kodSekolah2");
+    }
+
+if (isset($_POST['submit3'])) {
+    $mysqli->query ("SELECT * FROM dataJudul WHERE WHERE judul LIKE '%$judul%' AND aliran = '$aliran'");
+    header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
 $a = 1;
@@ -434,10 +448,11 @@ $a = 1;
                                 </tr>
 
                                 <tr>
+                                  <form method="post" action="main3.php" role="form" enctype="multipart/form-data">
                                   <td>
                                    <div class="form-group">
                                       1. Taip Judul: 
-                                      <input type="text" placeholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
+                                      <input type="text" name="judul" laceholder="Taip kata kunci judul untuk carian pantas.." class="form-control" >
                                       2. Pilih Jenis Sekolah:
                                       <div class="input-group mb-3">
                                                <select name="aliran" class="custom-select browser-default" required>
@@ -450,13 +465,15 @@ $a = 1;
                               </tr>
                               </tbody>
                              </table>
+                                        <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                         <div class="modal-footer">
-                                            <input type="submit" class="btn btn-primary" name="submit2" value="Carian rekod"/>
+                                            <input type="submit" class="btn btn-primary" name="submit3" value="Carian judul"/>
                                         </div>
+                                </form>
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
 
-                      <?php if($dataSekolah2 > 0) {?>
+                      <?php if($dataJudul2 > 0) {?>
                       <div class="table-responsive">
                         <table class="table table-sm">
                           <thead>
