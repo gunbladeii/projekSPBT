@@ -484,7 +484,7 @@ $a = 1;
                             <?php do {?>
                             <tr>
                               <td><?php echo $a++;?></td>
-                              <td><a class="badge badge-info" data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul2['kodJudul'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul2['judul']; ?></a></td>
+                              <td><a class="badge badge-info" data-toggle="modal" data-target="#judulModal" data-whatever3="<?php echo $dataJudul2['kodJudul'];?>" data-whatever4="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul2['judul']; ?></a></td>
                               <td><?php echo $dataJudul2['aliran']; ?></td>
                             </tr>
                             <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
