@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
     }
 
 if (isset($_POST['submit2'])) {
-    $mysqli->query ("UPDATE `dataSekolah` SET `comment` = '$comment' WHERE `kodSekolah` = '$aliran'");
+    $mysqli->query ("UPDATE `dataSekolah` SET `comment` = '$comment' WHERE `kodSekolah` = '$kodSekolah2'");
     header("location:main4.php?kodSekolah=$kodSekolah2");
     }
 
@@ -489,8 +489,8 @@ $a = 1;
                             <?php do {?>
                             <tr>
                               <td><?php echo $a++;?></td>
-                              <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul['judul']; ?></a></td>
-                              <td><?php echo $dataJudul['aliran']; ?></td>
+                              <td><a data-toggle="modal" data-target="#judulModal" data-whatever="<?php echo $dataJudul2['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><?php echo $dataJudul2['judul']; ?></a></td>
+                              <td><?php echo $dataJudul2['aliran']; ?></td>
                             </tr>
                             <?php } while ($dataJudul2 = mysqli_fetch_assoc($Recordset6)); ?>
                           </tbody>
