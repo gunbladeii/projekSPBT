@@ -66,7 +66,7 @@ if (isset($_POST['submit2'])) {
 
 if (isset($_POST['submit3'])) {
     $mysqli->query ("SELECT * FROM dataJudul WHERE WHERE judul LIKE '%$judul%' AND aliran = '$aliran'");
-    header("location:searchingJudul.php?kodSekolah=$kodSekolah2");
+    header("location:searchingJudul.php?kodSekolah=$kodSekolah2&judul=$judul2&aliran=$aliran2");
     }
 
 $a = 1;
