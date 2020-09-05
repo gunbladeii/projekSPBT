@@ -474,7 +474,7 @@ $a = 1;
                           </div>
                       <?php ;}else {echo 'Tiada dalam rekod';}?>
 
-                      <?php if(!empty($dataJudul2)) {?>
+                      <?php if($dataJudul2 > 0) {?>
                       <div class="table-responsive">
                         <table class="table table-sm">
                           <thead>
@@ -493,7 +493,7 @@ $a = 1;
                           </tbody>
                         </table>
                       </div>
-                      <?php ;} else {echo '<span class="badge badge-warning">Tiada padanan yang sesuai,Sila cuba carian semula</td><span>'}?>
+                      <?php ;} ?>
 
                       <?php if($rekodPemantauan > 0) {?>
                         <div class="table-responsive">
