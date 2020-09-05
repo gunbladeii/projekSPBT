@@ -433,7 +433,7 @@ $a = 1;
                                       <div class="input-group mb-3">
                                       <input type="text" name="bukuLebihan" class="form-control"  id="bukuLebihan" value="" required>
                                       <input type="text" id="bukuWajib" value="3">
-                                      <input type="text" id="bukuStok" value="">
+                                      <input type="text" id="bukuStok" name="bukuStok" value="">
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
