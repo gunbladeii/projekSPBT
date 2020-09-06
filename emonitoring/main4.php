@@ -370,9 +370,21 @@ $a = 1;
                               <a>Jawatan: <u><?php echo $dataSekolah['jawatan1'];?></u></a>
                               </td>
                               </tr>
+
+                              <tr>
+                              <td>
+                              Nama Pegawai Pengiring: <u><?php echo strtoupper($dataSekolah['namaPegawai2']);?></u>
+                              </td>
+                              </tr>
+
+                              <tr>
+                              <td>
+                              Jawatan: <u><?php echo $dataSekolah['jawatan2'];?></u>
+                              </td>
+                              </tr>
                           
                               <tr>
-                                <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Maklumat Pengurusan Stok Buku Teks</h5></th>
+                              <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Maklumat Pengurusan Stok Buku Teks</h5></th>
                               </tr>
                               <tr>
                                 <th>Bil</th>
