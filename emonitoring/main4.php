@@ -386,6 +386,7 @@ $a = 1;
                               <tr>
                               <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Maklumat Pengurusan Stok Buku Teks</h5></th>
                               </tr>
+                              <?php if(!empty($rekodPemantauan)) {?>
                               <tr>
                                 <th>Bil</th>
                                 <th>Kod judul</th>
@@ -402,6 +403,7 @@ $a = 1;
                                 <td><?php echo $rekodPemantauan['bukuStok'];?></td>
                               </tr>
                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
+                              <?php }?>
                                <tr>
                                 <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Ulasan Keseluruhan</h5></th>
                               </tr>
