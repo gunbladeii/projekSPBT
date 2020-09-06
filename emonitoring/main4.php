@@ -289,7 +289,8 @@ $a = 1;
       </div><!-- /.container-fluid -->
     </div>
       <div class="modal-footer">
-          <input class="btn btn-info" type="button" id="create_pdf" value="Cetak">
+          <input class="btn btn-danger" type="button" id="create_pdf" value="PDF">
+          <input class="btn btn-info" type="button" onclick="printDiv()" value="Cetak">
        </div>
    
       <section class="content" id="content">
@@ -610,7 +611,19 @@ function filterFunction() {
         }  
   
     }());  
-</script>  
+</script>
+<script> 
+        function printDiv() { 
+            var divContents = document.getElementById("content").innerHTML; 
+            var a = window.open('', '', 'height=500, width=500'); 
+            a.document.write('<html>'); 
+            a.document.write('<body > <h6>Janaan digital dari sistem eSPBT2.0</h6><br>'); 
+            a.document.write(divContents); 
+            a.document.write('</body></html>'); 
+            a.document.close(); 
+            a.print(); 
+        } 
+</script>   
 <script>  
     /* 
  * jQuery helper plugin for examples and tests 
