@@ -384,9 +384,9 @@ $a = 1;
                               </tr>
                           
                               <tr>
+                              <?php if(!empty($rekodPemantauan)) {?>
                               <th colspan="5" style="text-align: center; background-color: black"><h5 style="color: white">Maklumat Pengurusan Stok Buku Teks</h5></th>
                               </tr>
-                              <?php if(!empty($rekodPemantauan)) {?>
                               <tr>
                                 <th>Bil</th>
                                 <th>Kod judul</th>
