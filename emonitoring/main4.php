@@ -347,7 +347,7 @@ $a = 1;
                               </tr>
                               <tr>
                               <td colspan="5">
-                              <a>Nama Guru Penyelaras SPBT: <u><?php echo $dataSekolah['namaPenyelaras'];?></u></a>
+                              <a>Nama Guru Penyelaras SPBT: <u><?php echo strtoupper($dataSekolah['namaPenyelaras']);?></u></a>
                               </td>
                               </tr>
                               <tr>
@@ -362,12 +362,12 @@ $a = 1;
                               </tr>
                               <tr>
                               <td colspan="5">
-                              <a>Nama Pegawai Pemantau: <u><?php echo $dataSekolah['namaPegawai1'];?></u></a>
+                              <a>Nama Pegawai Pemantau: <u><?php echo strtoupper($dataSekolah['namaPegawai1']);?></u></a>
                               </td>
                               </tr>
                               <tr>
                               <td colspan="5">
-                              <a>Jawatan: <u><?php echo $dataSekolah['jawatan1'];?></u></a>
+                              <a>Jawatan: <u><?php echo strtoupper($dataSekolah['jawatan1']);?></u></a>
                               </td>
                               </tr>
 
@@ -379,7 +379,7 @@ $a = 1;
 
                               <tr>
                               <td>
-                              Jawatan: <u><?php echo $dataSekolah['jawatan2'];?></u>
+                              Jawatan: <u><?php echo strtoupper($dataSekolah['jawatan2']);?></u>
                               </td>
                               </tr>
                           
