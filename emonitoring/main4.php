@@ -299,7 +299,7 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <img src="logo_kpm.png" class="rounded mx-auto d-block">
+                <h2><img src="logo_kpm.png" class="rounded mx-auto d-block"></h2>
                 <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;text-align: center;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
                 <h2 class="card-title" style="font-size:14px;text-align: center;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
                 <div class="card-tools">
@@ -615,7 +615,7 @@ function filterFunction() {
 <script> 
         function printDiv() { 
             var divContents = document.getElementById("content").innerHTML; 
-            var a = window.open('', '', 'height=100%, width=100%'); 
+            var a = window.open('', '', 'height=100%, width=60%%'); 
             a.document.write('<html>'); 
             a.document.write('<body > <h6>Janaan digital dari sistem eSPBT2.0</h6><br>'); 
             a.document.write(divContents); 
