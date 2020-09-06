@@ -615,7 +615,7 @@ function filterFunction() {
 <script> 
         function printDiv() { 
             var divContents = document.getElementById("content").innerHTML; 
-            var a = window.open('', '', 'height=500, width=500'); 
+            var a = window.open('', '', 'height=100%, width=100%'); 
             a.document.write('<html>'); 
             a.document.write('<body > <h6>Janaan digital dari sistem eSPBT2.0</h6><br>'); 
             a.document.write(divContents); 
