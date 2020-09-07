@@ -54,14 +54,14 @@ session_start();
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
-            header('Location:../publisherSPBT/indexPublisher.php');
+            header('Location:index.php');
             }
             else if($res["role"] == "distiSPBT")
             {
             $_SESSION['user'] = $res['username'];
             $_SESSION['role'] = $res["role"];
             $_SESSION['password'] = $res["password"];
-            header('Location:../distiSPBT/index.php');
+            header('Location:index.php');
             }
             else if($res["role"] != "admin" || $res["role"] != "distiSPBT" ||$res["role"] != "publisherSPBT")
             {

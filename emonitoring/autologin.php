@@ -9,11 +9,11 @@
             }
             else if($_SESSION['role'] == "publisherSPBT")
             {
-            header('Location:publisherSPBT/indexPublisher.php');
+            header('Location:index.php');
             }
             else if($_SESSION['role'] == "distiSPBT")
             {
-            header('Location:distiSPBT/index.php');
+            header('Location:index.php');
             }
             else
             {
