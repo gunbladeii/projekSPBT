@@ -591,7 +591,9 @@ function filterFunction() {
   printWindow.document.write('<html><head><title>*Cetakan digital. Tiada tandatangan diperlukan.</title>');
   printWindow.document.write('</head><body >');
   printWindow.document.write('<img src="logo_kpm.png" style="display: block; margin-left: auto; margin-right: auto;">');
+  printWindow.document.write('<div style="display: block; margin-left: auto; margin-right: auto;">');
   printWindow.document.write(divContents);
+  printWindow.document.write('</div>');
   printWindow.document.write('</body></html>');
   printWindow.document.close();
   printWindow.print();
