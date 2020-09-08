@@ -376,13 +376,13 @@ $a = 1;
                               </tr>
 
                               <tr>
-                              <td>
+                              <td colspan="5">
                               Nama Pegawai Pengiring: <u><?php echo strtoupper($dataSekolah['namaPegawai2']);?></u>
                               </td>
                               </tr>
 
                               <tr>
-                              <td>
+                              <td colspan="5">
                               Jawatan: <u><?php echo strtoupper($dataSekolah['jawatan2']);?></u>
                               </td>
                               </tr>
