@@ -439,7 +439,7 @@ $b = 1;
                                 <td><span class="badge badge-info"><?php echo strtoupper($rekodPemantauan['kodJudul']);?></span></td>
                                 <td><?php echo $rekodPemantauan['judul'];?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
-                                <td><?php echo $rekodPemantauan['bukuStok'];?></td>
+                                <td><?php if($rekodPemantauan['bukuStok'] > 0){echo $rekodPemantauan["bukuStok"];}else echo '<i class="fas fa-check-circle"></i>';?></td>
                               </tr>
                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                               </tbody>
