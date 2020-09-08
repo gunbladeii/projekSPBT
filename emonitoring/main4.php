@@ -290,7 +290,6 @@ $a = 1;
     </div>
       <div class="modal-footer">
           <input class="btn btn-danger" type="button" id="btnPrint" value="PDF">
-          <input class="btn btn-info" type="button" onclick="printDiv()" value="Cetak">
        </div>
    
       <section class="content" id="dvContainer">
@@ -412,9 +411,9 @@ $a = 1;
                                 <td colspan="5">
                                   <div class="form-group">
                                       Ulasan:
-                                      
-                                      <textarea name="comment" class="form-control" id="validationDefault01"  rows="3" placeholder="<?php echo $dataSekolah['comment'];?>" readonly></textarea>
-                                     
+                                      <div class="input-group mb-3">
+                                      <?php echo $dataSekolah['comment'];?>
+                                      </div>
                                     </div>
                                 </td>
                               </tr>
@@ -593,7 +592,7 @@ function filterFunction() {
   $("#btnPrint").live("click", function () {
   var divContents = $("#dvContainer").html();
   var printWindow = window.open('', '', 'height=400,width=800');
-  printWindow.document.write('<html><head><title>DIV Contents</title>');
+  printWindow.document.write('<html><head><title>Cetakan digital</title>');
   printWindow.document.write('</head><body >');
   printWindow.document.write(divContents);
   printWindow.document.write('</body></html>');
