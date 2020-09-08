@@ -298,11 +298,6 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
-                <div class="table-responsive">
-                  <table class="table table-sm"><tr><th colspan="5" style="align-content: center";>
-                  <img src="logo_kpm.png" class="rounded mx-auto d-block"></th></tr>
-                  </table>
-                </div>
                 <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;text-align: center;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
                 <h2 class="card-title" style="font-size:14px;text-align: center;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
                 <div class="card-tools">
@@ -596,6 +591,7 @@ function filterFunction() {
   printWindow.document.write('<html><head><title>*Cetakan digital. Tiada tandatangan diperlukan.</title>');
   printWindow.document.write('</head><body >');
   printWindow.document.write(divContents);
+  printWindow.document.write('<img src="logo_kpm.png" class="rounded mx-auto d-block">');
   printWindow.document.write('</body></html>');
   printWindow.document.close();
   printWindow.print();
