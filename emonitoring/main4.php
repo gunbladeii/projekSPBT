@@ -294,7 +294,7 @@ $a = 1;
    
       <section class="content" id="dvContainer">
         <div id="row">
-        <div class="col-md-12">
+          <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
@@ -428,6 +428,8 @@ $a = 1;
             
         
                 <!-- /.table-responsive -->
+              </div>
+              </div>
               </div>
              
  </section>
