@@ -290,10 +290,10 @@ $a = 1;
     </div>
       <div class="modal-footer">
           <input class="btn btn-danger" type="button" id="create_pdf" value="PDF">
-          <input class="btn btn-info" type="button" onclick="printDiv()" value="Cetak">
+          <input class="btn btn-info" type="button" id="btnPrint" value="Cetak">
        </div>
    
-      <section class="content" id="content">
+      <section class="content" id="dvContainer">
         <div id="row">
         <div class="col-md-12">
            <!-- TABLE: list of publisherSPBT -->
@@ -574,44 +574,7 @@ function filterFunction() {
 </script>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
-<script>  
-    (function () {  
-        var  
-         form = $('#content'),  
-         cache_width = form.width(),  
-         a4 = [595.28, 841.89]; // for a4 size paper width and height  
-  
-        $('#create_pdf').on('click', function () {  
-            $('body').scrollTop(0);  
-            createPDF();  
-        });  
-        //create pdf  
-        function createPDF() {  
-            getCanvas().then(function (canvas) {  
-                var  
-                 img = canvas.toDataURL("image/png"),  
-                 doc = new jsPDF({  
-                     unit: 'px',  
-                     format: 'a4'  
-                 });  
-                doc.addImage(img, 'JPEG', 20, 20);  
-                doc.save('laporan_pemantauan.pdf');  
-                form.width(cache_width);  
-            });  
-        }  
-  
-        // create canvas object  
-        function getCanvas() {  
-            form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');  
-            return html2canvas(form, {  
-                imageTimeout: 2000,  
-                removeContainer: true  
-            });  
-        }  
-  
-    }());  
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 <script> 
         function printDiv() { 
             var divContents = document.getElementById("content").innerHTML; 
@@ -624,69 +587,18 @@ function filterFunction() {
             a.print(); 
         } 
 </script>   
-<script>  
-    /* 
- * jQuery helper plugin for examples and tests 
- */  
-    (function ($) {  
-        $.fn.html2canvas = function (options) {  
-            var date = new Date(),  
-            $message = null,  
-            timeoutTimer = false,  
-            timer = date.getTime();  
-            html2canvas.logging = options && options.logging;  
-            html2canvas.Preload(this[0], $.extend({  
-                complete: function (images) {  
-                    var queue = html2canvas.Parse(this[0], images, options),  
-                    $canvas = $(html2canvas.Renderer(queue, options)),  
-                    finishTime = new Date();  
-  
-                    $canvas.css({ position: 'absolute', left: 0, top: 0 }).appendTo(document.body);  
-                    $canvas.siblings().toggle();  
-  
-                    $(window).click(function () {  
-                        if (!$canvas.is(':visible')) {  
-                            $canvas.toggle().siblings().toggle();  
-                            throwMessage("Canvas Render visible");  
-                        } else {  
-                            $canvas.siblings().toggle();  
-                            $canvas.toggle();  
-                            throwMessage("Canvas Render hidden");  
-                        }  
-                    });  
-                    throwMessage('Screenshot created in ' + ((finishTime.getTime() - timer) / 1000) + " seconds<br />", 4000);  
-                }  
-            }, options));  
-  
-            function throwMessage(msg, duration) {  
-                window.clearTimeout(timeoutTimer);  
-                timeoutTimer = window.setTimeout(function () {  
-                    $message.fadeOut(function () {  
-                        $message.remove();  
-                    });  
-                }, duration || 2000);  
-                if ($message)  
-                    $message.remove();  
-                $message = $('<div ></div>').html(msg).css({  
-                    margin: 0,  
-                    padding: 5,  
-                    background: "#000",  
-                    opacity: 0.7,  
-                    position: "fixed",  
-                    top: 5,  
-                    right: 5,  
-                    fontFamily: 'Tahoma',  
-                    color: '#fff',  
-                    fontSize: 11,  
-                    borderRadius: 12,  
-                    width: 'auto',  
-                    height: 'auto',  
-                    textAlign: 'center',  
-                    textDecoration: 'none'  
-                }).hide().fadeIn().appendTo('body');  
-            }  
-        };  
-    })(jQuery);  
-  
-</script>  
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+  $("#btnPrint").live("click", function () {
+  var divContents = $("#dvContainer").html();
+  var printWindow = window.open('', '', 'height=400,width=800');
+  printWindow.document.write('<html><head><title>DIV Contents</title>');
+  printWindow.document.write('</head><body >');
+  printWindow.document.write(divContents);
+  printWindow.document.write('</body></html>');
+  printWindow.document.close();
+  printWindow.print();
+    });
+</script>
 </html>
