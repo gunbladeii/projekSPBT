@@ -289,8 +289,8 @@ $a = 1;
       </div><!-- /.container-fluid -->
     </div>
       <div class="modal-footer">
-          <input class="btn btn-danger" type="button" id="create_pdf" value="PDF">
-          <input class="btn btn-info" type="button" id="btnPrint" value="Cetak">
+          <input class="btn btn-danger" type="button" id="btnPrint" value="PDF">
+          <input class="btn btn-info" type="button" onclick="printDiv()" value="Cetak">
        </div>
    
       <section class="content" id="dvContainer">
