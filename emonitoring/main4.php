@@ -299,7 +299,7 @@ $a = 1;
             <div class="card">
               <div class="card-header border-transparent">
                 <div class="table-responsive">
-                  <table><tr><th colspan="5" style="align-content: center";>
+                  <table class="table table-sm"><tr><th colspan="5" style="align-content: center";>
                   <img src="logo_kpm.png" class="rounded mx-auto d-block"></th></tr>
                   </table>
                 </div>
