@@ -503,8 +503,8 @@ $a = 1;
                               <tr>
                                 <th>Bil</th>
                                 <th>Judul</th>
-                                <th>Jumlah Naskhah</th>
-                                <th>Stok</th>
+                                <th>Naskhah (elok)</th>
+                                <th>Stok (lebihan)</th>
                                 <th>Tindakan</th>
                               </tr>
                             </thead>
@@ -514,7 +514,7 @@ $a = 1;
                                 <td><?php echo $a++;?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['judul']);?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
-                                <td><?php echo $rekodPemantauan['bukuStok'];?></td>
+                                <td><?php if($rekodPemantauan['bukuStok'] > 0){echo $rekodPemantauan["bukuStok"];}else echo '<i class="fas fa-check-circle"></i>';?></td>
                                 <td><a data-toggle="modal" data-target="#delJudulModal" data-whatever="<?php echo $rekodPemantauan['id'];?>" data-whatever2="<?php echo $rekodPemantauan['kodSekolah'];?>"class="nav-link"><i class="fas fa-times"></i></a></td>
                               </tr>
                                <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
