@@ -412,7 +412,7 @@ $a = 1;
                                   <div class="form-group">
                                       Ulasan:
                                       <div class="input-group mb-3">
-                                      <u><?php echo $dataSekolah['comment'];?></u>
+                                      <?php echo "<u>".$dataSekolah['comment']."</u>";?>
                                       </div>
                                     </div>
                                 </td>
