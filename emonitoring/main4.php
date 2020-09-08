@@ -417,11 +417,6 @@ $a = 1;
                                     </div>
                                 </td>
                               </tr>
-                              <tr>
-                                <td colspan="5">
-                                      *Laporan ini adalah untuk tujuan cetakan digital. Tiada tandatangan diperlukan.
-                                </td>
-                              </tr>
                             </tbody>
                           </table>
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
@@ -592,7 +587,7 @@ function filterFunction() {
   $("#btnPrint").live("click", function () {
   var divContents = $("#dvContainer").html();
   var printWindow = window.open('', '', 'height=400,width=800');
-  printWindow.document.write('<html><head><title>Cetakan digital</title>');
+  printWindow.document.write('<html><head><title>*Cetakan digital. Tiada tandatangan diperlukan.</title>');
   printWindow.document.write('</head><body >');
   printWindow.document.write(divContents);
   printWindow.document.write('</body></html>');
