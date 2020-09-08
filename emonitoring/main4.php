@@ -400,7 +400,7 @@ $a = 1;
                                 <td><?php echo strtoupper($rekodPemantauan['kodJudul']);?></td>
                                 <td><?php echo strtoupper($rekodPemantauan['judul']);?></td>
                                 <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
-                                <td><?php if($rekodPemantauan['bukuStok'] > 0){echo $rekodPemantauan['bukuStok']}else echo '<i class="fas fa-check-circle"></i>';?></td>
+                                <td><?php if($rekodPemantauan['bukuStok'] > 0){echo $rekodPemantauan["bukuStok"];}else echo '<i class="fas fa-check-circle"></i>';?></td>
                               </tr>
                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                               <?php }?>
