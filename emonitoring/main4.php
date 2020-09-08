@@ -578,22 +578,28 @@ function filterFunction() {
   printWindow.document.write('</head>');
     printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/fontawesome-free/css/all.min.css">');
   printWindow.document.write('<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">');
+  <!-- Tempusdominus Bbootstrap 4 -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">');
+  <!-- iCheck -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/icheck-bootstrap/icheck-bootstrap.min.css">');
+  <!-- JQVMap -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/jqvmap/jqvmap.min.css">');
+  <!-- Theme style -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/dist/css/adminlte.min.css">');
+  <!-- overlayScrollbars -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">');
+  <!-- Daterange picker -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/daterangepicker/daterangepicker.css">');
+  <!-- summernote -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/summernote/summernote-bs4.css">');
+  <!-- Google Font: Source Sans Pro -->
   printWindow.document.write('<link rel="stylesheet" href="styleSearchJudul.css">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">');
   printWindow.document.write('<body>');
   printWindow.document.write(divContents);
-  printWindow.document.write('</body>');
-  printWindow.document.write('<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>');
-  printWindow.document.write('</html>');
+  printWindow.document.write('</body></html>');
   printWindow.document.close();
   printWindow.print();
     });
