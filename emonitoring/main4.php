@@ -590,7 +590,7 @@ function filterFunction() {
 <script type="text/javascript">
   $("#btnPrint").live("click", function () {
   var divContents = $("#dvContainer").html();
-  var printWindow = window.open('', '', 'height=400,width=900');
+  var printWindow = window.open('', '', 'height=500,width=450');
   printWindow.document.write('<html><head><title>*Cetakan digital. Tiada tandatangan diperlukan.</title>');
   printWindow.document.write('</head><body >');
   printWindow.document.write(divContents);
