@@ -569,21 +569,6 @@ function filterFunction() {
   });
 </script>
 </body>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
-<script> 
-        function printDiv() { 
-            var divContents = document.getElementById("content").innerHTML; 
-            var a = window.open('', '', 'height=100%, width=60%%'); 
-            a.document.write('<html>'); 
-            a.document.write('<body > <h6>Janaan digital dari sistem eSPBT2.0</h6><br>'); 
-            a.document.write(divContents); 
-            a.document.write('</body></html>'); 
-            a.document.close(); 
-            a.print(); 
-        } 
-</script>   
-
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
   $("#btnPrint").live("click", function () {
@@ -593,28 +578,22 @@ function filterFunction() {
   printWindow.document.write('</head>');
     printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/fontawesome-free/css/all.min.css">');
   printWindow.document.write('<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">');
-  <!-- Tempusdominus Bbootstrap 4 -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">');
-  <!-- iCheck -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/icheck-bootstrap/icheck-bootstrap.min.css">');
-  <!-- JQVMap -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/jqvmap/jqvmap.min.css">');
-  <!-- Theme style -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/dist/css/adminlte.min.css">');
-  <!-- overlayScrollbars -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">');
-  <!-- Daterange picker -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/daterangepicker/daterangepicker.css">');
-  <!-- summernote -->
   printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/summernote/summernote-bs4.css">');
-  <!-- Google Font: Source Sans Pro -->
   printWindow.document.write('<link rel="stylesheet" href="styleSearchJudul.css">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">');
   printWindow.document.write('<body>');
   printWindow.document.write(divContents);
-  printWindow.document.write('</body></html>');
+  printWindow.document.write('</body>');
+  printWindow.document.write('<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>');
+  printWindow.document.write('</html>');
   printWindow.document.close();
   printWindow.print();
     });
