@@ -298,6 +298,7 @@ $a = 1;
            <!-- TABLE: list of publisherSPBT -->
             <div class="card">
               <div class="card-header border-transparent">
+                <img src="logo_kpm.png" style="display: block; margin-left: auto; margin-right: auto;">
                 <h2 class="card-title" style="font-family: 'Roboto Condensed', sans-serif;text-align: center;">BORANG PEMANTAUAN PENGURUSAN MAKLUMAT STOK</h2>
                 <h2 class="card-title" style="font-size:14px;text-align: center;">(Dikemaskini pada <?php echo $date.' '.$time;?>)</h2>
                 <div class="card-tools">
@@ -588,7 +589,7 @@ function filterFunction() {
   $("#btnPrint").live("click", function () {
   var divContents = $("#dvContainer").html();
   var printWindow = window.open('', '', 'height=400,width=700');
-  printWindow.document.write('<html><head><title>*Cetakan digital. Tiada tandatangan diperlukan.</title>');
+  printWindow.document.write('<html><head><title>Laporan Pemantauan Stok</title>');
   printWindow.document.write('</head>');
     printWindow.document.write('<link rel="stylesheet" href="../adminSPBT/plugins/fontawesome-free/css/all.min.css">');
   printWindow.document.write('<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">');
@@ -611,7 +612,6 @@ function filterFunction() {
   printWindow.document.write('<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">');
   printWindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&family=Titan+One&display=swap" rel="stylesheet">');
-  printWindow.document.write('<img src="logo_kpm.png" style="display: block; margin-left: auto; margin-right: auto;">');
   printWindow.document.write('<body>');
   printWindow.document.write(divContents);
   printWindow.document.write('</body></html>');
