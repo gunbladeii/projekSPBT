@@ -15,6 +15,10 @@
             {
             header('Location:index.php');
             }
+            else if($res["role"] != "admin" || $res["role"] != "distiSPBT" ||$res["role"] != "publisherSPBT")
+            {
+            header('Location:index.php?message=fail');
+            }
             else
             {
             session_destroy();   
