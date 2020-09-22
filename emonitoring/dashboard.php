@@ -428,7 +428,6 @@ $b = 1;
                                 <th>No</th>
                                 <th>Kod Judul</th>
                                 <th>Nama Judul</th>
-                                <th>Naskhah (Buku elok)</th>
                                 <th>Stok (Lebihan)</th>
                               </tr>
                               </thead>
@@ -438,8 +437,7 @@ $b = 1;
                                 <td><?php echo $b++;?></td>
                                 <td><span class="badge badge-info"><?php echo strtoupper($rekodPemantauan['kodJudul']);?></span></td>
                                 <td><?php echo $rekodPemantauan['judul'];?></td>
-                                <td><?php echo $rekodPemantauan['bukuLebihan'];?></td>
-                                <td><?php if($rekodPemantauan['bukuStok'] > 0){echo $rekodPemantauan["bukuStok"];}else echo '<i class="fas fa-check-circle"></i>';?></td>
+                                <td><?php if($rekodPemantauan['bukuStok'] > 0){echo $rekodPemantauan["bukuStok"];}else echo '<i class="fas fa-times"></i>';?></td>
                               </tr>
                               <?php } while ($rekodPemantauan = mysqli_fetch_assoc($Recordset4)); ?>
                               </tbody>
