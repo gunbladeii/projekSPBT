@@ -496,8 +496,8 @@ $a = 1;
                              </table>
                                 <input type="hidden" name="remark" value="observe">
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
-                                <input type="hidden" name="namaPegawai1" value="<?php echo $dataSekolah['namaPegawai1'];?>">
-                                <input type="hidden" name="jawatan1" value="<?php echo $dataSekolah['jawatan1'];?>">
+                                <input type="hidden" name="namaPegawai1" value="<?php echo strtoupper($row_Recordset['nama']);?>">
+                                <input type="hidden" name="jawatan1" value="<?php echo strtoupper($row_Recordset['jawatan']);?>">
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
