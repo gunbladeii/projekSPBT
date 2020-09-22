@@ -336,7 +336,7 @@ $a = 1;
                                     <div class="form-group">
                                       Kod Sekolah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" readonly required>
+                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
