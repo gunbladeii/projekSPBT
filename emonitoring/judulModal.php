@@ -53,7 +53,7 @@
                                     <div class="form-group"> 
                                         Jumlah Stok (Lebihan):
                                        <div class="input-group mb-3">
-                                         <input type="text" id="bukuStok" name="bukuStok" class="form-control" value="" readonly required>
+                                         <input type="text" id="bukuStok" name="bukuStok" class="form-control" value="" required>
                                          <div class="input-group-append input-group-text">
                                           <span class="fas fa-pen-fancy"></span>
                                          </div>
