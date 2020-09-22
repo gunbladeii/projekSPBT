@@ -44,7 +44,7 @@ $dataJawatan = mysqli_fetch_assoc($Recordset3);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset3);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("UPDATE `dataSekolah` SET `namaSekolah` = '$namaSekolah', `noTelefon` = '$noTelefon', `daerah` = '$daerah', `negeri` = '$negeri', `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1', `jawatan1` = '$jawatan1', `namaPegawai2` = '$namaPegawai2', `jawatan2` = '$jawatan2',`remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
+    $mysqli->query ("UPDATE `dataSekolah` SET `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai2` = '$namaPegawai2', `jawatan2` = '$jawatan2', `remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
@@ -336,7 +336,7 @@ $a = 1;
                                     <div class="form-group">
                                       Kod Sekolah:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="kodSekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" required>
+                                      <input type="text" name="kod_Sekolah" class="form-control"  id="validationDefault01" value="<?php echo $dataSekolah['kodSekolah'];?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -495,6 +495,7 @@ $a = 1;
                               </tbody>
                              </table>
                                 <input type="hidden" name="remark" value="observe">
+                                <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
