@@ -44,7 +44,7 @@ $dataJawatan = mysqli_fetch_assoc($Recordset3);
 $totalRows_Recordset2 = mysqli_num_rows($Recordset3);
 
 if (isset($_POST['submit'])) {
-    $mysqli->query ("UPDATE `dataSekolah` SET `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai2` = '$namaPegawai2', `jawatan2` = '$jawatan2', `remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
+    $mysqli->query ("UPDATE `dataSekolah` SET `namaPenyelaras` = '$namaPenyelaras', `noHP` = '$noHP', `tarikhPemantauan` = '$tarikhPemantauan', `namaPegawai1` = '$namaPegawai1',`namaPegawai2` = '$namaPegawai2', `jawatan1` = '$jawatan1', `jawatan2` = '$jawatan2', `remark` = '$remark' WHERE `kodSekolah` = '$kodSekolah2'");
     header("location:main3.php?kodSekolah=$kodSekolah2");
     }
 
@@ -433,7 +433,7 @@ $a = 1;
                                    <div class="form-group">
                                       Nama Pegawai Pemantau:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="namaPegawai1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['nama']);?>" readonly required>
+                                      <input type="text" name="namaPegawai_1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['nama']);?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -447,7 +447,7 @@ $a = 1;
                                    <div class="form-group">
                                       Jawatan:
                                       <div class="input-group mb-3">
-                                      <input type="text" name="jawatan1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['jawatan']);?>" readonly required>
+                                      <input type="text" name="jawatan_1" class="form-control"  id="validationDefault01" value="<?php echo strtoupper($row_Recordset['jawatan']);?>" readonly required>
                                       <div class="input-group-append input-group-text">
                                           <span class="fas fa-id-card-alt"></span>
                                       </div>
@@ -496,6 +496,8 @@ $a = 1;
                              </table>
                                 <input type="hidden" name="remark" value="observe">
                                 <input type="hidden" name="kodSekolah" value="<?php echo $dataSekolah['kodSekolah'];?>">
+                                <input type="hidden" name="namaPegawai1" value="<?php echo $dataSekolah['namaPegawai1'];?>">
+                                <input type="hidden" name="jawatan1" value="<?php echo $dataSekolah['jawatan1'];?>">
                                 <div class="modal-footer">
                                     <input type="submit" class="btn btn-primary" name="submit" value="Simpan rekod"/>
                                 </div>
